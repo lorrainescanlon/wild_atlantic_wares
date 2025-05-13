@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato';
+    color: black;
+    background-color: #FFA569;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.eb-garamond-font {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    font-family: 'EB+Garamond'
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.jumbotron {
+    background: url('/media/potters_wheel.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Lato';
+    color: black;
+ }
