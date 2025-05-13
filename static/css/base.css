@@ -1,6 +1,6 @@
-html {
+/*html {
     height: 100%;
-}
+}*/
 
 body {
     font-family: 'Lato';
@@ -15,6 +15,7 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: black;
 }
 
 .eb-garamond-font {
@@ -24,9 +25,26 @@ body {
   font-style: normal;
 }
 
+
+/* Header */
+/*header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}*/
+
 .logo-font {
     text-transform: uppercase;
-    font-family: 'EB+Garamond'
+    font-family: 'EB+Garamond', sans serif;
+    color: black;
+    /*font-size: 1.2rem;
+    font-weight: 600;*/
+}
+
+.body-font {
+    font-family: 'Lato';
+    color: black;
 }
 
 .main-logo-link {
@@ -36,7 +54,14 @@ body {
 .jumbotron {
     background: url('/media/potters_wheel.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
-    font-family: 'Lato';
+    height: 70vh;
+    width: 100%;
+    font-family: 'EB+Garamond';
     color: black;
  }
+
+ body > footer {
+    position: sticky;
+    top: 100vh;
+    clear: right;
+}
