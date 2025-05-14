@@ -2,18 +2,38 @@
 
 {% load static %}
 
-{% block page_header%}
-        <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+{% block page_header %}
 {% endblock %}
 
 
 {% block content %}
-    <div class="jumbotron">
-        
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 hero-text">
+                    <h1>Explore our Irish handthrown wares</h1>
+                    <div class="my-5">
+                        <h4>
+                        <a href="" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row p-4">
+            <div class="col-12 col-md-4">
+                <a href="" class=""><img src="media\kitchen_ware.jpg"></a>
+            </div>
+            <div class="col-12 col-md-4">
+                <a href="" class=""><img src="media\living_ware.jpg"></a>
+            </div>
+            <div class="col-12 col-md-4">
+            </div>
+        </div>
     </div>
+
 {% endblock %}
 
