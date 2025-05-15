@@ -43,11 +43,16 @@
 
     <body class="d-flex flex-column h-100">
         <header class="container-fluid fixed-top">
+            <div id="delivery-banner" class="row text-center">
+                <div class="col">
+                    <h5>Free Shipping on Orders over €100</h5>
+                </div>
+            </div>
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
                     <form class="d-flex" action="" method="GET" >
                         <input class="form-control search-box" type="text" name="q" placeholder="search our site..." aria-label="Search">
-                        <button class="btn btn-outline-success search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
@@ -55,59 +60,55 @@
                         <h2 class="logo-font text-black my-0"><strong>Wild Atlantic</strong> Wares</h2>
                     </a>
                 </div>
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="body-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center pe-3">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="body-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item body-font">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item body-font">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item body-font">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item body-font">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item body-font">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item body-font">Product Management</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item body-font">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item body-font">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item body-font">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item body-font">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="body-font nav-link" href="">
-                            <div class="text-center">
-                                <div class="icons"><i class="fas fa-heart"></i></div>
-                                <p class="my-0">Wishlist</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                            <div class="text-center">
-                                <div><i class="fa-solid fa-basket-shopping"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        €0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div id="delivery-banner" class="row text-center">
-                <div class="col">
-                    <h3>Free Shipping on Orders over €100</h3>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="body-font nav-link" href="">
+                                <div class="text-center">
+                                    <div class="icons"><i class="fas fa-heart"></i></div>
+                                    <p class="my-0">Wishlist</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                                <div class="text-center">
+                                    <div><i class="fa-solid fa-basket-shopping"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            €0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
         </header>
 
         {% if messages %}
@@ -127,24 +128,38 @@
         <footer style="background-color: white;">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 page-header mb-4 text-center">
-                        <h2 class="text-uppercase">Stay in touch:</h2>
-                        <hr class="block-divider block-divider--short">
+                    <div class="col-12 col-md-4">
+                        <h3>Useful Links</h3>
+                        <a href="#" target="_blank">Our Story</a><br>
+                        <a href="#" target="_blank">Contact Us</a><br>
+                        <a href="#" target="_blank">FAQ</a><br>
+                        <a href="#" target="_blank">Privacy Policy</a><br>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <h3>Social</h3>
-                        <p>Keep up to date with all our latest offers</p>
-                        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i> Follow us on Facebook!</a>
+                    <div class="col-12 col-md-4">
+                        <h3>Connect with Us</h3>
+                        <a href="#" target="_blank"><i class="fa-solid fa-house"></i></i> Dingle, Ireland</a><br>
+                        <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i> info@wildatlanticwares.com</a><br>
+                        <a href="#" target="_blank"><i class="fa-solid fa-phone"></i> +353 86 8774693</a><br>
+                        <span>
+                            <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        </span><br>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-4">
                         <h2>Subscribe!</h2>
                         <p>Get exclusive offers and discount codes by subscribing to our monthly newsletter</p>
                         <!-- Mailchimp signup form here -->
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <hr>
+                        <p>Created by Lorraine Scanlon for Educational purposes only.</p>
+                    </div>
+                </div>
             </div>
+            
         </footer>
     </body>
 
