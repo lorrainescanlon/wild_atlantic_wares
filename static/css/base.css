@@ -34,10 +34,6 @@ header {
     z-index: 100;
 }
 
-.header-container {
-
-}
-
 .message-container {
     position: fixed;
     top: 72px;
