@@ -32,13 +32,6 @@ span {
     color: black;
 }
 
-/*.eb-garamond-font {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-}*/
-
 
 /* Header */
 header {
@@ -139,7 +132,3 @@ footer {
     padding-top: 15px;
 }
 
-.socials {
-    /*justify-content: space-evenly;
-    margin-left: 0;*/
-}

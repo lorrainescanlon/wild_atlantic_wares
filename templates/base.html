@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,6 +39,8 @@
 
 
         <title>Wild Atlantic Wares {% block extra_title %}{% endblock %}</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/png" href="/media/vase.png">
 
     </head>
 
@@ -49,18 +52,18 @@
                 </div>
             </div>
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
                     <form class="d-flex" action="" method="GET" >
                         <input class="form-control search-box" type="text" name="q" placeholder="search our site..." aria-label="Search">
                         <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center">
                     <a href="{% url 'home' %}" class="nav-link main logo-link">
-                        <h2 class="logo-font text-black my-0"><strong>Wild Atlantic</strong> Wares</h2>
+                        <h2 class="logo-font text-black my-0"><img src="/media/vase_sm.png" type="image/png"><strong> Wild Atlantic</strong> Wares</h2>
                     </a>
                 </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center pe-3">
+                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center pe-3">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
                             <a class="body-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -83,14 +86,14 @@
                                 {% endif %}
                             </div>
                         </li>
-                        <li class="list-inline-item">
+                        <!--<li class="list-inline-item">
                             <a class="body-font nav-link" href="">
                                 <div class="text-center">
                                     <div class="icons"><i class="fas fa-heart"></i></div>
                                     <p class="my-0">Wishlist</p>
                                 </div>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="list-inline-item">
                             <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                                 <div class="text-center">
