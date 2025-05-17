@@ -1,23 +1,23 @@
 # wild_atlantic_wares
 Wild atlantic wares
-# Farmers Market Review
 
-## Code Institute - Portfolio Project 4 - Django 
+## Code Institute - Portfolio Project 5 - ECommerce 
 
-Farmers Market Review is a review website which features full CRUD frunctionality to provide users with up to date information 
-about markets. This platform allows users to share their experiences and rate markets they have visited so as to inform others,
-currently it focuses on farmers markets in and around County Kerry.
+Wild Atlantic Wares is an ecommerce website featuring full CRUD frunctionality and web marketing.
+This platform allows users to share their experiences and rate products they have purchased as well as their shopping experience.
 
 ## Demo
-![How the website looks on different devices](/static/docs/images/mockup.PNG)
+![How the website looks on different devices](/static/docs/images/)
 
-A live demo of the site can be found [here](https://farmers-market-review-55ade4f51551.herokuapp.com/)
+A live demo of the site can be found [here]()
 
 ## Tabe of Contents
 - [Site Goals](#site-goals)
 - [UI/UX](#ui-ux)
 - [Project Planning](#project-planning)
   - [Agile](#agile)
+    - [User Stories](#user-stories)
+    - [MoSCow Prioritization](#moscow)
     - [GitHub Projects](#github-projects)
     - [Issues/sprints](#issues-sprints)
   - [Wireframes](#wireframes)
@@ -57,35 +57,35 @@ A live demo of the site can be found [here](https://farmers-market-review-55ade4
 
 
 ## Site Goals
-- To provide a platfrom where market goers can get useful information about their local markets.
-- To engage with users and enable them to review and rate their market experience.
-- To encourage would be visitors to visit the market by sharing reviews and ratings.
-- Negative reviews might prompt market organisers and vendors to improve their service.
-- To provide a means for feedback for site users to encourage the sharing of information.
+- To provide a website where users can browse for and buy Irish handmade craft.
+- To engage with users and enable them to review and rate products and experiences.
+- To encourage would be visitors to buy products by sharing reviews and ratings.
+- Use review feedback to improve the products and user experience. 
+- To provide a means site users can find more content via links, social media and a newsletter subscription.
 
 
 ## UI/UX
-This website is aimed at people who have an interest in farmers markets. Its objective is to encourage users to visit their local markets and help them to grow.
+This website is aimed at people who wish to buy ceramic wear. 
 
 - **Strategy**: 
-The goal is to create a platform where markets goers can get information about local markets and share reviews with others.
+The goal is to sell pottery products and promote Irish craft.
 
 - **Scope**: 
-To include features that enhance the user experience and provide value to the user. Features like maps and market ratings help to achieve this.
+To include features that enhance the user experience and provide value to the user.
 
 - **Structure**: 
-The user is presented with a landing page which lists the markets in paginated form. From here the user can browse to more detailed market information or follow the navigation links for different functions of the page.  
+The user is presented with a landing page which ... From here the user can browse to more detailed product information or follow the navigation links for different sections of the page.  
 
   **_Website Sections:_**
-  - **_Home / Landing Page:_** A list of markets in paginated form.
+  - **_Home / Landing Page:_** A.
   - **_Header:_** A header containg navigation links to other pages of the website.
-  - **_Market Detail:_** A page containing detailed market information and reviews.
+  - **_Product Detail:_** A page containing detailed market information and reviews.
   - **_Register:_** A page to register for a user account.
   - **_Login:_** A page where users to log in.
   - **_Logout:_** A page where users log out.
   - **_Contact:_** A page with a contact form.
-  - **_News:_** A page with news articles.
-  - **_Footer:_** A footer containing social media links.
+  - **_About:_** A page detailing the crafters story.
+  - **_Footer:_** A footer containing social media links and newsletter subscription.
 
 - **Skeleton**:
 The website is desinged with a simple hierarchical structure which the user can navigate through with ease.
@@ -99,6 +99,8 @@ More on this is the design section below.
 This project was designed and built using the agile approach. The first step in this process was to create the user stories which address the expectations and needs of the site users.
 Each user story had acceptance criteria defined and was managed through stages on a Kanban board
 
+#### User Stories
+
 | **User Stories** |
 | --- |
 | As a site user I can  |
@@ -111,6 +113,20 @@ Each user story had acceptance criteria defined and was managed through stages o
 | As a Site Admin I can |
 | As a Site Admin I can |
 | As a Site Administrator I |
+
+#### MosCow Priorization
+Based on MoSCow Prioritization principles (Must have, Should have, Could have, Won't have), the following feature sets were identified.
+Must Have Features
+    - 
+
+Should Have Features
+    -
+
+Could Have Features
+    -
+
+Won't have Features
+    -
 
 
 I created a [GitHub project](https://github.com/users/lorrainescanlon/projects/3) and utilised the provided Kanban board method to manage user stories and tasks. Tasks were grouped into epics with milestones applied to epics.
@@ -196,7 +212,7 @@ There is a consistent colour scheme used throughout the site as shown on the col
  - The review form allows logged in users to submit a review on a their experience.
  - The form contains two textareas and a drop down menu to select a star rating.
 
- ![Review form](/static/docs/images/reviewform.PNG)
+ ![Review form](/static/docs/images/)
 
 
 #### Register
@@ -233,12 +249,13 @@ There is a consistent colour scheme used throughout the site as shown on the col
  - Monthly Newsletter with calendar of events taking place like workshops, popup markets, seasonal products and competitions.
  - Content to include videos and interview with other Irish crafters.
  - Have a review like button, for users to like if they found a review helpful.
+ - A favourites option so that registered users could make a list of items they would like to buy.
 
 
 
 ## Database Model
 The database model evolved from the needs of the user stories.  
-The diagram was created using [Lucidchart](https://lucidchart.com
+The diagram was created using [Lucidchart](https://lucidchart.com)
 
 ![DBModel](/static/docs/images/)
 
@@ -398,4 +415,3 @@ To Clone
 ### Acknowledgements
 - Thank you to my mentor Medale Oluwanfemi for his advice and guidance on this project.
 - The tutoring team for their help at troubleshooting during the project.
-
