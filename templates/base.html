@@ -18,9 +18,9 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900
-                        &family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0
-                        ,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
             
         {% endblock %}
@@ -48,7 +48,7 @@
         <header class="container-fluid fixed-top">
             <div id="delivery-banner" class="row text-center">
                 <div class="col">
-                    <h5>Free Shipping on Orders over €100</h5>
+                    <h5>Free Delivery on Orders over €{{ free_delivery_threshold }}!</h5>
                 </div>
             </div>
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -59,8 +59,8 @@
                     </form>
                 </div>
                 <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center">
-                    <a href="{% url 'home' %}" class="nav-link main logo-link">
-                        <h2 class="logo-font text-black my-0"><img src="/media/vase_sm.png" type="image/png"><strong> Wild Atlantic</strong> Wares</h2>
+                    <a href="" class="nav-link logo-link">
+                        <h2 class="logo-font my-0"><!--<img src="/media/vase_sm.png" type="image/png">--><strong> Wild Atlantic</strong> Wares</h2>
                     </a>
                 </div>
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center pe-3">
@@ -79,10 +79,10 @@
                                 <a href="" class="dropdown-item body-font">Product Management</a>
                                 {% endif %}
                                 <a href="" class="dropdown-item body-font">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item body-font">Logout</a>
+                                <a href="" class="dropdown-item body-font">Logout</a>
                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item body-font">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item body-font">Login</a>
+                                <a href="" class="dropdown-item body-font">Register</a>
+                                <a href="" class="dropdown-item body-font">Login</a>
                                 {% endif %}
                             </div>
                         </li>
@@ -95,7 +95,7 @@
                             </a>
                         </li> -->
                         <li class="list-inline-item">
-                            <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="">
                                 <div class="text-center">
                                     <div><i class="fa-solid fa-basket-shopping"></i></div>
                                     <p class="my-0">
@@ -110,6 +110,16 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="row bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light w-100 ">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
             </div>
 
         </header>

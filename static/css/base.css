@@ -14,19 +14,13 @@ a {
     color: black;
 }
 
-footer a {
-    line-height: 1.75;
-}
 
-span {
-    padding: 2px 15px 15px 15px;
-}
 
 /* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
-    /*justify-content: center;*/
+    justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
     color: black;
@@ -62,14 +56,27 @@ header {
     font-weight: 600;*/
 }
 
+.menu-font {
+    text-transform: uppercase;
+    font-family: 'Lato';
+    color: black;
+}
+
+
+.nav-border {
+    border-top: 1px black;
+}
+
+
 /*.body-font {
     font-family: 'Lato';
     color: black;
 }*/
 
-.main-logo-link {
+/*.logo-link {
     width: fit-content;
-}
+
+}*/
 
 .hero-section {
     background: url('/media/potters_wheel.jpg') no-repeat center center fixed;
@@ -79,9 +86,10 @@ header {
     width: 100%;
     font-family: 'EB+Garamond';
     color: black;
- }
+}
 
- .hero-text {
+
+.hero-text {
     background-color: rgba(201, 194, 189, 0.7);
 }
 
@@ -98,7 +106,7 @@ header {
 }
 
 .shop-now-button {
-    background: black;
+    background: darkslategrey;
     color: white;
     /*min-width: 260px;*/
     border-radius: 20px;
@@ -124,6 +132,7 @@ header {
     height: 30vh;
 }
 
+/* Footer */
 footer {
     background-color: white;
     color: black;
@@ -132,3 +141,17 @@ footer {
     padding-top: 15px;
 }
 
+footer a {
+    line-height: 1.75;
+}
+
+footer span {
+    padding: 2px 15px 15px 15px;
+}
+
+/* Media Queries */
+@media (min-wodth: 992px) {
+    .header-container {
+        padding-top: 100px;
+    }
+}
