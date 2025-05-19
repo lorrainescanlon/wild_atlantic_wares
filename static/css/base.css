@@ -104,7 +104,6 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 128px;
 }
 
 .hero-section {
@@ -148,17 +147,17 @@ main {
     height: 20vh;
 }
 
-.product-grid-container {
+/*.product-grid-container {
     margin-top: 200px;
 }
 
 .product-detail-grid {
     margin-top: 150px;
-}
+}*/
 
 .card {
     /*max-height: 250px;*/
-    max-width: 250px;
+    max-width: 300px;
     justify-self: center;
 }
 
@@ -203,18 +202,25 @@ footer span {
 
 
 /* Media Queries */
-/*@media (min-wodth: 992px) {
+/* Make container bigger on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* pad header container to push content down */
+@media (min-width: 992px) {
+    
     .header-container {
-        padding-top: 164px;
+        padding-top: 170px;
     }
 }
 
+/* pad header container when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 125px;
     }
 
-    body {
-        heigt: calc(100vh - 116px);
-    }
-}*/   
+}  
