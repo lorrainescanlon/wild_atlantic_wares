@@ -213,14 +213,13 @@ footer span {
 @media (min-width: 992px) {
     
     .header-container {
-        padding-top: 170px;
+        padding-top: 162px;
     }
 }
 
 /* pad header container when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 125px;
+        padding-top: 114px;
     }
-
 }  
