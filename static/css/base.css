@@ -1,9 +1,11 @@
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html {
     height: 100%;
     scroll-behavior: smooth;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
     font-family: 'Lato';
@@ -15,6 +17,7 @@ a {
     color: black;
 }
 
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -25,18 +28,8 @@ a {
     color: black;
 }
 
-.card {
-    /*max-height: 250px;*/
-    max-width: 250px;
-    justify-self: center;
-}
 
-.card-col {
-    justify-items: center;
-}
-
-
-/* Header */
+/* Header Styles */
 header {
     background-color: white;
     position: sticky;
@@ -54,6 +47,26 @@ header hr {
     padding-right: 10px;
 }
 
+#delivery-banner {
+    background-color: #c9c2bd;
+    color: white;
+}
+
+.search-box {
+    border-radius: 10px 0 0 10px;;
+    border: 1px solid #A6A6A6;
+    max-width: 200px;
+}
+
+.search-box::placeholder {
+    
+    color: #A6A6A6;
+}
+
+.search-btn {
+    border: 1px solid #A6A6A6;
+    border-radius: 0 10px 10px 0;
+}
 
 .navbar-light .navbar-nav .nav-link {
     color: rgb(66, 68, 56);
@@ -65,7 +78,6 @@ header hr {
     right: 15px;
     z-index: 99999999999;
 }
-
 
 .logo-font {
     text-transform: uppercase;
@@ -81,22 +93,12 @@ header hr {
     color: rgb(66, 68, 56);
 }
 
-
 .nav-border {
     border-top: 1px black;
 }
 
 
-/*.body-font {
-    font-family: 'Lato';
-    color: black;
-}*/
-
-/*.logo-link {
-    width: fit-content;
-
-}*/
-
+/* Body Styles */
 main {
     background-image: url('/media/potters_wheel.jpg');
     background-position: center;
@@ -111,7 +113,6 @@ main {
     font-family: 'EB+Garamond';
     color: black;
 }
-
 
 .hero-text {
     background-color: rgba(201, 194, 189, 0.7);
@@ -137,48 +138,10 @@ main {
     color: black;
 }
 
-#delivery-banner {
-    background-color: #c9c2bd;
-    color: white;
-}
-
 .shop-now-button {
     background: rgb(66, 68, 56);
     color: white;
     border-radius: 20px;
-}
-
-.subscribe-button {
-    background: rgb(66, 68, 56);
-    color: white;
-    border-radius: 0 10px 10px 0;
-
-}
-
-#newsletter-email {
-    border-radius: 10px 0 0 10px;
-    border: 1px solid #A6A6A6;
-}
-
-#newsletter-mail::placeholder {
-    color: #A6A6A6;
-    font-family: 'lato';
-}
-
-.search-box {
-    border-radius: 10px 0 0 10px;;
-    border: 1px solid #A6A6A6;
-    max-width: 200px;
-}
-
-.search-box::placeholder {
-    
-    color: #A6A6A6;
-}
-
-.search-btn {
-    border: 1px solid #A6A6A6;
-    border-radius: 0 10px 10px 0;
 }
 
 .menu-grid {
@@ -189,7 +152,22 @@ main {
     margin-top: 200px;
 }
 
-/* Footer */
+.product-detail-grid {
+    margin-top: 150px;
+}
+
+.card {
+    /*max-height: 250px;*/
+    max-width: 250px;
+    justify-self: center;
+}
+
+.card-col {
+    justify-items: center;
+}
+
+
+/* Footer Styles */
 footer {
     background-color: white;
     color: black;
@@ -206,9 +184,37 @@ footer span {
     padding: 2px 15px 15px 15px;
 }
 
+#newsletter-email {
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #A6A6A6;
+}
+
+#newsletter-mail::placeholder {
+    color: #A6A6A6;
+    font-family: 'lato';
+}
+
+.subscribe-button {
+    background: rgb(66, 68, 56);
+    color: white;
+    border-radius: 0 10px 10px 0;
+
+}
+
+
 /* Media Queries */
-@media (min-wodth: 992px) {
+/*@media (min-wodth: 992px) {
     .header-container {
-        padding-top: 100px;
+        padding-top: 164px;
     }
 }
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        heigt: calc(100vh - 116px);
+    }
+}*/   
