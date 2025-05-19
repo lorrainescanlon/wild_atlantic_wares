@@ -1,64 +1,58 @@
 {% extends "base.html" %}
-
 {% load static %}
 
 {% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
 
 
 {% block content %}
-    <section class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 hero-text">
-                    <h1>Explore our Irish Handthrown Wares</h1>
-                    <div class="my-5">
-                        <h4>
-                        <a href="" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
-                        </h4>
-                    </div>
+    <div class="container product-grid-container">
+        <div class="row">
+            <div class="col text-center">
+                <h3 class="menu-font">Products</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-12 ">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 mb-5">
+                            <div class="card h-100 border-0">
+                                {% if product.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                            {% if product.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}    
                 </div>
             </div>
         </div>
-    </section>
-
-    <div class="container-fluid">
-        <div class="row p-4">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="shadow card p-5">
-                            <a href="" class=""><img src="media\kitchen_ware.jpg" class="card-img-top" style="height: 80%; object-fit: contain;" alt="kitchen ware image"></a>
-                            <div class="card-body">
-                                <a href="" class="link">
-                                    <h5 class="card-title text-center">Kitchen Ware</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="shadow card p-5">
-                            <a href="" class=""><img src="media\living_ware.jpg" class="card-img-top" style="height: 100%; object-fit: contain;" alt="Living ware image"></a>
-                            <div class="card-body">
-                                <a href="" class="link">
-                                    <h5 class="card-title text-center">Living Ware</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="shadow card p-5">
-                            <a href="" class=""><img src="media\sale_ware.jpg" class="card-img-top" style="height: 100%; object-fit: contain;" alt="kitchen ware image"></a>
-                            <div class="card-body">
-                                <a href="" class="link">
-                                    <h5 class="card-title text-center">Special Offer</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>        
-        </div>
     </div>
-
 {% endblock %}
