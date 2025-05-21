@@ -6,13 +6,13 @@
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="menu-font font-weight-bold nav-link mr-5" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="menu-font font-weight-bold nav-link mr-5" href="" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc&menu=All+Products" class="dropdown-item">By Price</a>
+                <!--<a href="{% url 'products' %}?sort=rating&direction=desc&menu=All+Products" class="dropdown-item ">By Rating</a>-->
+                <a href="{% url 'products' %}?sort=category&direction=asc&menu=All+Products" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -22,9 +22,9 @@
                 Kitchen | Dining
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="kitchen-link">
-                <a href="{% url 'products' %}?category=tablewear" class="dropdown-item">Tablewear</a>
-                <a href="{% url 'products' %}?category=cups_mugs" class="dropdown-item">Cups & Mugs</a>
-                <a href="{% url 'products' %}?category=tablewear,cups_mugs" class="dropdown-item">All Kitchen | Dining</a>
+                <a href="{% url 'products' %}?category=tableware&menu=Tableware" class="dropdown-item">Tableware</a>
+                <a href="{% url 'products' %}?category=cups_mugs&menu=Cups+%26+Mugs" class="dropdown-item">Cups & Mugs</a>
+                <a href="{% url 'products' %}?category=tableware,cups_mugs&menu=All+Kitchen+%7C+Dining" class="dropdown-item">All Kitchen | Dining</a>
             </div>
         </li>
 
@@ -33,9 +33,9 @@
                 Living | Decor
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="livingdecor-link">
-                <a href="{% url 'products' %}?category=pots_vases" class="dropdown-item">Pots & Vases</a>
-                <a href="{% url 'products' %}?category=lighting_candles" class="dropdown-item">Lighting & Candles</a>
-                <a href="{% url 'products' %}?category=pots_vases,lighting_candles" class="dropdown-item">All Living | Decor</a>
+                <a href="{% url 'products' %}?category=pots_vases&menu=Pots+%26+Vases" class="dropdown-item">Pots & Vases</a>
+                <a href="{% url 'products' %}?category=lighting_candles&menu=Lighting+%26+Candles" class="dropdown-item">Lighting & Candles</a>
+                <a href="{% url 'products' %}?category=pots_vases,lighting_candles&menu=All+Living+%7C+Decor" class="dropdown-item">All Living | Decor</a>
             </div>
         </li>
 
@@ -44,9 +44,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=deals,clearance" class="dropdown-item">All Special Offers</a>
+                <a href="{% url 'products' %}?category=deals&menu=Deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance&menu=Clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=deals,clearance&menu=All+Special+Offers" class="dropdown-item">All Special Offers</a>
             </div>
         </li>
     </ul>

@@ -215,7 +215,10 @@ footer span {
     .header-container {
         padding-top: 162px;
     }
+
 }
+
+
 
 /* pad header container when navbar is collapsed on mobile */
 @media (max-width: 991px) {

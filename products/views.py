@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q, Lower
-from .models import Product
+from django.db.models import Q
+from .models import Product, Category
 
 
 def all_products(request):
@@ -12,11 +12,13 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    display_category = None
 
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
+            display_category = request.GET['menu']
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
@@ -27,24 +29,36 @@ def all_products(request):
                      sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        if 'category' in request.GET:
-               categories = request.GET['category'].split(',')
-               products = products.filter(category__name__in=categories)
-               categories = Category.objects.filter(name__in=categories)
-                
+            if 'menu' in request.GET:
+                    display_category = request.GET['menu']
+            else:
+                display_category = product.category.friendly_name
 
+        if 'category' in request.GET:
+                categories = request.GET['category'].split(',')
+                products = products.filter(category__name__in=categories)
+                categories = Category.objects.filter(name__in=categories)
+                if 'menu' in request.GET:
+                    display_category = request.GET['menu']
+                else:
+                    display_category = product.category.friendly_name
+                
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "Search criteria can not be blank")
                 return redirect(reverse('products'))
-            
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
         'search_term': query,
+        'current_categories': categories,
+        'current_sorting': current_sorting,
+        'display_category': display_category,
       }
 
     return render(request, 'products/products.html', context)
