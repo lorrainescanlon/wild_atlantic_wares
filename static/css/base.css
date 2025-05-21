@@ -201,6 +201,12 @@ footer span {
 }
 
 
+.btt-link {
+    cursor: pointer;
+    text-align: end;
+}
+
+
 /* Media Queries */
 /* Make container bigger on xl screens */
 @media (min-width: 1200px) {
