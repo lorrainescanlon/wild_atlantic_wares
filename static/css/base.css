@@ -17,6 +17,10 @@ a {
     color: black;
 }
 
+#detail-link {
+    color: black !important;
+    text-decoration: none !important;
+}
 
 /* from Bulma */
 .icon {

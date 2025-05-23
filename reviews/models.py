@@ -1,5 +1,5 @@
 from django.db import models
-from products import Product
+from products.models import Product
 from django.contrib.auth.models import User
 
 RATING = ((5, "5 *"), (4, "4 *"), (3, "3 *"), (2, "2 *"), (1, "1 *"),
