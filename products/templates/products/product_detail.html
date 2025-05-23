@@ -66,5 +66,26 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                {% for review in reviews %}
+          <div class="shadow review-text p-2 reviews">
+            <p class="font-weight-bold">
+              {{ review.created_on }} &nbsp;|&nbsp;
+              <span class="font-weight-normal"> 
+                {{ review.stars_rating }} star review by:&nbsp; 
+              </span> 
+              <span class="font-weight-normal fst-italic">
+                {{ review.author }}
+              </span>  
+            </p>
+            <div id="review{{ review.id }}">
+              {{ review.product_review | linebreaks }}
+            </div>
+            
+          <!-- Our for loop ends here -->
+        {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}

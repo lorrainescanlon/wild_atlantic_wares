@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
+from reviews.models import Review
 
 
 def all_products(request):
@@ -68,9 +69,11 @@ def product_detail(request, product_id):
     """A view to return data for an individual product"""
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.all().order_by("-created_on")
 
     context = {
        'product': product,
+       'reviews' : reviews
     }
 
     return render(request, 'products/product_detail.html', context)
