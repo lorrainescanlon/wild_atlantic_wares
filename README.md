@@ -205,7 +205,7 @@ There is a consistent colour scheme used throughout the site as shown on the col
 
  ![Mobile detail](/static/docs/images/mobdetails.jpg)
 
-
+#### Filter and Sort 
 
 #### Review Form
  - The review form allows logged in users to submit a review on a product.
