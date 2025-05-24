@@ -16,4 +16,3 @@ class ReviewForm(forms.ModelForm):
             'experience_review': 'Feedback on your experience'
         }
         widgets = {}
-

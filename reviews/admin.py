@@ -6,14 +6,13 @@ from .models import Review
 
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
-        
-    'product', 
-    'created_on',
-    'rating',
-    'product_review',
-    'experience_review',
-    'author', 
-    'approved',
+        'product',
+        'created_on',
+        'rating',
+        'product_review',
+        'experience_review',
+        'author',
+        'approved',
     )
 
     ordering = ('product',)

@@ -55,7 +55,7 @@
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
                     <form class="d-flex" action="{% url 'products' %}" method="GET" >
                         <input class="form-control search-box" type="text" name="q" placeholder="search our site..." aria-label="Search">
-                        <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass icon"></i></button>
                     </form>
                 </div>
                 <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center">
@@ -69,7 +69,7 @@
                             <a class="body-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 <div class="text-center">
-                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <div><i class="fas fa-user fa-lg icon"></i></div>
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
@@ -97,7 +97,7 @@
                         <li class="list-inline-item">
                             <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="">
                                 <div class="text-center">
-                                    <div><i class="fa-solid fa-basket-shopping"></i></div>
+                                    <div><i class="fa-solid fa-basket-shopping icon"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
                                             €{{ grand_total|floatformat:2 }}
