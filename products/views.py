@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q
+from django.db.models import Q, Sum
 from .models import Product, Category
 from reviews.models import Review
 
@@ -70,10 +70,20 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all().order_by("-created_on")
+    review_count = product.reviews.filter(approved=True).count()
+
+    if review_count <= 0:
+        product_rating = "No reviews yet"
+    else:
+        product_rating = int(Review.objects.filter
+                             (product=product, approved=True).aggregate
+                             (total=Sum('rating'))["total"]/review_count)
 
     context = {
        'product': product,
-       'reviews' : reviews
+       'reviews': reviews,
+       'review_count': review_count,
+       'product_rating': product_rating,
     }
 
     return render(request, 'products/product_detail.html', context)
