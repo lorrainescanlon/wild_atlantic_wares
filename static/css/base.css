@@ -102,6 +102,13 @@ header hr {
     color: rgb(66, 68, 56);
 }
 
+
+.menu-font-white {
+    text-transform: uppercase;
+    font-family: 'Lato';
+    color: white;
+}
+
 .nav-border {
     border-top: 1px black;
 }
@@ -146,10 +153,20 @@ main {
     color: black;
 }
 
-.shop-now-button {
+.shop-button {
     background: rgb(66, 68, 56);
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+/*.keep-shop-button {
+    background: rgb(66, 68, 56);
+    color: white;
+    border-radius: 10px;
+}*/
+
+.shop-button i {
+    color: white;
 }
 
 .menu-grid {
@@ -206,7 +223,6 @@ footer span {
     background: rgb(66, 68, 56);
     color: white;
     border-radius: 0 10px 10px 0;
-
 }
 
 

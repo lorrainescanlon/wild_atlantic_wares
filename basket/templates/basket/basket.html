@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="menu-font mt-4 mb-4">Shopping Basket</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mb-3">
+                {% if basket_items %}
+                    <div class="table-responsive rounded"></div>
+                {% else %}
+                    <p class="lead mb-5">Your shopping basket is empty.</p>
+                    <a href="{% url 'products' %}" class="btn shop-button btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="menu-font-white">keep shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
