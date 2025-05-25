@@ -159,20 +159,23 @@ main {
     border-radius: 10px;
 }
 
-/*.keep-shop-button {
-    background: rgb(66, 68, 56);
-    color: white;
-    border-radius: 10px;
-}*/
 
 .shop-button i {
     color: white;
+}
+
+.btn-outline-dark {
+    border-color:  rgb(66, 68, 56);
+    border-radius: 10px;
 }
 
 .menu-grid {
     height: 20vh;
 }
 
+.table-responsive {
+    background-color: white;
+}
 /*.product-grid-container {
     margin-top: 200px;
 }

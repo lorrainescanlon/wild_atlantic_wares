@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q, Sum, Avg
+from django.db.models import Q, Avg
 from .models import Product, Category
 from reviews.models import Review
 
@@ -15,6 +15,7 @@ def all_products(request):
     direction = None
     display_category = None
 
+    Review.objects.filter(approved=True)
     products = Product.objects.annotate(rating=Avg(('reviews__rating')))
 
     if request.GET:
@@ -71,11 +72,14 @@ def all_products(request):
 def product_detail(request, product_id):
     """A view to return data for an individual product"""
 
+    Review.objects.filter(approved=True)
     products = Product.objects.annotate(rating=Avg(('reviews__rating')))
     product = get_object_or_404(products, pk=product_id)
 
     reviews = product.reviews.all().order_by("-created_on")
-    review_count = product.reviews.filter(approved=True).count()
+    review_count = product.reviews.count()
+
+    """review_count = product.reviews.filter(approved=True).count()"""
 
     context = {
        'product': product,
