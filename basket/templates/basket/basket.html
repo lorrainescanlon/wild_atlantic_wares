@@ -26,27 +26,27 @@
                         <table class="table table-sm p-3">
                             <thead class="text-black p-3">
                                 <tr>
-                                    <th scope="col">Product</th>
+                                    <th scope="col" class="text-center">Product</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th class="d-none d-lg-block" scope="col">Subtotal</th>
                                 </tr>
                             </thead>
 
                             {% for item in basket_items %}
                                 <tr>
-                                    <td class="p-3">
+                                    <td class="p-lg-3 text-md-center">
                                         <img class="img-fluid" src="{{ item.product.image.url }}">
                                     </td>
-                                    <td class="p-3 w-25">
+                                    <td class="p-lg-3 w-md-25">
                                         <p class=""><strong>{{ item.product.name }}</strong></p>
                                         <p class="small text-muted">SKU: {{ item.product.sku }}</p>
                                     </td>
-                                    <td class="p-3">
+                                    <td class="p-lg-3">
                                         <p class="">€{{ item.product.price}}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="py-md-3 w-md-25">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -61,13 +61,13 @@
                                         <a class="update-link text-info"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
-                                    <td class="p-3 w-25">
+                                    <td class="d-none d-lg-block p-lg-3 w-25">
                                         <p class="">{{ item.product.price | calc_linetotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
-                                <td colspan="5" class="pt-5 text-right">
+                                <td colspan="5" class="pt-5 text-md-right">
                                     <h6><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
@@ -79,14 +79,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg">
+                                <td colspan="5" class="text-md-right">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg mt-1">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn shop-button btn-lg">
+                                    <a href="" class="btn shop-button btn-lg mt-1">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -98,7 +98,7 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your shopping basket is empty.</p>
-                    <a href="{% url 'products' %}" class="btn shop-button btn-lg">
+                    <a href="{% url 'products' %}" class="btn shop-button btn-lg mt-1">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
