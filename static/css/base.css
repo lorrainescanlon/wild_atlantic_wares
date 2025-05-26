@@ -234,6 +234,14 @@ footer span {
     text-align: end;
 }
 
+.update-link,
+.remove-item {
+    color: rgb(66, 68, 56) !important;
+    cursor:pointer;
+}
+.remove-item :hover {
+    color: red;
+}
 
 /* Media Queries */
 /* Make container bigger on xl screens */
