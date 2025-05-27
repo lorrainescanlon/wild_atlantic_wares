@@ -85,13 +85,6 @@ header hr {
     color: rgb(66, 68, 56);
 }
 
-.message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
-}
-
 .logo-font {
     text-transform: uppercase;
     font-family: 'EB+Garamond', sans serif;
@@ -117,6 +110,21 @@ header hr {
     border-top: 1px black;
 }
 
+/* Toast Messages */
+.message-container {
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    z-index: 999999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 
 /* Body Styles */
 main {
