@@ -27,7 +27,7 @@ def add_to_basket(request, item_id):
                          f'Updated {product.name} qty to {basket[item_id]}')
     else:
         basket[item_id] = quantity
-        messages.error(request, f'{product.name} added to your basket')
+        messages.success(request, f'{product.name} added to your basket')
 
     request.session['basket'] = basket
 

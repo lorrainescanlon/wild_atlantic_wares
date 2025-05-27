@@ -16,10 +16,10 @@
             <div class="col text-center pt-2">
                 <h4 class="menu-font">
                     {% if search_term != None %}
-                        {{ search_term }}
+                        {{ search_term }} - {{ products|length }} found
                     {% else %}
                         {{ display_category }}  
-                    {% endif %} 
+                    {% endif %}
                 </h4>  
            </div>
         </div>
