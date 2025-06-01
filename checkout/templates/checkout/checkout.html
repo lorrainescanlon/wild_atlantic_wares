@@ -21,16 +21,16 @@
         <div class="row bckgr-white rounded mb-4">
             <div class="d-none d-md-block col-12 col-md-6 mt-md-4 pl-5">
                 <p class="text-muted text-center">Order Summary ({{ product_count }})</p>
-                <hr class="m-0">
+                <hr class="my-0">
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mt-0 mb-0 small text-muted">Item</p>
+                        <p class="my-0 small text-muted">Item</p>
                     </div> 
                     <div class="col-3 text-left">
-                        <p class="mt-0 mb-0 small text-muted">Subtotal</p>
+                        <p class="my-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
-                <hr class="m-0 mb-md-3">
+                <hr class="mt-0 mb-md-3">
                 {% for item in basket_items %}
                     <div class="row mt-2">
                         <div class="col-2 my-2">
@@ -67,12 +67,12 @@
             </div>
             {% include 'includes/mobile-basket-summary.html' %}    
             <div class="col-12 col-md-6 pl-md-5 mt-md-4">
-                <p class="text-muted mb-xs-0 text-center">Your Details</p>
+                <p class="text-muted text-center">Your Details</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form"> 
                     <fieldset class="px-3 mb-2">
-                        <hr class="d-none d-md-block m-0">
-                        <p class="my-0 small text-muted">Shipping Details</p>
-                        <hr class="m-0 mb-md-3">
+                        <hr class="my-0">
+                        <p class="my-md-0 mb-0 small text-muted">Shipping Details</p>
+                        <hr class="mt-0 mb-md-3">
                         {% csrf_token %}
                         {{ order_form | crispy}}
                         <div class="form-check form-check-inline mb-md-4 mr-0">
@@ -103,6 +103,9 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    
     <script type="text/javascript">
         $('[data-toggle="collapse"]').on('click', function(){
             if ($(this).attr('aria-expanded') == 'false') {
@@ -111,7 +114,6 @@
             } else {
                 $(this).find('i').addClass('fa-plus').removeClass('fa-minus');
             }
-        });
-        
+        }); 
     </script>
 {% endblock %}

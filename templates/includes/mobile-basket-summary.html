@@ -4,10 +4,10 @@
             <a class="text-muted mt-4 text-center" id="basket-summary" role="button" data-toggle="collapse" data-target=".basket-summary" aria-expanded="false" aria-controls="CollpaseSummary" >
                 Order Summary ({{ product_count }}) €{{ grand_total | floatformat:2 }} &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
             </a>
-            <hr class="my-1">
+            <hr class="mt-1 mb-0">
         </p>
         <div class="collapse basket-summary">
-            <div class="row">
+            <div class="row mt-0">
                 <div class="col-7 offset-2">
                     <p class="my-0 small text-muted">Item</p>
                 </div> 
@@ -36,19 +36,20 @@
                     </div>
                 </div>
             {% endfor %}
+            <br>
             <hr class="my-0">
-            <div class="row my-2 text-black">
+            <div class="row my-2 text-black mr-1">
                 <div class="col-7 offset-2">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3 mb-2">
-                    <p class="my-0">€{{ total | floatformat:2 }}</p>
-                    <p class="my-0">€{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0 text-right">€{{ total | floatformat:2 }}</p>
+                    <p class="my-0 text-right">€{{ delivery | floatformat:2 }}</p>
+                    <p class="my-0 text-right"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
-            <hr class="my-0">
+            <hr class="mt-0 mb-3">
         </div>
     </div>   
