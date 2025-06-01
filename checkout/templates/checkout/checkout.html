@@ -18,11 +18,10 @@
                 <h2 class="menu-font m-4 text-center">Checkout</h2>
             </div>
         </div>
-        <div class="row bckgr-white rounded mb-3">
-            {% include 'includes/mobile-basket-summary.html' %}
-            <div class="d-none d-md-block col-12 col-md-5 mb-5 pl-md-5">
-                <p class="text-muted mt-4 text-center">Order Summary ({{ product_count }})</p>
-                <hr m-0>
+        <div class="row bckgr-white rounded mb-4">
+            <div class="d-none d-md-block col-12 col-md-6 mt-md-4 pl-5">
+                <p class="text-muted text-center">Order Summary ({{ product_count }})</p>
+                <hr class="m-0">
                 <div class="row">
                     <div class="col-7 offset-2">
                         <p class="mt-0 mb-0 small text-muted">Item</p>
@@ -31,10 +30,10 @@
                         <p class="mt-0 mb-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
-                <hr m-0>
+                <hr class="m-0 mb-md-3">
                 {% for item in basket_items %}
-                    <div class="row">
-                        <div class="col-2 mb-1">
+                    <div class="row mt-2">
+                        <div class="col-2 my-2">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
@@ -43,7 +42,7 @@
                                 {% endif %}
                             </a>
                         </div>
-                        <div class="col-7">
+                        <div class="col-7 pt-1">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
@@ -53,8 +52,8 @@
                     </div>
                 {% endfor %}
                 <hr class="my-0">
-                <div class="row text-black">
-                    <div class="col-7 offset-2">
+                <div class="row text-black mt-2 mb-3">
+                    <div class="col-6 offset-2">
                         <p class="my-0">Order Total:</p>
                         <p class="my-0">Delivery:</p>
                         <p class="my-0">Grand Total:</p>
@@ -65,17 +64,18 @@
                         <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
-            </div>    
-            <div class="col-12 col-md-6 pl-md-5 bckgr-white px-3">
-                <p class="text-muted mt-md-4 mb-0 text-center">Your Details</p>
+            </div>
+            {% include 'includes/mobile-basket-summary.html' %}    
+            <div class="col-12 col-md-6 pl-md-5 mt-md-4">
+                <p class="text-muted mb-xs-0 text-center">Your Details</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form"> 
-                    <fieldset class="px-3 mt-0 mb-2">
-                        <hr m-0>
-                        <p class="mb-1 mt-0 small text-muted">Shipping Details</p>
-                        <hr m-0>
+                    <fieldset class="px-3 mb-2">
+                        <hr class="d-none d-md-block m-0">
+                        <p class="my-0 small text-muted">Shipping Details</p>
+                        <hr class="m-0 mb-md-3">
                         {% csrf_token %}
                         {{ order_form | crispy}}
-                        <div class="form-check form-check-inline mr-0">
+                        <div class="form-check form-check-inline mb-md-4 mr-0">
                             {% if user.is_authenticated %}
                                 <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
@@ -89,9 +89,9 @@
                     </fieldset>
                     
                     <fieldset class="px-3 mb-1">
-                        <hr m-0>
-                        <p class="mb-1 mt-0 small text-muted">Payment Details</p>
-                        <hr m-0>
+                        <hr class="m-0">
+                        <p class="my-0 small text-muted">Payment Details</p>
+                        <hr class="m-0 mb-md-3">
                         <div class="mb-3" id="card-element"></div>
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     </fieldset>
@@ -100,6 +100,7 @@
         </div>    
     </div>
 {% endblock %}
+
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
