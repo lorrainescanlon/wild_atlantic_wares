@@ -310,6 +310,12 @@ footer span {
     color: black;
 }
 
+#basket-summary{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Media Queries */
 /* Make container bigger on xl screens */
 @media (min-width: 1200px) {
