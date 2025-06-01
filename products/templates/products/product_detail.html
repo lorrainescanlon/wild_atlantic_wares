@@ -76,7 +76,7 @@
                     <br>
                     <p>
                         <a class="text-black" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-care" aria-expanded="false" aria-controls="collapseExample">
-                        Care Instructions +
+                        Care Instructions &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
                         </a>
                     </p>
                     
@@ -87,7 +87,7 @@
                     </p>
                     <p>
                         <a class="text-black" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-shipping" aria-expanded="false" aria-controls="collapseShipping">
-                            Shipping +
+                            Shipping &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
                         </a>
                     </p>
                     <p class="collapse collapse-shipping">
@@ -122,4 +122,18 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('[data-toggle="collapse"]').on('click', function(){
+            if ($(this).attr('aria-expanded') == 'false') {
+                $(this).find('i').addClass('fa-minus').removeClass('fa-plus');
+                $(this).attr('aria-expanded') == 'true';          
+            } else {
+                $(this).find('i').addClass('fa-plus').removeClass('fa-minus');
+            }
+        });
+        
+    </script>
 {% endblock %}

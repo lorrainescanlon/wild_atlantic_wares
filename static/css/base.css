@@ -302,6 +302,14 @@ footer span {
     background-color: white;
 }
 
+.accordion-button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Lato';
+    font-size: 16px;
+    color: black;
+}
+
 /* Media Queries */
 /* Make container bigger on xl screens */
 @media (min-width: 1200px) {
