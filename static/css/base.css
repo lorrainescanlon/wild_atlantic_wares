@@ -302,6 +302,14 @@ footer span {
     background-color: white;
 }
 
+.bckgr-color {
+    background-color: #c9c2bd;
+}
+
+.modal-body {
+ align-self: center;
+}
+
 .accordion-button {
     background-color: transparent;
     border: none;
