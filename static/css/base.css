@@ -296,6 +296,12 @@ footer span {
     color: red;
 }
 
+/* Checkout Styles */
+
+.bckgr-white {
+    background-color: white;
+}
+
 /* Media Queries */
 /* Make container bigger on xl screens */
 @media (min-width: 1200px) {
