@@ -72,12 +72,12 @@
             {% include 'includes/mobile-basket-summary.html' %}    
             <div class="col-12 col-md-6 pl-md-5 mt-md-4">
                 <p class="text-muted text-center">Your Details</p>
-                <form action="{% url 'checkout' %}" method="POST" id="payment-form"> 
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %} 
                     <fieldset class="px-3 mb-2">
                         <hr class="my-0">
                         <p class="my-md-0 mb-0 small text-muted">Shipping Details</p>
                         <hr class="mt-0 mb-md-3">
-                        {% csrf_token %}
                         {{ order_form | crispy}}
                         <div class="form-check form-check-inline mb-md-4 mr-0">
                             {% if user.is_authenticated %}

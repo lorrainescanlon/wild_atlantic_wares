@@ -4,8 +4,6 @@ from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
-
 
 def basket(request):
     """A view to return the basket contents page"""

@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
+from django.views.decorators.http import require_POST
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -8,6 +9,24 @@ from products.models import Product
 from basket.contexts import basket_contents
 
 import stripe
+import json
+
+
+@require_POST
+def cache_checkout_data(request):
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'basket': json.dumps(request.session.get('basket', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
@@ -24,8 +43,8 @@ def checkout(request):
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
-            'street_address1': request.POST['address1'],
-            'street_address2': request.POST['address2'],
+            'address1': request.POST['address1'],
+            'address2': request.POST['address2'],
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
@@ -38,7 +57,7 @@ def checkout(request):
                         order=order,
                         product=product,
                         quantity=item_data,
-                    )
+                    )                   
                     order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
