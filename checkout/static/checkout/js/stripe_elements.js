@@ -113,7 +113,7 @@ form.addEventListener('submit', function(ev) {
             }
         });
     }).fail(function () {
-        // reload the page, the error will be in django messages
+        // reload the page, the error will be displayed using django messages
         location.reload();
     })
 });
