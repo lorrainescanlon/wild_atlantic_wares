@@ -17,7 +17,7 @@ class OrderAdmin(admin.ModelAdmin):
     fields = ('order_number', 'full_name', 'date',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'address1',
-              'address2', 'county', 'deivery_cost',
+              'address2', 'county', 'delivery_cost',
               'order_total', 'grand_total',)
     
     list_display = ('order_number', 'full_name', 'date',
@@ -28,3 +28,4 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Order, OrderAdmin)
+admin.site.register(OrderLineItem)
