@@ -46,13 +46,16 @@ def all_products(request):
                 display_category = request.GET['menu']
             else:
                 display_category = products.category.friendly_name
-                
+
+        if 'menu' in request.GET:
+            display_category = request.GET['menu']
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "Search criteria can not be blank")
                 return redirect(reverse('products'))
-                
+            
             queries = Q(name__icontains=query) | Q(
                  description__icontains=query)
             products = products.filter(queries)
