@@ -15,7 +15,7 @@
             </div>
         </div>
        
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
             <p>Your Basket ({{ product_count }})</p>
                 {% if free_delivery_diff > 0 %}
                     <p>Spend <strong>€{{ free_delivery_diff }}</strong> more to get free delivery!</p>

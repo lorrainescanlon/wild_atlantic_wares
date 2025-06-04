@@ -255,6 +255,9 @@ footer {
     width: 100%;
     padding-left: 10px;
     padding-top: 15px;
+    /*position: fixed;
+    left: 0;
+    bottom: 0;*/
 }
 
 footer a {
