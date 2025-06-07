@@ -1,9 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
+
 
 def profile(request):
     """ Display the user's profile"""
@@ -37,3 +39,20 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def update_profile(request):
+    if request.method == "POST":
+        profile = UserProfile.objects.get(user=request.user)
+        update_form = UserProfileForm(data=request.POST, instance=profile)
+       
+        if update_form.is_valid():
+            profile.save()
+            
+        #template = 'profiles/profile.html'
+        messages.add_message(
+            request, messages.SUCCESS,
+            'Profile Updated')
+
+    return HttpResponseRedirect(reverse('profile'))
+    #return render(request, template)
