@@ -56,12 +56,14 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
+            profile = UserProfile.objects.get(user=request.user)
             order.save()
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
                         order=order,
+                        user_profile=profile,
                         product=product,
                         quantity=item_data,
                     )                   

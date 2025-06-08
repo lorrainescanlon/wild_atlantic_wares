@@ -6,7 +6,7 @@ class ReviewForm(forms.ModelForm):
     """
     Form for submitting reviews
     """
-
+    
     class Meta:
         model = Review
         fields = ['product_review', 'rating', 'experience_review']
