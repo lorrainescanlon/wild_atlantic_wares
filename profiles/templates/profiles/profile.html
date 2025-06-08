@@ -15,49 +15,44 @@
 
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container-fluid bckgr-white">
         <div class="row">
             <div class="col">
                 <h2 class="menu-font m-4 text-center">Profile for {{ profile_name }}</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <p class="text-muted">Default Delivery Details</p>
-                <form id="profile-update-form" class="mt-3" method="post" action="{% url 'update_profile' %}">
-                    {{ form | crispy }}
-                    {% csrf_token %}
-                    <button id="submit-profile-update-form"  type="submit" class="btn btn-outline-dark text-uppercase my-2">Update</button>
-                </form>
-            </div>
-            <div class="col-12 col-lg-6">
-                <p class="text-muted">Order History</p>
-                <div class="order-history table-responsive">
-                    <table class="table table-sm table-borderless">
-                        <thead>
-                            <tr>
-                                <th>Order Number</th>
-                                <th>Date</th>
-                                <th>Items</th>
-                                <th>OrderTotal</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for order in orders %}
-                                <tr>
-                                    <td>
-                                        <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:6 }}
-                                        </a>
-                                    </td>
-                                    <td>{{ order.date }}</td>
-                                    <td>${{ order.grand_total }}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+            <div class="col-12 col-lg-5 p-4">
+                <div class="card-body p-2 mt-2">
+                    <div class="">
+                        <a href="" class="btn btn-profile-menu mt-1 p-2 w-100">
+                            <h5 class="px-3 py-2">Delivery Details</h5>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="{% url 'profile_orders' %}" class="btn btn-profile-menu mt-1 p-2 w-100">
+                            <h5 class="px-3 py-2">Order History</h5>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="" class="btn btn-profile-menu mt-1 p-2 w-100">
+                            <h5 class="px-3 py-2">Reviews</h5>
+                        </a>     
+                    </div>
                 </div>
+            </div>
+            <div class="col-12 col-lg-7 p-4">
+                <div class="card-body">
+                    <header class="card-header border">
+                        <h2 class="h5 mb-0 text-center">Default Delivery Details</h2>
+                    </header>
+                    <form id="profile-update-form" class="border p-4" method="post" action="{% url 'update_profile' %}">
+                        {{ form | crispy }}
+                        {% csrf_token %}
+                        <button id="submit-profile-update-form"  type="submit" class="btn btn-outline-dark text-uppercase my-2">Update</button>
+                    </form>
+                </div>
+                
             </div>
         </div>
     </div>

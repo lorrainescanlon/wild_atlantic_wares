@@ -233,6 +233,11 @@ main {
     border-radius: 5px;
 }
 
+.btn-profile-menu {
+    border-color:  rgb(66, 68, 56);
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.03);
+}
 
 .menu-grid {
     height: 20vh;
