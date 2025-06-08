@@ -212,7 +212,13 @@ main {
     border-radius: 10px;
 }
 
+.shop-button-br {
+    background: rgb(66, 68, 56);
+    color: white;
+    border-radius: 5px;
+}
 
+.shop-button-br i,
 .shop-button i {
     color: white;
 }
@@ -221,6 +227,12 @@ main {
     border-color:  rgb(66, 68, 56);
     border-radius: 10px;
 }
+
+.btn-outline-dark-br {
+    border-color:  rgb(66, 68, 56);
+    border-radius: 5px;
+}
+
 
 .menu-grid {
     height: 20vh;
