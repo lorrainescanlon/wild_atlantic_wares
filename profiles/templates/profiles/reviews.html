@@ -15,7 +15,7 @@
 
 
 {% block content %}
-    <div class="container-fluid bckgr-white border-btm">
+    <div class="container-fluid bckgr-white">
         <div class="row">
             <div class="col">
                 <h2 class="menu-font m-4 text-center">Profile for {{ profile_name }}</h2>
@@ -44,17 +44,11 @@
             <div class="col-12 col-lg-7 p-4">
                 <div class="card-body">
                     <header class="card-header border">
-                        <h2 class="h5 mb-0 text-center">Default Delivery Details</h2>
+                        <h2 class="h5 mb-0 text-center">Your Reviews</h2>
                     </header>
-                    <form id="profile-update-form" class="border p-4" method="post" action="{% url 'update_profile' %}">
-                        {{ form | crispy }}
-                        {% csrf_token %}
-                        <button id="submit-profile-update-form"  type="submit" class="btn btn-outline-dark text-uppercase my-2">Update</button>
-                    </form>
+                    
                 </div>
-                
             </div>
         </div>
     </div>
-
 {% endblock %}

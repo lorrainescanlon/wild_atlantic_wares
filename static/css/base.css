@@ -165,6 +165,11 @@ header hr {
     overflow-y: auto;
 }
 
+.border-btm {
+    border-bottom-color: #c9c2bd;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
 
 
 /* Body Styles */
@@ -234,9 +239,17 @@ main {
 }
 
 .btn-profile-menu {
-    border-color:  rgb(66, 68, 56);
+    /*border-color:  rgb(66, 68, 56);*/
+    border-color: #A6A6A6;
     border-radius: 5px;
     background-color: rgba(0,0,0,.03);
+}
+
+
+
+.card {
+    border-color: #c9c2bd ;
+    border-width: 1px;
 }
 
 .menu-grid {
@@ -245,6 +258,7 @@ main {
 
 .table-responsive {
     background-color: white;
+    border-color: #A6A6A6;
 }
 /*.product-grid-container {
     margin-top: 200px;

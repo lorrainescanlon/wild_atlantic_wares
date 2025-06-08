@@ -191,14 +191,14 @@
         <div class="row">
 			<div class="col-12 text-center">
                {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn shop-button btn-lg my-3">
+                    <a href="{% url 'profile' %}" class="btn shop-button my-3">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %} 
-				    <a href="{% url 'products' %}?category=deals,clearance&menu=All+Special+Offers" class="btn shop-button btn-lg my-3">
+				    <a href="{% url 'products' %}?category=deals,clearance&menu=All+Special+Offers" class="btn shop-button my-3">
 					    <span class="icon mr-2">
 						    <i class="fas fa-gifts"></i>
 					    </span>
