@@ -82,7 +82,7 @@ def submit_review(request):
 
             review = review_form.save(commit=False)
             review.user = profile
-            review.product = review_form.product.value()
+            review.product = review_form.product
             review.save()
 
             messages.add_message(
