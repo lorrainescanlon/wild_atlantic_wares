@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q, Avg
+from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 from reviews.models import Review
@@ -57,7 +58,7 @@ def all_products(request):
             if not query:
                 messages.error(request, "Search criteria can not be blank")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(
                  description__icontains=query)
             products = products.filter(queries)

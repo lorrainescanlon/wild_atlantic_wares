@@ -81,7 +81,6 @@
                     </p>
                 {% endif %}
             </div>
-            <div class="vr"></div>
             <div class="col-12 col-md-4 mb-3 p-3">
                 <div class="border">
                     <header class="card-header">
@@ -103,7 +102,7 @@
                         </div>
                         <hr>
                         <!-- Order total display -->
-                        <div class="d-flex justify-content-between fw-bold">
+                        <div class="d-flex justify-content-between">
                             <p class="mb-0">Subtotal:</p>
                             <p class="mb-0">€{{ grand_total|floatformat:2 }}</p>
                         </div>
@@ -133,7 +132,6 @@
                 {% endif %}   
             </div>
         </div>  
-        <hr class="w-100">  
     </div>
 {% endblock %}
 

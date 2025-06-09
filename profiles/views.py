@@ -46,12 +46,8 @@ def profile_orders(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, (
-        f'This is a past confirmation for order number {order_number}. '
-        'A confirmation email was sent on the order date.'
-    ))
-
-    template = 'checkout/checkout_success.html'
+    template = 'profiles/order_summary.html'
+    #template = 'checkout/checkout_success.html'
     context = {
         'order': order,
         'from_profile': True,
@@ -62,7 +58,6 @@ def order_history(request, order_number):
 
 def profile_reviews(request):
     profile = UserProfile.objects.get(user=request.user)
-    #profile = request.user
     form = ReviewForm(profile)
 
     template = 'profiles/reviews.html'
@@ -77,7 +72,6 @@ def profile_reviews(request):
 def submit_review(request):
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
-        #review_form = ReviewForm(data=request.POST, instance=review)
         review_form = ReviewForm(data=request.POST, profile=profile)
         if review_form.is_valid():
 
@@ -96,7 +90,6 @@ def submit_review(request):
             )
 
     return HttpResponseRedirect(reverse('profile'))
-
 
 
 def update_profile(request):
@@ -118,4 +111,3 @@ def update_profile(request):
             )
 
     return HttpResponseRedirect(reverse('profile'))
-    #return render(request, template)
