@@ -11,7 +11,7 @@
 
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container-fluid bckgr-light">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
@@ -105,7 +105,7 @@
                     <small class="text-muted">Reviews</small>
                 </p>
                 {% for review in reviews %}
-                    <div class="shadow-lg review-text p-2 reviews">
+                    <div class="shadow-lg review-text p-4 mt-2 reviews" style="border-radius: 10px;">
                         <p class="font-weight-bold">
                             {{ review.created_on }} &nbsp;|&nbsp;
                             <span class="font-weight-normal"> 

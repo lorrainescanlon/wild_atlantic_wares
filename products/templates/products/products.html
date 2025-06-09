@@ -11,7 +11,7 @@
 
 
 {% block content %}
-    <div class="container">
+    <div class="container-fluid bckgr-light">
         <div class="row">
             <div class="col text-center pt-2">
                 <h4 class="menu-font">
@@ -21,12 +21,12 @@
                         {{ display_category }}
                     {% endif %}
                 </h4>  
-           </div>
+        </div>
         </div>
         <div class="row">
-           <div class="col my-auto d-flex justify-content-center justify-content-md-end">
+            <div class="col my-auto d-flex justify-content-center justify-content-md-end pb-2">
                 <div class="sort-select-wrapper w-sm-50 w-md-20">
-                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border-none">
                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -38,11 +38,10 @@
         </div>
 
         <div class="row">
-            <div class="product-container col-12 ">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
+            <div class="product-container col-12 px-4">
+                <div class="row mt-1 mb-2">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 mb-5">
+                        <div class="col-sm-6 col-md-6 col-lg-4 mb-5 px-3">
                             <div class="card h-100 border-0">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
@@ -54,7 +53,7 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <p class="mb-0"><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
@@ -75,13 +74,15 @@
                     {% endfor %}    
                 </div>
             </div>
+        </div>    
+        <div class="back-to-top">
+            <a class="btt-link btn btn-outline-dark-br ml-3 mb-3">
+                Back to Top &nbsp; <i class="fa-solid fa-arrow-up"></i>
+            </a>
         </div>
     </div>
-    <div class="back-to-top">
-        <a class="btt-link btn btn-outline-dark-br ml-3 mb-3">
-            Back to Top &nbsp; <i class="fa-solid fa-arrow-up"></i>
-        </a>
-    </div>
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}
