@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container-fluid bckgr-white border-btm">
+        <div class="row">
+            <div class="col">
+                <h2 class="menu-font m-4 text-center">Product Management</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6 p-4">
+               <div class="card-body">
+                    <header class="card-header border">
+                        <h2 class="h5 mb-0 text-center">Edit a Product</h2>
+                    </header>
+                    <form method="POST" action="{% url 'edit_product' product.id %}" class="border form mb-2 p-4" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{form | crispy}}
+                        <div class="text-right">
+                            <a class="btn btn-outline-dark" href="{% url 'products' %}">Cancel</a>
+                            <button class="btn shop-button" type="submit">Update Product</button>
+                        </div>
+                    </form>
+                </div>    
+            </div>
+            <div class="col-12 col-lg-6 p-4">
+            </div>
+        </div>
+    </div>
+{% endblock %}
