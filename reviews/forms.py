@@ -10,12 +10,6 @@ class ReviewForm(forms.ModelForm):
     """
     product = forms.ModelChoiceField(queryset=None)
 
-    def __init__(self, profile, *args, **kwargs):
-        super(ReviewForm, self).__init__(*args, **kwargs)
-
-        self.fields['product'].queryset = OrderLineItem.objects.filter(
-                                        user_profile=profile)
-
     class Meta:
         model = Review
         fields = ['product', 'product_review', 'rating', 'experience_review']
@@ -27,3 +21,10 @@ class ReviewForm(forms.ModelForm):
             'experience_review': 'Feedback on your experience'
         }
         widgets = {}
+
+    def __init__(self, profile, *args, **kwargs):
+        #super().__init__(*args, **kwargs)
+        super(ReviewForm, self).__init__(*args, **kwargs)
+
+        self.fields['product'].queryset = OrderLineItem.objects.filter(
+                                        user_profile=profile)
