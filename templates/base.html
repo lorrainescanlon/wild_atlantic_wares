@@ -77,7 +77,7 @@
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="" class="dropdown-item body-font">Product Management</a>
+                                <a href="{% url 'add_product' %}" class="dropdown-item body-font">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item body-font">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item body-font">Logout</a>
@@ -157,7 +157,7 @@
         {% endblock %}
    
         <footer style="background-color: white;">
-            <div class="container-fluid border-top mt-0 pt-3">
+            <div class="container-fluid border-top pt-3">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h5>Subscribe to our Newsletter!</h5>

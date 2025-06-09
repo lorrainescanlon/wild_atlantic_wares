@@ -38,7 +38,11 @@
                             {% for item in basket_items %}
                                 <tr class="border">
                                     <td class="p-lg-3 text-md-center">
-                                        <img class="img-fluid" src="{{ item.product.image.url }}" style="max-width: 100px;">
+                                        {% if item.product.image %}
+                                        <img class="w-100" src="{{ item.product.image.url }}" style="max-width: 100px;" alt="{{ item.product.name }}">
+                                        {% else %}
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" style="max-width: 100px;" alt="{{ item.product.name }}">
+                                        {% endif %}
                                     </td>
                                     <td class="p-lg-3 w-md-25">
                                         <p class=""><strong>{{ item.product.name }}</strong></p>
