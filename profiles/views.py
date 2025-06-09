@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -10,10 +11,11 @@ from reviews.forms import ReviewForm
 from products.models import Product
 
 
+@login_required
 def profile(request):
     """ Display the user's profile"""
     profile = get_object_or_404(UserProfile, user=request.user)
-    
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -23,7 +25,7 @@ def profile(request):
             messages.error(request, 'Update failed. Please ensure your form data is valid')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
@@ -37,6 +39,7 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def profile_orders(request):
     profile = get_object_or_404(UserProfile, user=request.user)
     profile_name = request.user
@@ -52,6 +55,7 @@ def profile_orders(request):
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -65,6 +69,7 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
+@login_required
 def profile_reviews(request):
     profile = UserProfile.objects.get(user=request.user)
     form = ReviewForm(profile)
@@ -78,6 +83,7 @@ def profile_reviews(request):
     return render(request, template, context)
 
 
+@login_required
 def submit_review(request):
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
@@ -101,6 +107,7 @@ def submit_review(request):
     return HttpResponseRedirect(reverse('profile'))
 
 
+@login_required
 def update_profile(request):
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
