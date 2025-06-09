@@ -35,7 +35,7 @@
                         </a>
                     </div>
                     <div class="">
-                        <a href="" class="btn btn-profile-menu mt-1 p-2 w-100">
+                        <a href="{% url 'profile_reviews' %}" class="btn btn-profile-menu mt-1 p-2 w-100">
                             <h5 class="px-3 py-2">Reviews</h5>
                         </a>     
                     </div>
@@ -44,9 +44,13 @@
             <div class="col-12 col-lg-7 p-4">
                 <div class="card-body">
                     <header class="card-header border">
-                        <h2 class="h5 mb-0 text-center">Your Reviews</h2>
+                        <h2 class="h5 mb-0 text-center">Leave a Review</h2>
                     </header>
-                    
+                    <form id="profile-update-form" class="border p-4" method="post" action="{% url 'update_profile' %}">
+                        {{ form | crispy }}
+                        {% csrf_token %}
+                        <button id="submit-profile-update-form"  type="submit" class="btn btn-outline-dark text-uppercase my-2">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>

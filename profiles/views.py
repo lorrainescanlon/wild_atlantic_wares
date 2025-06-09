@@ -5,6 +5,8 @@ from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
+from reviews.models import Review
+from reviews.forms import ReviewForm
 
 
 def profile(request):
@@ -56,6 +58,19 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
+def profile_reviews(request):
+    profile = UserProfile.objects.get(user=request.user)
+    form = ReviewForm(profile)
+
+    template = 'profiles/reviews.html'
+    context = {
+        'form': form,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)
+
+
 def update_profile(request):
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
@@ -64,7 +79,6 @@ def update_profile(request):
         if update_form.is_valid():
             profile.save()
 
-        #template = 'profiles/profile.html'
             messages.add_message(
                 request, messages.SUCCESS,
                 'Profile Updated'

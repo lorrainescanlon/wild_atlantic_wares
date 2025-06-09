@@ -11,7 +11,7 @@ class ReviewAdmin(admin.ModelAdmin):
         'rating',
         'product_review',
         'experience_review',
-        'author',
+        'user',
         'approved',
     )
 
