@@ -97,7 +97,7 @@ def submit_review(request):
             )
 
     return HttpResponseRedirect(reverse('profile'))
-    #return render(request, template)
+
 
 
 def update_profile(request):
