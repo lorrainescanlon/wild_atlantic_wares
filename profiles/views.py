@@ -7,6 +7,7 @@ from .forms import UserProfileForm
 from checkout.models import Order
 from reviews.models import Review
 from reviews.forms import ReviewForm
+from products.models import Product
 
 
 def profile(request):
@@ -82,7 +83,7 @@ def submit_review(request):
 
             review = review_form.save(commit=False)
             review.user = profile
-            review.product = review_form.product
+            #review.product = review_form.product
             review.save()
 
             messages.add_message(
