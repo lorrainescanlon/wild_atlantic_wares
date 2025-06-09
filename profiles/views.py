@@ -74,14 +74,15 @@ def profile_reviews(request):
 
 
 def submit_review(request):
-    template = 'profiles/reviews.html'
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
-        review_form = ReviewForm(data=request.POST, instance=profile)
-
+        #review_form = ReviewForm(data=request.POST, instance=review)
+        review_form = ReviewForm(data=request.POST, profile=profile)
         if review_form.is_valid():
+
             review = review_form.save(commit=False)
-            review.user = request.user
+            review.user = profile
+            review.product = review_form.product.value()
             review.save()
 
             messages.add_message(
@@ -94,8 +95,8 @@ def submit_review(request):
                 'Review submission failed. Please ensure form fields are valid.'
             )
 
-    #return HttpResponseRedirect(reverse('profile'))
-    return render(request, template)
+    return HttpResponseRedirect(reverse('profile'))
+    #return render(request, template)
 
 
 def update_profile(request):
