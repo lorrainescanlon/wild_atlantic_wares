@@ -16,6 +16,7 @@ def all_products(request):
     display_category = None
 
     Review.objects.filter(approved=True)
+    reviews = Product.reviews.filter()
     products = Product.objects.annotate(rating=Avg(('reviews__rating')))
 
     if request.GET:

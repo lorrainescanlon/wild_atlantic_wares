@@ -15,7 +15,7 @@ class Review(models.Model):
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE,
                                 related_name="reviews")
-    user = models.ForeignKey(User, on_delete=models.CASCADE,
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE,
                              related_name="reviewer")
     product_review = models.TextField(max_length=400)
     experience_review = models.TextField(max_length=400)
@@ -28,4 +28,4 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.product} {self.rating} \
-            review by {self.author} * on {self.created_on}"
+            review by {self.user} * on {self.created_on}"
