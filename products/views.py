@@ -102,7 +102,7 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the shop """
     if not request.user.is_superuser:
-        messages.error(request, 'Only Administrators can manage Products')
+        messages.error(request, 'Only authorised users can manage Products')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -129,7 +129,7 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Edit an existing product """
     if not request.user.is_superuser:
-        messages.error(request, 'Only Administrators can manage Products')
+        messages.error(request, 'Only authorised users can manage Products')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -160,7 +160,7 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Delete an existing product """
     if not request.user.is_superuser:
-        messages.error(request, 'Only Administrators can manage Products')
+        messages.error(request, 'Only authorised users can manage Products')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
