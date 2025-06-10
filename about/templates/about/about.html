@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container-fluid bckgr-white border-btm">
+        <div class="row">
+            <div class="col">
+                <h2 class="menu-font m-4 text-center">About Us</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-4">
+                <div class="card-body p-2 mt-2">
+                    <p>Team Image here</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 p-4">
+                <div class="card-body">
+                    <header class="card-header border">
+                        <h2 class="h5 mb-0 text-center">Our Story/h2>
+                    </header>
+                    <div><p>story details here</p></div>
+                </div>      
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

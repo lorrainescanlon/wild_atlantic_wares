@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container-fluid bckgr-white border-btm">
+        <div class="row">
+            <div class="col">
+                <h2 class="menu-font m-4 text-center">Profile for {{ profile_name }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-4">
+                <div class="card-body p-2 mt-2">
+                    <div class="">
+                        <a class="text-black" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-care" aria-expanded="false" aria-controls="collapseExample">
+                            Shipping &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                       </a>
+                        <p class="collapse collapse-care">
+                            We recommend washing all of your ceramic pieces by hand. Gently scrub them with a soft sponge or cloth using mild soap and warm water. 
+                            Avoid using abrasive scrubbers or harsh chemicals, which can damage the glaze. After washing, let your ceramics air dry naturally.
+                            <hr class="collapse collapse-care">
+                        </p>
+                    </div>
+                    <div class="">
+                       <a class="text-black" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-shipping" aria-expanded="false" aria-controls="collapseShipping">
+                            Returns & Refunds &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                       </a>
+                        <p class="collapse collapse-shipping">
+                            Shipping is free on orders in excess of €100.<br> 
+                            A fee of 20% of the Order value applies on all other orders.<br>
+                            Local pick up can be arranged.
+                            <hr class="collapse collapse-shipping">
+                        </p>
+                    </div>
+                    <div class="">
+                        <a class="text-black" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-shipping" aria-expanded="false" aria-controls="collapseShipping">
+                            Shipping &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                       </a>
+                        <p class="collapse collapse-shipping">
+                            Shipping is free on orders in excess of €100.<br> 
+                            A fee of 20% of the Order value applies on all other orders.<br>
+                            Local pick up can be arranged.
+                            <hr class="collapse collapse-shipping">
+                        </p>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('[data-toggle="collapse"]').on('click', function(){
+            if ($(this).attr('aria-expanded') == 'false') {
+                $(this).find('i').addClass('fa-minus').removeClass('fa-plus');
+                $(this).attr('aria-expanded') == 'true';          
+            } else {
+                $(this).find('i').addClass('fa-plus').removeClass('fa-minus');
+            }
+        });
+        
+    </script>
+{% endblock %}
+
