@@ -300,6 +300,9 @@ footer {
     /*position: fixed;
     left: 0;
     bottom: 0;*/
+    border-top-color: #c9c2bd /*rgb(66, 68, 56)*/ !important;
+    border-top-style: solid !important;
+    border-top-width: 1.5px !important;
 }
 
 footer a {

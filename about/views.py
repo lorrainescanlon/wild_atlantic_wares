@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
-from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.contrib import messages
+from .models import Contact, Faq
+from .forms import ContactForm
 
 
 def about(request):
@@ -10,14 +12,31 @@ def about(request):
 
 def contact_us(request):
     """A view to return the contact page"""
+    if request.method == "POST":
+        contact_form = ContactForm(data=request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            messages.add_message(
+                request, messages.SUCCESS, 'Contact form recieved! '
+                'We appreciate your feedback & will be in contact shortly.')
 
-    return render(request, 'about/contact.html')
+    contact_form = ContactForm()
+    context = {
+        'form': contact_form,
+    }
+
+    return render(request, 'about/contact.html', context,)
 
 
 def faq_list(request):
     """A view to return the faq page"""
+    faqs = Faq.objects.all()
 
-    return render(request, 'about/faq.html')
+    context = {
+        'faqs': faqs,
+    }
+
+    return render(request, 'about/faq.html', context,)
 
 
 def privacy_policy(request):

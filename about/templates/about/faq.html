@@ -15,7 +15,7 @@
 
 
 {% block content %}
-    <div class="container-fluid bckgr-white border-btm">
+    <div class="container-fluid bckgr-white">
         <div class="row">
             <div class="col">
                 <h2 class="menu-font m-4 text-center">Frequently Asked Questions</h2>
@@ -24,55 +24,16 @@
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2 p-4">
                 <div class="card-body">
-                    <div class="card-body border">
-                        <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-care" aria-expanded="false" aria-controls="collapseExample">
-                            Shipping &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
-                       </a>
-                        <p class="collapse collapse-care pt-3">
-                            We recommend washing all of your ceramic pieces by hand. Gently scrub them with a soft sponge or cloth using mild soap and warm water. 
-                            Avoid using abrasive scrubbers or harsh chemicals, which can damage the glaze. After washing, let your ceramics air dry naturally.
-                        </p>
-                    </div>
-                    <div class="card-body border">
-                       <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-returns" aria-expanded="false" aria-controls="collapseShipping">
-                            Returns & Refunds &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
-                       </a>
-                        <p class="collapse collapse-returns pt-3">
-                            Shipping is free on orders in excess of €100.<br> 
-                            A fee of 20% of the Order value applies on all other orders.<br>
-                            Local pick up can be arranged.
-                        </p>
-                    </div>
-                    <div class="card-body border">
-                        <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-account" aria-expanded="false" aria-controls="collapseShipping">
-                            Account Registration &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
-                       </a>
-                        <p class="collapse collapse-account pt-3">
-                            Shipping is free on orders in excess of €100.<br> 
-                            A fee of 20% of the Order value applies on all other orders.<br>
-                            Local pick up can be arranged.
-                        </p>
-                    </div>
-                    <div class="card-body border">
-                        <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-payments" aria-expanded="false" aria-controls="collapseShipping">
-                            Payments Accepted &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
-                       </a>
-                        <p class="collapse collapse-payments pt-3">
-                            Shipping is free on orders in excess of €100.<br> 
-                            A fee of 20% of the Order value applies on all other orders.<br>
-                            Local pick up can be arranged.
-                        </p>
-                    </div>
-                    <div class="card-body border">
-                        <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-other" aria-expanded="false" aria-controls="collapseShipping">
-                            Other &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
-                       </a>
-                        <p class="collapse collapse-other pt-3">
-                            Shipping is free on orders in excess of €100.<br> 
-                            A fee of 20% of the Order value applies on all other orders.<br>
-                            Local pick up can be arranged.
-                        </p>
-                    </div>
+                    {% for faq in faqs %}
+                        <div class="card-body border">
+                            <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-{{ faq.id }}" aria-expanded="false" aria-controls="collapseExample">
+                                {{ faq.title }} &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                        </a>
+                            <p class="collapse collapse-{{ faq.id }} pt-3">
+                                {{ faq.body }}
+                            </p>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
