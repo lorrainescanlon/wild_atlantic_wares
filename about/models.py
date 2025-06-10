@@ -13,4 +13,4 @@ class Contact(models.Model):
     created_on = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return f"Contact form {self.name}"
+        return f"Contact form {self.name} {self.created_on}"
