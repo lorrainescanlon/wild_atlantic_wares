@@ -28,7 +28,9 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profiles/', include('profiles.urls')),
     path('about/', include('about.urls')),
+    path('summernote/', include('django_summernote.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 handler403 = 'wild_atlantic_wares.views.handler403'
 handler404 = 'wild_atlantic_wares.views.handler404'
 handler405 = 'wild_atlantic_wares.views.handler405'
