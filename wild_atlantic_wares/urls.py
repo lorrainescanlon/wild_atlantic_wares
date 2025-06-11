@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404
 
 
 urlpatterns = [
@@ -30,5 +29,7 @@ urlpatterns = [
     path('profiles/', include('profiles.urls')),
     path('about/', include('about.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-handler404 = 'wild_atlantic_wares.handler404'
+handler403 = 'wild_atlantic_wares.views.handler403'
+handler404 = 'wild_atlantic_wares.views.handler404'
+handler405 = 'wild_atlantic_wares.views.handler405'
+handler500 = 'wild_atlantic_wares.views.handler500'

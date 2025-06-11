@@ -1,5 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid bckgr-white">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-2 my-auto">
+                <div class="text-center">
+                    <h1 class="display-4 logo-font text-black">
+                        Error 500
+                    </h1>
+                    <h2>
+                        Internal Server Error
+                    </h2>
+                    <p>
+                        Sorry, our server experienced a problem!
+                        Try to refresh this page.
+                        If the problem persists please contact us.
+                    </p>
+                    <div class="my-5">
+                        <h4>
+                            <a href="{% url 'products' %}?menu=All+Products"
+                                class="btn btn-outline-dark text-uppercase py-3">
+                                    Return to shop
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 <div class="container header-container">
     <div class="row">
@@ -10,12 +51,20 @@
     <div class="row h-100">
         <div class="col-7 col-md-6 my-auto">
             <h1 class="display-4 logo-font text-black">
-                Sorry, something went wonrg!
+                Error 500
             </h1>
+            <h2>
+                Internal Server Error
+            </h2>
+            <p>
+                Sorry, our server experienced a problem!
+                Try to refresh this page.
+                If the problem persists please contact us.
+            </p>
             <div class="my-5">
                 <h4>
-                    <a href="" 
-                        class="btn btn-lg rounded-0 text-uppercase py-3">
+                    <a href="{% url 'products' %}?menu=All+Products" 
+                        class="btn btn-outline-dark text-uppercase py-3">
                             Return to shop
                     </a>
                 </h4>

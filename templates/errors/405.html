@@ -15,18 +15,18 @@
             <div class="col-12 col-md-6 offset-md-2 my-auto">
                 <div class="text-center">
                     <h1 class="display-4 logo-font text-black">
-                        Error 404
+                        Error 405
                     </h1>
                     <h2>
-                        Not Found
+                        Method Not Allowed
                     </h2>
                     <p>
-                        The page you are looking for isn't available.
+                        The resource you are requesting doesn't support the request method. 
                         Please ensure you are using the correct URL.
                     </p>
                     <div class="my-5">
                         <h4>
-                            <a href="{% url 'products' %}?menu=All+Products"
+                            <a href="{% url 'products' %}?menu=All+Products" 
                                 class="btn btn-outline-dark text-uppercase py-3">
                                     Return to shop
                             </a>
