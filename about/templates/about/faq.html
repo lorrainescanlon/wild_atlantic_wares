@@ -27,10 +27,10 @@
                     {% for faq in faqs %}
                         <div class="card-body border">
                             <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-{{ faq.id }}" aria-expanded="false" aria-controls="collapseExample">
-                                {{ faq.title }} &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                                {{ faq.title | safe }} &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
                         </a>
                             <p class="collapse collapse-{{ faq.id }} pt-3">
-                                {{ faq.body }}
+                                {{ faq.body | safe }}
                             </p>
                         </div>
                     {% endfor %}
