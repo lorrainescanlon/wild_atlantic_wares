@@ -35,7 +35,7 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+                products = products.order_by(sortkey)
 
             if 'menu' in request.GET:
                 display_category = request.GET['menu']
