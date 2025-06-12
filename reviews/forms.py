@@ -24,7 +24,6 @@ class ReviewForm(forms.ModelForm):
         widgets = {}
 
     def __init__(self, profile, *args, **kwargs):
-        #super().__init__(*args, **kwargs)
         super(ReviewForm, self).__init__(*args, **kwargs)
         orderded_items = OrderLineItem.objects.filter(user_profile=profile)
         product_ids = orderded_items.values_list('product__id', flat=True).distinct()

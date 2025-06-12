@@ -11,12 +11,13 @@ import stripe
 import json
 import time
 
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
     def __init__(self, request):
         self.request = request
-    
+
     def _send_confirmation_email(self, order):
         """
         Send order confirmation email
@@ -28,7 +29,7 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
@@ -85,7 +86,7 @@ class StripeWH_Handler:
         # Check whether order exists in database
         order_exists = False
         attempt = 1
-        while attempt <=5:
+        while attempt <= 5:
             try:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,

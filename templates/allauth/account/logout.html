@@ -13,7 +13,7 @@
     </div>
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <p>{% blocktrans %}'Are you sure you want to sign out?{% endblocktrans %}</p>
+        <p>{% blocktrans %}Are you sure you want to sign out?{% endblocktrans %}</p>
         <form method="post" action="{% url 'account_logout' %}">
           {% csrf_token %}
           {% if redirect_field_value %}

@@ -66,7 +66,7 @@ def checkout(request):
                         user_profile=profile,
                         product=product,
                         quantity=item_data,
-                    )                   
+                    )
                     order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
