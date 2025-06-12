@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://wild-atlantic-wares-858dcca4bf04.herokuapp.com/sitemap/xml

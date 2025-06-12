@@ -94,8 +94,12 @@ The user is presented with a landing page which ... From here the user can brows
   - **_Register:_** A page to register for a user account.
   - **_Login:_** A page where users to log in.
   - **_Logout:_** A page where users log out.
-  - **_Contact:_** A page with a contact form.
+  - **_Profile:_** A page detailing the crafters story.
+  - **_Order History:_** A page detailing the crafters story.
+  - **_Reviews:_** A page detailing the crafters story.
   - **_About:_** A page detailing the crafters story.
+  - **_FAQ:_** A page detailing the crafters story.
+  - **_Contact:_** A page with a contact form.
   - **_Footer:_** A footer containing social media links and newsletter subscription.
 
 - **Skeleton**:

@@ -329,6 +329,11 @@ footer span {
     border-radius: 0 10px 10px 0;
 }
 
+/* Mailchimp styles */
+#mc_embed_signup{
+    background:#fff; 
+    clear:left; 
+}
 
 .btt-link {
     cursor: pointer;

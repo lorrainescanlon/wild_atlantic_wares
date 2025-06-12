@@ -20,7 +20,8 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="{% static 'css/base.css' %}"> 
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock %}
 
         {% block extra_css %}
@@ -41,7 +42,7 @@
 
         <title>Wild Atlantic Wares {% block extra_title %}{% endblock %}</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/png" href="/media/vase.png">
+        <link rel="icon" type="image/png" href="https://wild-atlantic-wares.s3.eu-west-1.amazonaws.com/media/vase.png">
 
     </head>
 
@@ -151,26 +152,43 @@
         <footer style="background-color: white;">
             <div class="container-fluid pt-3">
                 <div class="row px-sm-2">
-                    <div class="col-12 text-center">
-                        <h5>Subscribe to our Newsletter!</h5>
-                    </div>
-                    <div class="col-12 center pt-1 pb-3">
-                     <form id="newsletter-form" class="d-flex justify-content-center">
-                        <div class="">
-                            <div class="input-group">
-                                <input type="email" id="newsletter-email" class="form-control subscribe-box" placeholder="Enter your email">
-                                <button type="submit" id="newsletter-submit" class="btn subscribe-button " aria-label="Subscribe to newsletter">Subscribe</button>
+                    <div class="col-12 text-center pt-1 pb-3">
+                        <div class="row" id="mc_embed_shell">
+                            <div class="col-12 col-md-6 offset-md-3 offset-lg-3" id="mc_embed_signup">
+                                <form action="https://herokuapp.us12.list-manage.com/subscribe/post?u=52c91df7cc6b5241d4bfb2cc8&amp;id=200287f467&amp;f_id=007be1e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                    <div id="mc_embed_signup_scroll">
+                                        <h2 class="text-center">Subscribe to our Newsletter</h2>
+                                        <div class="mc-field-group">
+                                            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                                        </div>
+                                    </div>
+                                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                                        <input type="text" name="b_52c91df7cc6b5241d4bfb2cc8_200287f467" tabindex="-1" value="">
+                                    </div>
+                                    <div class="optionalParent">
+                                        <div class="clear foot">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                        </div>
+                                    </div>
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </div>    
                 <div class="row pl-md-5 pt-md-2 border-top">
                     <div class="col-12 col-md-4 py-3">
-                        <h3>Wild Atlantic Wares</h3>
-                        <p>We are more than an online shop. We are crafters who pour hours into creating these pieces of pottery for our customer.
-                            We take inspiration from the unique landscape that is the <strong>Wild Atlantic Way</strong>. The colours and textures of this rugged 
-                            environment come through in our work. We hope you enjoy it as much as we do!
-                        </p>
+                        <article>
+                            <h3>Wild Atlantic Wares</h3>
+                            <p>We are more than an online shop. We are crafters who pour hours into creating these pieces of pottery for our customer.
+                                We take inspiration from the unique landscape that is the <strong>Wild Atlantic Way</strong>. The colours and textures of this rugged 
+                                environment come through in our work. We hope you enjoy it as much as we do!
+                            </p>
+                        </article>
                     </div>
                     <div class="col-12 col-md-4 pl-md-5 py-3">
                         <h3>Useful Links</h3>
@@ -181,12 +199,12 @@
                     </div>
                     <div class="col-12 col-md-4  py-3">
                         <h3>Connect with Us</h3>
-                        <a href="{% url 'contact' %}" target=""><i class="fa-solid fa-house"></i></i> Dingle, Ireland</a><br>
+                        <a href="{% url 'contact' %}" target=""><i class="fa-solid fa-house"></i></i><strong> Dingle, Ireland</strong></a><br>
                         <a href="{% url 'contact' %}" target=""><i class="fa-solid fa-envelope"></i> info@wildatlanticwares.com</a><br>
                         <a href="{% url 'contact' %}" target=""><i class="fa-solid fa-phone"></i> +353 86 8774693</a><br>
                         <div class="row socials">
                             <span>
-                                <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61576963876705" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
                             </span>
                             <span>
                                 <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -202,5 +220,8 @@
                 </div>
             </div>
         </footer>
+        <!-- MailChimp scripts -->
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     </body>
 </html
