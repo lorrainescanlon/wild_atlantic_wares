@@ -176,11 +176,10 @@ header hr {
 
 
 /* Body Styles */
-main {
-    /*background-image: url('/media/potters_wheel.jpg');*/
+main {/*
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 .hero-section {
@@ -387,5 +386,9 @@ footer span {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 114px;
+    }
+
+    .hero-section {
+    height: 50vh;
     }
 }  
