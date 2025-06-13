@@ -3,13 +3,13 @@ Wild atlantic wares
 
 ## Code Institute - Portfolio Project 5 - ECommerce 
 
-Wild Atlantic Wares is an ecommerce website featuring full CRUD frunctionality and web marketing.
-This platform allows users to share their experiences and rate products they have purchased as well as their shopping experience.
-
+Wild Atlamtic Wares is an online ecommerce platform bringing our hand crafted pottery to its target audience.
+This platform allows users to browse our current catalogue and share their experiences by reviewing products they have purchased.
+Wild Atlantic Wares features full CRUD frunctionality and web marketing initiatives like email subscription and social media.
 ## Demo
 ![How the website looks on different devices](/static/docs/images/)
 
-A live demo of the site can be found [here]()
+A live demo of the site can be found [here](https://wild-atlantic-wares-858dcca4bf04.herokuapp.com/)
 
 ## Tabe of Contents
 - [Site Goals](#site-goals)
@@ -68,7 +68,7 @@ A live demo of the site can be found [here]()
 
 
 ## Site Goals
-- To provide a website where users can browse for and buy Irish handmade craft.
+- To provide a website where users can browse for and buy Irish handmade pottery.
 - To engage with users and enable them to review and rate products and experiences.
 - To encourage would be visitors to buy products by sharing reviews and ratings.
 - Use review feedback to improve the products and user experience. 
@@ -76,7 +76,7 @@ A live demo of the site can be found [here]()
 
 
 ## UI/UX
-This website is aimed at people who wish to buy ceramic wear. 
+This website is aimed at people who wish to buy handmade pottery. Its objective is to encourage users to buy locally made pottery.
 
 - **Strategy**: 
 The goal is to sell pottery products and promote Irish craft.
@@ -100,6 +100,7 @@ The user is presented with a landing page which ... From here the user can brows
   - **_About:_** A page detailing the crafters story.
   - **_FAQ:_** A page detailing the crafters story.
   - **_Contact:_** A page with a contact form.
+  - **_Provacy Policy:_** A page containing the sites privacy policy.
   - **_Footer:_** A footer containing social media links and newsletter subscription.
 
 - **Skeleton**:
@@ -112,50 +113,72 @@ More on this is the design section below.
 
 ### Agile
 This project was designed and built using the agile approach. The first step in this process was to create the user stories which address the expectations and needs of the site users.
-Each user story had acceptance criteria defined and was managed through stages on a Kanban board
+Tasks were then created and updated as the project moved along and acceptance criteria was met, until all tasks were completed.
 
 #### User Stories
+The following User Stories were created to fulfill the expectations and needs of the site users.
 
 | **User Stories** |
 | --- |
-| As a site user I can  |
-| As a site user I can  |
-| As a Site User I can  |
-| As a Site User I can  |
-| As a Site User I can |
-| As a Site Admin I can |
-| As a Site Admin I can |
-| As a Site Admin I can |
-| As a Site Admin I can |
-| As a Site Administrator I |
+| As a site user I can | view a list of products so that I can make a purchase. |
+| As a site user I can | view a specific category so that I can find items I am interested in. |
+| As a Site User I can | sort a list of products so that I can find items based on my needs. |
+| As a Site User I can | I can sort a category of products so that I can identify items based on my needs. |
+| As a Site User I can | I can search for a product so that I can find items I want to buy. |
+| As a Site User I can | view product details so that I can purchase the correct item. |
+| As a Site User I can | view deals and offers so that I can make savings on purchases. |
+| As a Site User I can | view the total of my shopping cart so that I avoid over spending. |
+| As a Site User I can | I can select the quantity of a product so that I can purchase the correct amount. |
+| As a Site User I can | view the items in my shopping cart so that I can ensure they are correct and that I can view the total cost.|
+| As a Site User I can | adjust the items in my shopping cart so that I buy only what I want to. |
+| As a Site User I can | enter my payment and shipping details so that I can complete my purchase |
+| As a Site User I can | view an order confirmation so that I can verify that my purchase has been successful.|
+| As a Site User I can | receive an email order confirmation so that I can keep a record of my purchase. |
+| As a Site User I can | register an account so that I can create a personal profile.|
+| As a Site User I can | login to my personalized account so that I can view my purchase history.|
+| As a Site User I can | review a product so that I can provide feedback and inform future customers.|
+| As a Site Administrator I can | add a product so that I can add new items to my shop. |
+| As a Site Administrator I can | update a product so that I can make changes to items in my shop. |
+| As a Site Administrator I can | delete a product so that I can remove items that are no longer in stock|
+
+
+#### Github Project
+I created a GitHub Project to help manage the development of the site [GitHub project](https://github.com/users/lorrainescanlon/projects/5).
+Issues were created for user stories with acceptance criteria defined for each. Tasks were created for user stories and grouped into epics with milestones applied to epics. Tasks were managed through the various stages and states using a Kanban board ![Kanban](/static/docs/images/)
 
 #### MosCow Priorization
 Based on MoSCow Prioritization principles (Must have, Should have, Could have, Won't have), the following feature sets were identified.
 Must Have Features
-    - 
+    - Product browsing
+    - Product filtering
+    - Product sorting
+    - Product search
+    - Shopping basket and checkout
+    - Payment processing
+    - Status messages
+    - Email notifications
+    - Product management
 
 Should Have Features
-    -
+    - User profile order history
+    - Use profile reviews
+    - User profile management
 
 Could Have Features
-    -
+    - Newletter Subscription
+    - Related Products recommendations
+    - Contact form
 
 Won't have Features
-    -
-
-
-I created a [GitHub project](https://github.com/users/lorrainescanlon/projects/3) and utilised the provided Kanban board method to manage user stories and tasks. Tasks were grouped into epics with milestones applied to epics.
-The Kanban board was updated as the project moved along and acceptance criteria was met, until all tasks were completed.
-
-![Kanban](/static/docs/images/)
+    - Social media login integration
+    - Wishlist functionality
 
 
 ### Wireframes
-Wireframes were created using Figma software. The initial designs met basic early requirements that have evolved since. View the wireframe designs here ![Wireframes](/static/docs/)
+Wireframes were created using Balsamiq software. The initial designs met basic early requirements that have evolved since. View the wireframe designs here ![Wireframes](/static/docs/)
 
-![Wireframe1](/static/docs/images/)
+![Wireframes](wireframes.pdf)
 
-![Wireframe2](/static/docs/images/)
 
 
 ### Design
@@ -400,10 +423,16 @@ Ensure the following are installed and added to requirements.txt prior to deploy
   - Enter the name of the app 'farmers-market-review', select region as 'Europe' and click the 'Create app' button
   - On the app screen select the 'Settings' tab.
   - Find the 'Config Vars' section and populate the following Key : Value pairs
-    - CLOUDINARY_URL *your key value*
+    - AWS_ACCESS_KEY_ID *your key value*
+    - AWS_SECRET_ACCESS_KEY *your key value*
     - DATABASE_URL *your key value* 
-    - GMAPS_API_KEY *your key value*
+    - EMAIL_HOST_PASSWORD *your key value*
+    - EMAIL_HOST_USER *your key value*
     - SECRET_KEY *your key value*
+    - STRIPE_PUBLIC_KEY *your key value*
+    - STRIPE_SECRET_KEY *your key value*
+    - STRIPE_WH_SECRET_KEY *your key value*
+    - USE_AWS *your key value*
   - Scroll back to the top of this page and find the Deploy tab. 
   - On this page find 'Deployment method' and select 'GitHub'.
   - In the 'Connect to Github' section enter the name of your repository and click 'Connect'.
