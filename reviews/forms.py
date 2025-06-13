@@ -1,7 +1,6 @@
 from .models import Review
 from django import forms
 from checkout.models import OrderLineItem
-from profiles.models import UserProfile
 from products.models import Product
 
 
@@ -26,5 +25,7 @@ class ReviewForm(forms.ModelForm):
     def __init__(self, profile, *args, **kwargs):
         super(ReviewForm, self).__init__(*args, **kwargs)
         orderded_items = OrderLineItem.objects.filter(user_profile=profile)
-        product_ids = orderded_items.values_list('product__id', flat=True).distinct()
-        self.fields['product'].queryset = Product.objects.filter(id__in=product_ids)
+        product_ids = orderded_items.values_list('product__id',
+                                                 flat=True).distinct()
+        self.fields['product'].queryset = Product.objects.filter(
+            id__in=product_ids)

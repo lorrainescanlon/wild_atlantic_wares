@@ -40,8 +40,6 @@ A live demo of the site can be found [here]()
   - [Toasts](#toasts)
   - [Try Exceptions](#try-exceptions)
   - [Error 500](#error500)
-- [Web Marketing](#web-marketing)
-- [Search Engine Optimization](#seo)  
 - [Technologies Used](#technologies-used)
   - [Development Environment and Hosting](#development-environment-and-hosting)
   - [Libraries](#libraries)
@@ -53,6 +51,8 @@ A live demo of the site can be found [here]()
   - [PostgresSQL](#postgres-sql)
   - [Amazon Web Services](#amazon-web-services)
   - [Stripe](#stripe)
+- [Web Marketing](#web-marketing)
+- [Search Engine Optimization](#seo)  
 - [Testing](#testing)
   - [Testing file](#testing-file)
   - [Bugs](#bugs)
@@ -281,7 +281,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 ### Order Model
  - The pictures model contains image urls for market pictures. These pictures are displayed on the image carousel on the markets detail page.
 
-### Order Line Item
+### OrderLineItem
  - Records contact messages sent via the form on the contact.html page.
 
 ### UserProfile
@@ -332,20 +332,42 @@ The CRUD principle was at the center of the design process for this project.
 #### Bootstrap
  - [Bootstrap5](https://getbootstrap.com/) - Front-end framework used to simplify html, css and responsive design features.
 
-#### Whitenoise
- - [Whitenoise](https://whitenoise.readthedocs.io/en/stable/index.html) - Middleware used by Django to handle serving of the static files.
-
 #### Summernote
  - [Summernote](https://summernote.org/) - WYSIWYG editor used by the site admin in the admin panel.
 
 ### PostgresSql
  - [PostgresSQL](https://www.postgresql.org/) - An object-relational database management system (ORDMBS) is used as the backend for this project.
 
-### Google Maps API
- - [Google Maps](https://developers.google.com/maps) - Platform used to render maps on the website.
-
 ### Amazon
- - [Amazon]() - Platform for hosting images and video.
+ - [Amazon Web Services](#amazon-web-services) - Platform for hosting images and video.
+ 
+### Stripe
+- [Stripe](#stripe) - Used to take secure payments over the web.
+
+## Web Marketing
+
+### Facebook
+ - [Facebook](https://www.facebook.com/people/Wild-Atlantic-Wares/61576963876705/)
+  Facebook is a popular social media platform used by over 2 billion worldwide users monthly. 
+
+### MailChimp
+ - [MailChimp](https://mailchimp.com)  - Email marketing platform
+ Screenshot of subscribe section and emails showing on mailchimp
+ Setup a newsletter subscription service using Mailchimp
+
+## SEO
+ 
+### Meta Data
+ - [Meta Data](#meta-data) - Meta Data keywords and decription.
+  take screenshot of meta in the head and put it here...
+  Meta Data keywords and decription are used to increase search engine optimisation.
+
+### Sitemap
+ - [Sitemap](#sitemap) - link it here
+  Sitemap created at 
+  Robots file to  disallow certain sections of your website. I have disallowed the profile and basket dierctories.
+
+
 
 ## Testing
 
@@ -368,7 +390,6 @@ For detailed testing, validation and results please refer to the [Testing Docume
 Ensure the following are installed and added to requirements.txt prior to deployment to Heroku.
 - Gunicorn, required by Heroku to run Django.
 - Pyscopg2, required to connect to PostgreSQL.
-- Whitenoise, to enable the serving of static files in prodution environment.
 - Amazon bucket to host images and video files.
 - Stripe account to enable payments.
 

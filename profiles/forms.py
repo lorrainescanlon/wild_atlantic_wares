@@ -5,7 +5,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        exclude = ('user',) 
+        exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -27,5 +27,6 @@ class UserProfileForm(forms.ModelForm):
         for field in self.fields:
             placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black profile-form-input'
+            self.fields[field].widget.attrs['class'] = ('border-black '
+                                                        'profile-form-input')
             self.fields[field].label = False

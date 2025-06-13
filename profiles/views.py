@@ -6,9 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
-from reviews.models import Review
 from reviews.forms import ReviewForm
-from products.models import Product
 
 
 @login_required
@@ -22,7 +20,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure your form data is valid')
+            messages.error(request, 'Update failed. Please ensure your form \
+                            data is valid')
     else:
         form = UserProfileForm(instance=profile)
 
@@ -60,7 +59,6 @@ def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     template = 'profiles/order_summary.html'
-    # template = 'checkout/checkout_success.html'
     context = {
         'order': order,
         'from_profile': True,
@@ -101,7 +99,8 @@ def submit_review(request):
         else:
             messages.add_message(
                 request, messages.Error,
-                'Review submission failed. Please ensure form fields are valid.'
+                'Review submission failed.\
+                      Please ensure form fields are valid.'
             )
 
     return HttpResponseRedirect(reverse('profile'))
