@@ -177,7 +177,7 @@ header hr {
 
 /* Body Styles */
 main {
-    background-image: url('/media/potters_wheel.jpg');
+    /*background-image: url('/media/potters_wheel.jpg');*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,6 +186,10 @@ main {
 .hero-section {
     height: 70vh;
     width: 100%;
+    background-image: url('/media/potters_wheel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'EB+Garamond';
     color: black;
 }
