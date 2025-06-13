@@ -76,7 +76,7 @@ A live demo of the site can be found [here](https://wild-atlantic-wares-858dcca4
 
 
 ## UI/UX
-This website is aimed at people who wish to buy handmade pottery. Its objective is to encourage users to buy locally made pottery.
+This website is aimed at people who have an interest in handmade craft and wish to buy handmade pottery. Its objective is to encourage users to buy sustainably and hand produced pottery.
 
 - **Strategy**: 
 The goal is to sell pottery products and promote Irish craft.
@@ -88,20 +88,21 @@ To include features that enhance the user experience and provide value to the us
 The user is presented with a landing page which ... From here the user can browse to more detailed product information or follow the navigation links for different sections of the page.  
 
   **_Website Sections:_**
-  - **_Home / Landing Page:_** A.
-  - **_Header:_** A header containg navigation links to other pages of the website.
-  - **_Product Detail:_** A page containing detailed market information and reviews.
+  - **_Home / Landing Page:_** A page with links to the shop and specific categories of products.
+  - **_Header:_** A header containg navigation links to other pages and sections of the website.
+  - **_Product Page:_** A page displaying all available products.
+  - **_Product Detail:_** A page containing detailed product information.
   - **_Register:_** A page to register for a user account.
   - **_Login:_** A page where users to log in.
   - **_Logout:_** A page where users log out.
-  - **_Profile:_** A page detailing the crafters story.
-  - **_Order History:_** A page detailing the crafters story.
-  - **_Reviews:_** A page detailing the crafters story.
+  - **_Profile:_** A page with peofile users shipping details, order history and link to reviews.
+  - **_Order History:_** A page detailing the profile users order history.
+  - **_Reviews:_** A page with a review.
   - **_About:_** A page detailing the crafters story.
-  - **_FAQ:_** A page detailing the crafters story.
+  - **_FAQ:_** A page with a list of frequently asked questions.
   - **_Contact:_** A page with a contact form.
   - **_Provacy Policy:_** A page containing the sites privacy policy.
-  - **_Footer:_** A footer containing social media links and newsletter subscription.
+  - **_Footer:_** A footer containing links to pages, social media links and a newsletter subscription form.
 
 - **Skeleton**:
 The website is desinged with a simple hierarchical structure which the user can navigate through with ease.
@@ -120,26 +121,26 @@ The following User Stories were created to fulfill the expectations and needs of
 
 | **User Stories** |
 | --- |
-| As a site user I can | view a list of products so that I can make a purchase. |
-| As a site user I can | view a specific category so that I can find items I am interested in. |
-| As a Site User I can | sort a list of products so that I can find items based on my needs. |
-| As a Site User I can | I can sort a category of products so that I can identify items based on my needs. |
-| As a Site User I can | I can search for a product so that I can find items I want to buy. |
-| As a Site User I can | view product details so that I can purchase the correct item. |
-| As a Site User I can | view deals and offers so that I can make savings on purchases. |
-| As a Site User I can | view the total of my shopping cart so that I avoid over spending. |
-| As a Site User I can | I can select the quantity of a product so that I can purchase the correct amount. |
-| As a Site User I can | view the items in my shopping cart so that I can ensure they are correct and that I can view the total cost.|
-| As a Site User I can | adjust the items in my shopping cart so that I buy only what I want to. |
-| As a Site User I can | enter my payment and shipping details so that I can complete my purchase |
-| As a Site User I can | view an order confirmation so that I can verify that my purchase has been successful.|
-| As a Site User I can | receive an email order confirmation so that I can keep a record of my purchase. |
-| As a Site User I can | register an account so that I can create a personal profile.|
-| As a Site User I can | login to my personalized account so that I can view my purchase history.|
-| As a Site User I can | review a product so that I can provide feedback and inform future customers.|
-| As a Site Administrator I can | add a product so that I can add new items to my shop. |
-| As a Site Administrator I can | update a product so that I can make changes to items in my shop. |
-| As a Site Administrator I can | delete a product so that I can remove items that are no longer in stock|
+| As a site user I can view a list of products so that I can make a purchase. |
+| As a site user I can view a specific category so that I can find items I am interested in. |
+| As a Site User I can sort a list of products so that I can find items based on my needs. |
+| As a Site User I can I can sort a category of products so that I can identify items based on my needs. |
+| As a Site User I can I can search for a product so that I can find items I want to buy. |
+| As a Site User I can view product details so that I can purchase the correct item. |
+| As a Site User I can view deals and offers so that I can make savings on purchases. |
+| As a Site User I can view the total of my shopping cart so that I avoid over spending. |
+| As a Site User I can I can select the quantity of a product so that I can purchase the correct amount. |
+| As a Site User I can view the items in my shopping cart so that I can ensure they are correct and that I can view the total cost.|
+| As a Site User I can adjust the items in my shopping cart so that I buy only what I want to. |
+| As a Site User I can enter my payment and shipping details so that I can complete my purchase |
+| As a Site User I can view an order confirmation so that I can verify that my purchase has been successful.|
+| As a Site User I can receive an email order confirmation so that I can keep a record of my purchase. |
+| As a Site User I can register an account so that I can create a personal profile.|
+| As a Site User I can login to my personalized account so that I can view my purchase history.|
+| As a Site User I can review a product so that I can provide feedback and inform future customers.|
+| As a Site Administrator I can add a product so that I can add new items to my shop. |
+| As a Site Administrator I can update a product so that I can make changes to items in my shop. |
+| As a Site Administrator I can delete a product so that I can remove items that are no longer in stock|
 
 
 #### Github Project
@@ -175,16 +176,16 @@ Won't have Features
 
 
 ### Wireframes
-Wireframes were created using Balsamiq software. The initial designs met basic early requirements that have evolved since. View the wireframe designs here ![Wireframes](/static/docs/)
+Wireframes were created using Balsamiq software. The initial designs met basic early requirements that have evolved since. View the wireframe designs here
 
-![Wireframes](wireframes.pdf)
+![Wireframes](/static/docs/wireframes.pdf)
 
 
 
 ### Design
 There is a consistent colour scheme used throughout the site as shown on the colour palette below. These colours are complimented by rich images of ceramic ware that add interest and enhance the user experience.
  
-![colour palate](/static/docs/images/)
+![colour palate](/static/images/colour_palette.PNG/)
 
 
 ## Features
