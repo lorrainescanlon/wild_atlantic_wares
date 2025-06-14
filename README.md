@@ -185,7 +185,7 @@ Wireframes were created using Balsamiq software. The initial designs met basic e
 ### Design
 There is a consistent colour scheme used throughout the site as shown on the colour palette below. These colours are complimented by rich images of ceramic ware that add interest and enhance the user experience.
  
-![colour palate](/static/images/colour_palette.PNG/)
+![colour palate](/static/docs/images/colour_palette.PNG)
 
 
 ## Features
@@ -195,7 +195,7 @@ There is a consistent colour scheme used throughout the site as shown on the col
 #### Navigation Bar
  - Navbar with website name, and page navigation links.
  - If user is authenticated/logged in they are presented with appropriate navigation links.
- - An active link is highlighted ?? text.
+ - An active link is highlighted.
  - The search box is located to the left of the navigation bar and colapses to the burger menu on mobile devices.
 
  ![Nav Bar](/static/docs/images/)
@@ -206,14 +206,14 @@ There is a consistent colour scheme used throughout the site as shown on the col
 
  - The navbar becomes a collapsible burger menu with drop-down list on small to medium sized screens.
 
- ![Nav burger](/static/docs/images/navburger.jpg)
+ ![Nav burger](/static/docs/images/)
 
 #### Footer
  - The footer contains sections for internal links, external links, social media links and a subcription box.
 
  ![Footer](/static/docs/images/)
 
- - The secstion stack vertically on mobile screens.
+ - The sections stack vertically on mobile screens.
 
  ![Mobile footer](/static/docs/images/)
 
@@ -265,12 +265,15 @@ There is a consistent colour scheme used throughout the site as shown on the col
 
  ![Login](/static/docs/images/)
   
+#### Profile
+
 
 #### Logout
  - Log out button to log user out.
 
   ![Logout](/static/docs/images/)
 
+#### About Us
 
 #### Contact form
  - Contact form to enable users to provide feedback and/or contact the site administrator.
@@ -281,16 +284,15 @@ There is a consistent colour scheme used throughout the site as shown on the col
  - The link provides access to the sites privacy policy.
  
 
- ![News](/static/docs/images/)
+ ![Privacy Policy](/static/docs/images/)
 
 
 ### Future Features
- - Monthly Newsletter with calendar of events taking place like workshops, popup markets, seasonal products and competitions.
+ - A favourites option so that registered users could make a list of items they would like to buy.
+ - A weddings list feature.
  - Content to include videos and interview with other Irish crafters.
  - Have a review like button, for users to like if they found a review helpful.
- - A favourites option so that registered users could make a list of items they would like to buy.
-
-
+ 
 
 ## Database Model
 The database model evolved from the needs of the user stories.  
@@ -309,9 +311,16 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
  - Records contact messages sent via the form on the contact.html page.
 
 ### UserProfile
+- Records UserPorfile record and default shipping details.
 
 ### Review Model
- - The review model records reviews that are submitted for the markets stored in the market model.
+ - The review model records reviews that are submitted for a particular item from the profile app.
+
+### Contact Model
+ - The cotact model records contact messages sent by users of the website
+
+### Faq Model
+ - The Faq model stores frequently asked questions.
 
 
 ### CRUD
@@ -321,16 +330,19 @@ The CRUD principle was at the center of the design process for this project.
 **Create:**
  - A user can create an account which is written to the database User model.
  - An authenticated user can create and submit a review that is written to the Review model.
+ - An authenticated admin user can add a new product record.
 
 **Read:**
  - A user can read detailed product information and review data returned from the Product and Review database models.
- - A user can search for markets by name and location details returned from the Market model.
+ - A user can search for products by name and details. Results are retuend from the Products model.
 
 **Update:**
- - An authenticated user can update or edit their own.
+ - An authenticated user can update or edit their default shipping information attached to their profile.
+ - An authenticated admin user can edit a product.
 
 **Delete:**
  - An authenticated user can .
+ -  An authenticated admin user can delete a product.
 
 
 ## Technologies Used
@@ -354,7 +366,7 @@ The CRUD principle was at the center of the design process for this project.
  - [Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Used for styled and responsive forms with validation.
 
 #### Bootstrap
- - [Bootstrap5](https://getbootstrap.com/) - Front-end framework used to simplify html, css and responsive design features.
+ - [Bootstrap4](https://getbootstrap.com/) - Front-end framework used to simplify html, css and responsive design features.
 
 #### Summernote
  - [Summernote](https://summernote.org/) - WYSIWYG editor used by the site admin in the admin panel.
@@ -383,8 +395,13 @@ The CRUD principle was at the center of the design process for this project.
  
 ### Meta Data
  - [Meta Data](#meta-data) - Meta Data keywords and decription.
-  take screenshot of meta in the head and put it here...
-  Meta Data keywords and decription are used to increase search engine optimisation.
+    Meta Data keywords and decription are used to increase search engine optimisation.
+  
+    <meta name="description" content="Hand crafted pottery on Irelands Wild Atlantic Way">
+            <meta name="keywords" content="handmade pottery, Irish pottery, ceramic gifts, ceramic vases, ceramic cups, 
+                ceramic mugs, cermic plates, ceramic bowls, wild atlantic way craft, Dingle craft, pottery Dingle, sustainable pottery ">
+
+  
 
 ### Sitemap
  - [Sitemap](#sitemap) - link it here
