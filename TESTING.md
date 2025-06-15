@@ -5,7 +5,7 @@
     - [Navigation](#navigation)
     - [User Stories Testing](#user-stories-testing)
     - [Search Function](#search)
-    - [CRUD Functionality](#crud-functionality)
+    - [App Testing](#app-functionality)
     - [Account/Authentication](#account-authentication)
     - [Social Links](#social-links)
 - [Lighthouse Testing](#lighthouse-testing)
@@ -68,7 +68,7 @@
 | Order Product by Price Ascending |  |  |  |  | 
 
 
-### CRUD Functionality
+### App Functionality
 
  **Create**                                                  
 
@@ -76,9 +76,13 @@
 | ----------- | ---------- | ------------------- | ---------- |
 | User account creation | Complete and submit the registration form | User can login using username and password. Porfile menu changes to include logout an profile page links |  |
 | Submit a review | A registered user logs in and navigates to the profile page. Here they fill in the review form and submit | Form is submitted successfully message is displayed and the review awaits admin approval. Once approved by admin it is committed to the database. | |
-| Add new Porduct to Shop | Create and submit a new Product | Product added sucess messsage. Product appears on the shop to buy. | |  
+| Add new Product to Shop | Create and submit a new Product | Product added sucess messsage. Product appears on the shop to buy. | |  
 
- **Read** 
+
+
+### Testing App functionality
+
+ **Basket App** 
 
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
@@ -86,7 +90,25 @@
 |  |  | |  |      
 |  |  |  |
 
-**Update**
+ **Checkout App** 
+
+| **Feature** | **Action** | **Expected Result** | **Result** |
+| ----------- | ---------- | ------------------- | ---------- |
+| |  |  | |
+|  |  | |  |      
+|  |  |  |
+
+
+
+**User Profile**
+
+| **Feature** | **Action** | **Expected Result** | **Result** |
+| ----------- | ---------- | ------------------- | ---------- |
+| View default shipping details  |   |  |
+| View order history |   |  |
+| Create a review |   |  |
+
+**Contact Form**
 
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
