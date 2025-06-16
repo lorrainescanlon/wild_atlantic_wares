@@ -7,6 +7,7 @@
     - [Search Function](#search)
     - [App Testing](#app-functionality)
     - [Account/Authentication](#account-authentication)
+    - [Site Admin Testing](#site-admin)
     - [Social Links](#social-links)
 - [Lighthouse Testing](#lighthouse-testing)
     - [Mobile](#mobile)
@@ -79,8 +80,6 @@
 | Add new Product to Shop | Create and submit a new Product | Product added sucess messsage. Product appears on the shop to buy. | |  
 
 
-
-### Testing App functionality
 
  **Basket App** 
 

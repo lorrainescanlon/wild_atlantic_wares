@@ -48,7 +48,8 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-3 mt-2">
-                                        <label for=".qty_input">Quantity</label>
+                                        <label for="id_qty_{{ product.id }}">Quantity</label>
+                                        <!--<label for=".qty_input">Quantity</label>-->
                                     </div>
                                     <div class="col-6 form-group w-50">
                                         <div class="input-group">
@@ -80,26 +81,27 @@
                     {% endif %}
                     <br>
                     <p>
-                       <a class="text-black" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-care" aria-expanded="false" aria-controls="collapseExample">
-                        Care Instructions &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                       <a class="text-black" id="detail-link-care" role="button" data-toggle="collapse" data-target=".collapse-care" aria-expanded="false" aria-controls="care">
+                        Care Instructions &nbsp; <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
                        </a>
                     </p>
                     
-                    <p class="collapse collapse-care">
+                    <p class="collapse collapse-care" id="care">
                        We recommend washing all of your ceramic pieces by hand. Gently scrub them with a soft sponge or cloth using mild soap and warm water. 
                        Avoid using abrasive scrubbers or harsh chemicals, which can damage the glaze. After washing, let your ceramics air dry naturally.
-                       <hr class="collapse collapse-care">
                     </p>
+                    <hr class="collapse collapse-care">
+
                     <p>
-                       <a class="text-black" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-shipping" aria-expanded="false" aria-controls="collapseShipping">
-                            Shipping &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                       <a class="text-black" id="detail-link-ship" role="button" data-toggle="collapse" data-target=".collapse-shipping" aria-expanded="false" aria-controls="shipping">
+                            Shipping &nbsp; <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
                        </a>
                     </p>
-                    <p class="collapse collapse-shipping">
+                    <p class="collapse collapse-shipping" id="shipping">
                         Shipping is free on orders in excess of €100.<br> 
                         A fee of 20% of the Order value applies on all other orders.<br>
-                        <hr class="collapse collapse-shipping">
                     </p>
+                    <hr class="collapse collapse-shipping">
                 </div>
             </div>
         </div>
@@ -130,7 +132,7 @@
     </div>
     
     <!-- Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bckgr-color">  
@@ -155,7 +157,7 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('[data-toggle="collapse"]').on('click', function(){
             if ($(this).attr('aria-expanded') == 'false') {
                 $(this).find('i').addClass('fa-minus').removeClass('fa-plus');

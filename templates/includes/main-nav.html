@@ -53,12 +53,13 @@
             <div class="nav-link d-block d-lg-none dropdown-menu w-100 p-3 border-0" aria-labelledby="mobile-search">
                 <form class="form" method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control search-box" type="text" name="q" placeholder="search our site..." aria-label="Search">
-                    <div class="input-group-append">
-                        <button class="btn search-btn" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>     
+                        <input class="form-control search-box" id="mobile-search" type="text" name="q" placeholder="search our site..." aria-label="Search">  
+                        <div class="input-group-append">
+                            <button class="btn search-btn" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
                 </form>        
             </div>
         </li>

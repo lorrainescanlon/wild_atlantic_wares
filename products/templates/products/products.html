@@ -14,14 +14,14 @@
     <div class="container-fluid bckgr-light mb-0">
         <div class="row">
             <div class="col text-center pt-2">
-                <h4 class="menu-font">
+                <h4 class="menu-font mt-sm-4 mt-md-3">
                     {% if search_term != None %}
                         {{ search_term }} - {{ products|length }} found
                     {% else %}
                         {{ display_category }}
                     {% endif %}
                 </h4>  
-        </div>
+            </div>
         </div>
         <div class="row">
             <div class="col my-auto d-flex justify-content-center justify-content-md-end pb-2">
@@ -85,13 +85,13 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
     
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
