@@ -26,10 +26,10 @@
                 <div class="card-body">
                     {% for faq in faqs %}
                         <div class="card-body border">
-                            <a class="" id="detail-link" role="button" data-toggle="collapse" data-target=".collapse-{{ faq.id }}" aria-expanded="false" aria-controls="collapseExample">
-                                {{ faq.title }} &nbsp <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
-                        </a>
-                            <p class="collapse collapse-{{ faq.id }} pt-3">
+                            <a class="" id="detail-link-{{ faq.id }}" role="button" data-toggle="collapse" data-target=".collapse-{{ faq.id }}" aria-expanded="false" aria-controls="paragraph-{{ faq.id }}">
+                                {{ faq.title }} &nbsp; <span class="sm-icon"><i class="fa-solid fa-plus"></i></span>
+                            </a>
+                            <p class="collapse collapse-{{ faq.id }} pt-3" id="paragraph-{{ faq.id }}">
                                 {{ faq.body }}
                             </p>
                         </div>
@@ -42,7 +42,7 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('[data-toggle="collapse"]').on('click', function(){
             if ($(this).attr('aria-expanded') == 'false') {
                 $(this).find('i').addClass('fa-minus').removeClass('fa-plus');

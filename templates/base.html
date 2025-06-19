@@ -27,7 +27,7 @@
             <link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
             <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
-            <link rel="preload" fetchpriority="high" as="image" href="/media/potters_wheel.jpg" type="image/PNG">
+            <link rel="preload" fetchpriority="high" as="image" href= "url('/media/potters_wheel.jpg')" type="image/PNG">
 
         {% endblock %}
 
@@ -68,7 +68,7 @@
                     </form>
                 </div>
                 <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center">
-                    <a href="{% url 'home' %}" class="nav-link logo-link">
+                    <a href="{% url 'home' %}" class="nav-link logo-link" aria-label="Home">
                         <h2 class="logo-font my-0"><strong> Wild Atlantic</strong> Wares</h2>
                     </a>
                 </div>
@@ -96,7 +96,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_basket' %}">
+                            <a class="body-font {% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_basket' %}" aria-label="shopping basket">
                                 <div class="text-center">
                                     <div><i class="fa-solid fa-basket-shopping icon"></i></div>
                                     <p class="my-0 text-black">
@@ -173,7 +173,7 @@
                                         /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
                                         <input type="text" name="b_52c91df7cc6b5241d4bfb2cc8_200287f467" tabindex="-1" value="">
                                     </div>
-                                    <div class="optionalParent">
+                                    <div class="optionalParent" style="justify-self: center;">
                                         <div class="clear foot">
                                             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
                                         </div>
@@ -206,18 +206,18 @@
                     </div>
                     <div class="col-12 col-md-4  py-3">
                         <h3>Connect with Us</h3>
-                        <a href="{% url 'contact' %}"><i class="fa-solid fa-house"></i><strong> Dingle, Ireland</strong></a><br>
-                        <a href="{% url 'contact' %}"><i class="fa-solid fa-envelope"></i> info@wildatlanticwares.com</a><br>
-                        <a href="{% url 'contact' %}"><i class="fa-solid fa-phone"></i> +353 86 8774693</a><br>
+                        <a href="{% url 'contact' %}" aria-label="Our postal address"><i class="fa-solid fa-house"></i><strong> Dingle, Ireland</strong></a><br>
+                        <a href="{% url 'contact' %}" aria-label="Our email address"><i class="fa-solid fa-envelope"></i> info@wildatlanticwares.com</a><br>
+                        <a href="{% url 'contact' %}" aria-label="Our telephone number"><i class="fa-solid fa-phone"></i> +353 86 8774693</a><br>
                         <div class="row socials">
                             <span>
-                                <a href="https://www.facebook.com/profile.php?id=61576963876705" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61576963876705" target="_blank" aria-label="Follow us on Facebook"><i class="fa-brands fa-square-facebook"></i></a>
                             </span>
                             <span>
-                                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.instagram.com" target="_blank" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
                             </span>
                             <span>
-                                <a target="_blank" href="https://www.youtube.com"><i class="fa-brands fa-square-youtube"></i></a>
+                                <a href="https://www.youtube.com" target="_blank" aria-label="Watch us on Youtube"><i class="fa-brands fa-square-youtube"></i></a>
                             </span>
                         </div>
                     </div>
@@ -229,6 +229,6 @@
         </footer>
         <!-- MailChimp scripts -->
         <script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" defer></script>
-        <script defer>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     </body>
 </html>
