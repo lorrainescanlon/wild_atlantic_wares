@@ -113,7 +113,6 @@
                             </p>
                         </fieldset>
                         <div class="sumit-order text-center mb-2"> 
-                            <!-- text-center mt-5 mb-2"-->
                             <a href="{% url 'view_basket' %}" class="btn btn-outline-dark-br mt-1">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
@@ -141,7 +140,7 @@
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 
-    <script type="text/javascript">
+    <script>
         $('[data-toggle="collapse"]').on('click', function(){
             if ($(this).attr('aria-expanded') == 'false') {
                 $(this).find('i').addClass('fa-minus').removeClass('fa-plus');
@@ -152,3 +151,4 @@
         }); 
     </script>
 {% endblock %}
+

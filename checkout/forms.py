@@ -14,24 +14,17 @@ class OrderForm(forms.ModelForm):
         Add placeholders remove lables and autofocus on full_name field
         """
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'full_name': 'Full Name',
-            'email': 'Email',
-            'phone_number': 'Telephone',
-            'address1': 'Street Address 1',
-            'address2': 'Street Address 2',
-            'town_or_city': 'Town or City',
-            'county': 'County',
-            'postcode': 'Postcode',
-        }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
+        self.fields['full_name'].widget.attrs['placeholder'] = 'Full Name*'
+        self.fields['email'].widget.attrs['placeholder'] = 'Email*'
+        self.fields['phone_number'].widget.attrs['placeholder'] = 'Telephone*'
+        self.fields['address1'].widget.attrs['placeholder'] = 'Street Address 1*'
+        self.fields['address2'].widget.attrs['placeholder'] = 'Sreet Address 2'
+        self.fields['town_or_city'].widget.attrs['placeholder'] = 'Town or City*'
+        self.fields['county'].widget.attrs['placeholder'] = 'County'
+        self.fields['postcode'].widget.attrs['placeholder'] = 'Postcode'
+
         for field in self.fields:
-            if field != 'country':
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
