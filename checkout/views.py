@@ -7,7 +7,6 @@ from django.views.decorators.http import require_POST
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
-from basket.contexts import basket_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from basket.contexts import basket_contents
@@ -18,6 +17,10 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Cache checkout data in stripe payment intent metadata
+    before payment is confirmed.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -51,24 +54,37 @@ def checkout(request):
             'address2': request.POST['address2'],
             'county': request.POST['county'],
         }
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
-            profile = UserProfile.objects.get(user=request.user)
+         
             order.save()
             for item_id, item_data in basket.items():
                 try:
-                    product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        user_profile=profile,
-                        product=product,
-                        quantity=item_data,
-                    )
+                    if request.user.is_authenticated:
+                        profile = UserProfile.objects.get(user=request.user)
+
+                        product = Product.objects.get(id=item_id)
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            user_profile=profile,
+                            product=product,
+                            quantity=item_data,
+                        )
+                    else:
+                        product = Product.objects.get(id=item_id)
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        
                     order_line_item.save()
+
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "There was a problem with one of the items in "
@@ -134,9 +150,12 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    profile = UserProfile.objects.get(user=request.user)
-    order.user_profile = profile
     order.save()
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        order.user_profile = profile
+        order.save()
 
     if save_info:
         profile_data = {
