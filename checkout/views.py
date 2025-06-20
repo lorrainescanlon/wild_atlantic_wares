@@ -65,26 +65,13 @@ def checkout(request):
             order.save()
             for item_id, item_data in basket.items():
                 try:
-                    if request.user.is_authenticated:
-                        profile = UserProfile.objects.get(user=request.user)
-
-                        product = Product.objects.get(id=item_id)
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            user_profile=profile,
-                            product=product,
-                            quantity=item_data,
-                        )
-                    else:
-                        product = Product.objects.get(id=item_id)
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        
+                    product = Product.objects.get(id=item_id)
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
                     order_line_item.save()
-
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "There was a problem with one of the items in "
