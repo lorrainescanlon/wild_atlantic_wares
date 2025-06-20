@@ -8,9 +8,9 @@ class OrderLineItemAdminInine(admin.TabularInline):
 
 
 class OrderLineItemAdmin(admin.ModelAdmin):
-    readonly_fields = ('order', 'user_profile', 'product', 'quantity')
+    readonly_fields = ('order', 'product', 'quantity')
 
-    list_display = ('order', 'user_profile', 'product', 'quantity')
+    list_display = ('order', 'product', 'quantity')
 
 
 class OrderAdmin(admin.ModelAdmin):

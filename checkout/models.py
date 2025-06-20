@@ -69,9 +69,6 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE,
                               related_name='lineitems')
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                     null=True, blank=True,
-                                     related_name='items')
     product = models.ForeignKey(Product, null=False, blank=False,
                                 on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=True, default=0)
