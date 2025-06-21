@@ -21,8 +21,10 @@ class OrderForm(forms.ModelForm):
         self.fields['phone_number'].widget.attrs['placeholder'] = 'Telephone*'
         self.fields['address1'].widget.attrs['placeholder'] = \
             'Street Address 1*'
-        self.fields['address2'].widget.attrs['placeholder'] = 'Street Address 2'
-        self.fields['town_or_city'].widget.attrs['placeholder'] = 'Town or City*'
+        self.fields['address2'].widget.attrs['placeholder'] = \
+            'Street Address 2'
+        self.fields['town_or_city'].widget.attrs['placeholder'] = \
+            'Town or City*'
         self.fields['county'].widget.attrs['placeholder'] = 'County'
         self.fields['postcode'].widget.attrs['placeholder'] = 'Postcode'
 

@@ -29,7 +29,10 @@
 | Login link | To be directed to user log in page | Pass |
 | Contact link | To be directed to site contact page | Pass |
 | Logout link | To be directed to the user log out page | Pass |
-| Category link |  | Pass |
+| Basket link |  | Pass |
+| All Products link | | Pass |
+| All Products link | | Pass |
+| All Products link | | Pass |
 | All Products link | | Pass |
 | Facebook link | To be directed to the facebook website | Pass |
 
