@@ -14,13 +14,14 @@
     <div class="container-fluid bckgr-light mb-0">
         <div class="row">
             <div class="col text-center pt-2">
-                <h4 class="menu-font mt-sm-4 mt-md-3">
-                    {% if search_term != None %}
-                        {{ search_term }} - {{ products|length }} found
-                    {% else %}
-                        {{ display_category }}
-                    {% endif %}
-                </h4>  
+                {% if search_term != None %}
+                    <h4 class="menu-font mt-sm-4 mt-md-3">{{ search_term }} - {{ products|length }} found</h4>
+                        {% if products|length == 0 %}
+                            <p style="font-size: large;">Please try a different search word</p>
+                        {% endif %}
+                {% else %}
+                    {{ display_category }}
+                {% endif %}
             </div>
         </div>
         <div class="row">

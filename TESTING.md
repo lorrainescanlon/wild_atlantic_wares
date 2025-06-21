@@ -24,17 +24,36 @@
 
 | **Feature** | **Expected Outcome** | **Result** |
 | ----------- | -------------------- | ---------- |
-| Home link | To be redirected to home page | Pass |
-| Register link | To be directed to regitration user page | Pass |
+| Wild Atlantic Wares home link | To be redirected to home page | Pass |
+| Register link | To be directed to sign up page | Pass |
 | Login link | To be directed to user log in page | Pass |
-| Contact link | To be directed to site contact page | Pass |
-| Logout link | To be directed to the user log out page | Pass |
-| Basket link |  | Pass |
-| All Products link | | Pass |
-| All Products link | | Pass |
-| All Products link | | Pass |
-| All Products link | | Pass |
-| Facebook link | To be directed to the facebook website | Pass |
+| Logout link | To be directed to the log out page | Pass |
+| Basket link | To be directed to the shopping basket page | Pass |
+| All Products By Price link | To be directed to a page with all products arranged by price | Pass |
+| All Products By Rating link | To be directed to a page with all products arranged by rating | Pass |
+| All Products By Category link | To be directed to a page with all products arranged by category | Pass |
+| Tableware Link | To be directed to a page with tableware products | Pass |
+| Cups & Mugs Link | To be directed to a page with cups and mugs | Pass |
+| All Kitchen Dining Link | To be directed to a page displaying tableware, cups and mugs | Pass |
+| Pots & Vases Link | To be directed to a page with pots and vases | Pass |
+| Lighting & Candles Link | To be directed to a page with candles and lighting products | Pass |
+| All Living Decor Link | To be directed to a page with pots, vases, lighting and candles | Pass |
+| Deals Link | To be directed to a page with product deals | Pass |
+| Clearance Link | To be directed to a page with clearance products | Pass |
+| All Special Offers Link | To be directed to a page with both deals and clearnace products | Pass |
+| Shop Now button | To be directed to all products page | Pass |
+| Kitchen Dining image link | To be directed to all kitchen and dining products | Pass |
+| Living Decor image link | To be directed to all living and decor products | Pass |
+| Special Offer image link | To be directed to all special offer products | Pass |
+| About Us Link | To be directed to a page with information about the company | Pass |
+| FAQ Link | To be directed to a page with a list of the most frequently asked questions | Pass |
+| Contact Us Link | To be directed to a page with contact information and a contact form | Pass |
+| Privacy Policy Link | To be directed to a page with the business privacy policy | Pass |
+| Connect with Us | Address, mail and telephone to currently direct users to the contact us page | Pass |
+| Facebook icon link | To be directed to the facebook website which opens in a new browser window | Pass |
+| Instagram icon link | Currently direct users to the Instagram homepage which opens in a new browser window | Pass |
+| YouTube icon link | Currently direct users to the YouTube homepage which opens in a new browser window  | Pass |
+| Back to Top button | Scroll to the top of the current page | Pass |
 
 
 ### User Story Testing
@@ -58,8 +77,8 @@
 | -----------| -------------------- | --------------------- | ----------- | ---------- |
 | Search for Product by name |  |  |  |  | 
 | Search for Product by description | One or more results containing serach query in Product name or description are returned or 'No Product found' message |  |  |  |
-| Search for Product not in the database | 'No Products found' message returned | |  | |
-| Search empty query | 'No Products found' message returned | Search for '' |   | 
+| Search for Product not in the database | '0 Found' message returned | Search for 'chair' | 'Chair - 0 Found' message returned | |
+| Search empty query | Error Message - Search Criteria can not be blank, direct to All Products page | Search for '' | Error Message - Search Criteria can not be blank displayed and directed to All Products page | Pass |
 
 ### Order By Function
 

@@ -8,13 +8,13 @@
   <div class="container-fluid bckgr-white">
     <div class="row">
       <div class="col">
-        <h2 class="menu-font mt-5 text-center">{% trans "Sign Out" %}</h2>
+        <h2 class="menu-font mt-5 text-center">{% trans "Log Out" %}</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 text-center mb-5">
+      <div class="col-12 text-center mt-3 mb-5">
         <p>{% blocktrans %}Are you sure you want to sign out?{% endblocktrans %}</p>
-        <form method="post" action="{% url 'account_logout' %}">
+        <form method="post" action="{% url 'account_logout' %}" class="pt-3">
           {% csrf_token %}
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
