@@ -37,10 +37,10 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
                 products = products.order_by(sortkey)
 
-            if 'menu' in request.GET:
+            """if 'menu' in request.GET:
                 display_category = request.GET['menu']
             else:
-                display_category = products.category.friendly_name
+                display_category = products.category.friendly_name"""
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
