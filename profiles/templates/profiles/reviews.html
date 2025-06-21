@@ -15,32 +15,14 @@
 
 
 {% block content %}
+    
     <div class="container-fluid bckgr-white border-btm">
         <div class="row">
             <div class="col">
                 <h4 class="menu-font mt-4 text-center">Review Form {{ profile_name }}</h4>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-4 p-4">
-                <div class="card-body p-2 mt-2">
-                    <div class="">
-                        <a href="{% url 'profile' %}" class="btn btn-profile-menu mt-1 p-2 w-100">
-                            <h5 class="px-3 py-2">Delivery Details</h5>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="{% url 'profile_orders' %}" class="btn btn-profile-menu mt-1 p-2 w-100">
-                            <h5 class="px-3 py-2">Order History</h5>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="{% url 'profile_reviews' %}" class="btn btn-profile-menu mt-1 p-2 w-100">
-                            <h5 class="px-3 py-2">Reviews</h5>
-                        </a>     
-                    </div>
-                </div>
-            </div>
+        {% include 'includes/profile-menu.html' %}
             <div class="col-12 col-md-8 p-4">
                 <div class="card-body">
                     <header class="card-header border">

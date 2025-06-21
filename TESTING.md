@@ -50,9 +50,7 @@
 | Contact Us Link | To be directed to a page with contact information and a contact form | Pass |
 | Privacy Policy Link | To be directed to a page with the business privacy policy | Pass |
 | Connect with Us | Address, mail and telephone to currently direct users to the contact us page | Pass |
-| Facebook icon link | To be directed to the facebook website which opens in a new browser window | Pass |
-| Instagram icon link | Currently direct users to the Instagram homepage which opens in a new browser window | Pass |
-| YouTube icon link | Currently direct users to the YouTube homepage which opens in a new browser window  | Pass |
+
 | Back to Top button | Scroll to the top of the current page | Pass |
 
 
@@ -75,10 +73,10 @@
 
 | **Feature**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
 | -----------| -------------------- | --------------------- | ----------- | ---------- |
-| Search for Product by name |  |  |  |  | 
-| Search for Product by description | One or more results containing serach query in Product name or description are returned or 'No Product found' message |  |  |  |
-| Search for Product not in the database | '0 Found' message returned | Search for 'chair' | 'Chair - 0 Found' message returned | |
-| Search empty query | Error Message - Search Criteria can not be blank, direct to All Products page | Search for '' | Error Message - Search Criteria can not be blank displayed and directed to All Products page | Pass |
+| Search for Product by name | One or more results containing serach query in product name or description are returned | Search for 'cup' | 2 products are returned | Pass | 
+| Search for Product by description | One or more results containing serach query in Product name or description are returned | Search for 'white' | 11 products are returned | Pass |
+| Search for Product not in the database | '0 Found' message returned | Search for 'chair' | 'Chair - 0 Found' message returned | Pass |
+| Search empty query | Toast Error Message - Search Criteria can not be blank. Direct to All Products page with 'Please enter a valid search word' | Search for '' | Error Message - Search Criteria can not be blank displayed and directed to All Products page with 'Please enter a valid search word'| Pass |
 
 ### Order By Function
 
@@ -125,9 +123,12 @@
 
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
-| View default shipping details  |   |  |
-| View order history |   |  |
-| Create a review |   |  |
+| View Profile Menu | Click on 'My Account' and Login with valid username and password | 'My Profile' link appears on 'My Account' menu | Pass |
+| View default shipping details | As an authenticated user click on 'My Profile' from the 'My Account' menu | A profile page appears with Default Delivery Details Form | Pass |
+| Update default shipping details | Updated Address 1 and clicked the Update button | The form data is updated with the new data and a Toast Success message 'Profile Updated' id displayed | Pass |
+| View order history | From the Profile page choose Order History from the menu on the left of the page | A list of orders associated with that profile are displayed | Pass |
+| View order summary | Click on an order from the list displayed on the view order history page | An order summary page is displayed with details of that particular order | Pass |
+| Create a review | From the Profile page choose Order History from the menu on the left of the page   |  | |
 
 **Contact Form**
 
@@ -169,7 +170,35 @@
 | Logout using 'Log Out' button on Logout page | Account logout successfull, 'You have signed out' message appears and logged in as status changes to 'You are not logged in' | Pass |
 
 
+### Site Admin Testing
+
+**Admin Account**
+| **Test** | **Expected Outcome** | **Result** |
+| -------- | -------------------- | ---------- |
+| Login with a valid username and password | My Account Menu list items to change |  |
+| View Products detail page| Links to edit and delete product should be displayed  |  |
+| Add Product |  |  |
+| Edit Product |  |  |
+| Delete Product |  |  |
+
+**Admin Console**
+| **Test** | **Expected Outcome** | **Result** |
+| -------- | -------------------- | ---------- |
+| Login with a valid username and password | |  |
+| View Model Data | |  |
+| Add Product |  |  |
+| Edit Product |  |  |
+| Delete Product |  |  |
+
+[Site Admin Testing](#site-admin)
+
 ### Social Links
+| **Feature** | **Expected Outcome** | **Result** |
+| ----------- | -------------------- | ---------- |
+| Facebook icon link | To be directed to the facebook website which opens in a new browser window | Pass |
+| Instagram icon link | Currently direct users to the Instagram homepage which opens in a new browser window | Pass |
+| YouTube icon link | Currently direct users to the YouTube homepage which opens in a new browser window  | Pass |
+ 
  Social media links tested on both mobile and desktop. 
  Social links tested in multiple browsers successfully.
  All open in a separate browser window.
