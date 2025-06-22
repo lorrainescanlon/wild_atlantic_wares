@@ -437,11 +437,11 @@ For details on bugs encountered and resolved during development please refer to 
    Summernote editor was installed to enable admin to add and update faqs via the admin console. 
    When I edited an faq and refreshed the page the html tags appeared in the body of the text.
    I then added the | safe filter but this then affected the data-toggle collapse, which did not work properly when the |safe filter was used.
-   The paragraphs expanded when clicked but would not collapse again,see here ![faq-problem](/static/docs/images/faq_problem.PNG)
+   The paragraphs expanded when clicked but would not collapse again,see here ![faq-problem](/static/docs/bugs/faq_problem.PNG)
    I have reverted to unedited text for the faqs for now. 
 
  - More link Bug
-   A bug exists in the implementation of the more link ![more-link](/static/docs/images/product_detail_morelink.PNG) from the products detail page.
+   A bug exists in the implementation of the more link ![more-link](/static/docs/bugs/product_detail_morelink.PNG) from the products detail page.
 
       <a href="{% url 'products' %}?category={{ product.category.name }}&menu={{ product.category.friendly_name }}">
    
