@@ -17,6 +17,9 @@
     - [CSS](#css)
     - [Python](#python)
     - [JavaScript](#javascript)
+- [Bugs and Challenges](#bugs-challenges)
+    - [Resolved Bugs](#resolved-bugs)
+    - [Challenges](challenges)
 - [Browser Compatibility](#browser-compatibility)
 
 ## Manual Testing
