@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q, Avg
-from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 from reviews.models import Review
@@ -19,7 +18,6 @@ def all_products(request):
     display_category = None
 
     Review.objects.filter(approved=True)
-    """reviews = Product.reviews.filter()"""
     products = Product.objects.annotate(rating=Avg(('reviews__rating')))
 
     if request.GET:
@@ -74,8 +72,6 @@ def product_detail(request, product_id):
 
     reviews = product.reviews.all().order_by("-created_on")
     review_count = product.reviews.count()
-
-    """review_count = product.reviews.filter(approved=True).count()"""
 
     context = {
        'product': product,
