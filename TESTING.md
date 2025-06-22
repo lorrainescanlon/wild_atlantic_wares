@@ -50,7 +50,6 @@
 | Contact Us Link | To be directed to a page with contact information and a contact form | Pass |
 | Privacy Policy Link | To be directed to a page with the business privacy policy | Pass |
 | Connect with Us | Address, mail and telephone to currently direct users to the contact us page | Pass |
-
 | Back to Top button | Scroll to the top of the current page | Pass |
 
 
@@ -124,11 +123,40 @@
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
 | View Profile Menu | Click on 'My Account' and Login with valid username and password | 'My Profile' link appears on 'My Account' menu | Pass |
-| View default shipping details | As an authenticated user click on 'My Profile' from the 'My Account' menu | A profile page appears with Default Delivery Details Form | Pass |
-| Update default shipping details | Updated Address 1 and clicked the Update button | The form data is updated with the new data and a Toast Success message 'Profile Updated' id displayed | Pass |
-| View order history | From the Profile page choose Order History from the menu on the left of the page | A list of orders associated with that profile are displayed | Pass |
+| View default delivery details | As an authenticated user click on 'My Profile' from the 'My Account' menu | A profile page appears with Default Delivery Details Form | Pass |
+| Update default delivery details | Updated Address 1 and click the Update button | The form data is updated with the new data and a Toast Success message 'Profile Updated' id displayed | Pass |
+| View order history | From the Profile page choose 'Order History' from the menu on the left of the page | A list of orders associated with that profile are displayed | Pass |
 | View order summary | Click on an order from the list displayed on the view order history page | An order summary page is displayed with details of that particular order | Pass |
-| Create a review | From the Profile page choose Order History from the menu on the left of the page   |  | |
+| Create a review | From the Profile page choose 'Submit Review' from the menu on the left of the page. Fill out the form by selecting a product from the Product drop down menu, enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form is submitted with a Toast Success message 'Thank you for your review!" and user is redirected to the profile page | Pass |
+
+
+*Update delivery details form validation*
+
+| **Testing Perfomed** | **Action** | **Expected Outcome** | **Outcome** | **Result** |
+| -------------------- | ---------- | -------------------- | ----------- | ---------- |
+| Update Telephone number | Changed the last 2 didgits in the telephone number and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Profile default delivery details were updated and success message displayed | Pass |
+| Delete Telephone number | Cleared the telephone number field and clicked Update | The form should submit, the telephone number should now be blank on the form and a Toast Success message appear with 'Profile Updated' | Form Submitted, telephone number field is now blank on default delivery details form and Profile Updated Success message displayed | Pass |
+| Update Street Address 1 | Changed Address 1 field and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Form submitted, Street Address 1 updated on default delivery details form and success message displayed | Pass |
+| Delete Street Address 1 | Cleared Address 1 field and clicked Update | The form should submit, street address 1 should now be blank on default delivery details form and a Toast Success message appear with 'Profile Updated' | Form Submitted, Street Address 1 is now clear on default delivery details form and Profile Updated Success message displayed | Pass |
+| Update Street Address 2 | Changed Address 2 field and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Form submitted, Street Address 2 updated on default delivery details form and success message displayed | Pass |
+| Delete Street Address 2 | Cleared Address 2 field and clicked Update | The form should submit, street address 1 should now be blank on default delivery details form and a Toast Success message appear with 'Profile Updated' | Form Submitted, Street Address 2 is now clear on default delivery details form and Profile Updated Success message displayed | Pass |
+| Update Town or City | Changed Town or City field and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Form submitted, Town or City updated on default delivery details form and success message displayed | Pass |
+| Delete Town or City | ClearedTown or City field and clicked Update | The form should submit, Town or City should now be blank on default delivery details form and a Toast Success message appear with 'Profile Updated' | Form Submitted, Town or City is now clear on default delivery details form and Profile Updated Success message displayed | Pass |
+| Update County | Changed County field and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Form submitted, County updated on default delivery details form and success message displayed | Pass |
+| Delete County | Cleared County field and clicked Update | The form should submit, County should now be blank on default delivery details form and a Toast Success message appear with 'Profile Updated' | Form Submitted, County is now clear on default delivery details form and Profile Updated Success message displayed | Pass |
+| Update Postcode | Changed Postcode field and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Form submitted, Postcode updated on default delivery details form and success message displayed | Pass |
+| Delete Postcode | Cleared Postcode field and clicked Update | The form should submit, Postcode should now be blank on default delivery details form and a Toast Success message appear with 'Profile Updated' | Form Submitted, Postcode is now clear on default delivery details form and Profile Updated Success message displayed | Pass |
+| Update Country | Changed Country field and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Form submitted, Country updated on default delivery details form and success message displayed | Pass |
+| Delete Country | Cleared Country field and clicked Update | The form should submit, Country should now be blank on default delivery details form and a Toast Success message appear with 'Profile Updated' | Form Submitted, Country is now clear on default delivery details form and Profile Updated Success message displayed | Pass |
+
+
+*Create Review form validation*
+
+| **Testing Perfomed** | **Action** | **Expected Outcome** | **Outcome** | **Result** |
+| -------------------- | ---------- | -------------------- | ----------- | ---------- |
+| Submit an incomplete review | Do not select a product from the Product drop down menu. Continue to enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form should not submit and a message telling the user that a product needs to be selected should be displayed | The form did not submit, the select drop down was highlighted but no message was displayed | Fail |
+| Submit an incomplete review | Fill out the form by selecting a product from the Product drop down menu, do not enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form should not submit and a message telling the user that the field can not be blank should be displayed | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
+| Submit an incomplete review | Fill out the form by selecting a product from the Product drop down menu, enter a Product review, select a star rating and leave feedback on user experience blank. click the Submit button | The form should not submit and a message telling the user that the field can not be blank should be displayed | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
 
 **Contact Form**
 

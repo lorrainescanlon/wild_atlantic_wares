@@ -9,7 +9,12 @@ class ReviewForm(forms.ModelForm):
     """
     Form for submitting reviews
     """
-    product = forms.ModelChoiceField(queryset=None)
+    product = forms.ModelChoiceField(
+        queryset=None,
+        required=True,
+        empty_label="-- Select your purchased item --",
+        label='Item',
+    )
 
     class Meta:
         model = Review
@@ -17,8 +22,8 @@ class ReviewForm(forms.ModelForm):
 
         labels = {
             'product': 'Item',
-            'product_view': 'Your Product Review',
-            'rating': 'Rate this product out of 5',
+            'product_review': 'Your Item Review',
+            'rating': 'Rate this item out of 5',
             'experience_review': 'Feedback on your experience'
         }
         widgets = {}
