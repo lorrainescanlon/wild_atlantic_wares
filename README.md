@@ -124,12 +124,12 @@ The following User Stories were created to fulfill the expectations and needs of
 | As a site user I can view a list of products so that I can make a purchase. |
 | As a site user I can view a specific category so that I can find items I am interested in. |
 | As a Site User I can sort a list of products so that I can find items based on my needs. |
-| As a Site User I can I can sort a category of products so that I can identify items based on my needs. |
-| As a Site User I can I can search for a product so that I can find items I want to buy. |
+| As a Site User I can sort a category of products so that I can identify items based on my needs. |
+| As a Site User I can search for a product so that I can find items I want to buy. |
 | As a Site User I can view product details so that I can purchase the correct item. |
 | As a Site User I can view deals and offers so that I can make savings on purchases. |
 | As a Site User I can view the total of my shopping cart so that I avoid over spending. |
-| As a Site User I can I can select the quantity of a product so that I can purchase the correct amount. |
+| As a Site User I can select the quantity of a product so that I can purchase the correct amount. |
 | As a Site User I can view the items in my shopping cart so that I can ensure they are correct and that I can view the total cost.|
 | As a Site User I can adjust the items in my shopping cart so that I buy only what I want to. |
 | As a Site User I can enter my payment and shipping details so that I can complete my purchase |

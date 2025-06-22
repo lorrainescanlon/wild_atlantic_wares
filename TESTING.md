@@ -57,16 +57,28 @@
 
 | **User Story** | **Expected Outcome** | **Result** |
 |----------------|----------------------|------------|
-| As a site user I can  |  |  |
-| As a site user I can  |  | |
-| As a Site User I can  |  |
-| As a Site User I can  |  |  |
-| As a Site User I can  | |  |
-| As a Site Admin I can  |  |  |
-| As a Site Admin I can |  |  |
-| As a Site Admin I can  |  |  |
-| As a Site Admin I can  |  |  |
-| As a Site Administrator I can |  |  |
+| As a site user I can view a list of products so that I can make a purchase  | A list of all products are displayed | Pass |
+| As a site user I can view a specific category so that I can find items I am interested in | Products can be viewed by category | Pass |
+| As a Site User I can sort a list of products so that I can find items based on my needs | Products can be sorted | Pass |
+| As a Site User I can sort a category of products so that I can identify items based on my needs | Product categories can be sorted | Pass |
+| As a Site User I can search for a product so that I can find items I want to buy | Products can be searched for by words or phrases | Pass |
+| As a Site User I can view product details so that I can purchase the correct item | Details for individual products can be displayed | Pass |
+| As a Site User I can view deals and offers so that I can make savings on purchases | Products can be categorised as deals and special offers | Pass  |
+| As a Site User I can view the total of my shopping basket so that I avoid over spending | Shopping cart totals are visible to the user | Pass |
+| As a Site User I can select the quantity of a product so that I can purchase the correct amount | A quantity button allowing a user to increase or decrease quantity | Pass |
+| As a Site User I can view the items in my shopping basket so that I can ensure they are correct and that I can view the total cost | A shopping basket page detailing items and totals | Pass |
+| As a Site User I can adjust the items in my shopping basket so that I buy only what I want to | Items can have their quantity adjusted and items can be removed from the shopping basket | Pass |
+| As a Site User I can enter my payment and shipping details so that I can complete my purchase | A secure payment method using stripe is available to the user | Pass |
+| As a Site User I can view an order confirmation so that I can verify that my purchase has been successful | Users can view an order confirmation once a payment has been verified | Pass |
+| As a Site User I can receive an email order confirmation so that I can keep a record of my purchase | Users recieve an order confirmation via email once a payment has been verified | Pass |
+| As a Site User I can register an account so that I can create a personal profile | Registered users can create user profiles | Pass |
+| As a Site User I can login to my personalized account so that I can view my purchase history | Order history can be accessed via the users Profile | Pass |
+| As a Site User I can review a product so that I can provide feedback and inform future customers | Reviews can be submitted for items purchased | Pass |
+| As a Site Admin I can add a product so that I can add new items to my shop | New items can be added by authenticated and authorised users | Pass |
+| As a Site Admin I can update a product so that I can make changes to items in my shop | Items can be updated by authenticated and authorised users | Pass |
+| As a Site Admin I can delete a product so that I can remove items that are no longer in stock | items can be deleted by authenticated and authorised users | Pass |
+
+
 
 ### Search Function
 
@@ -77,28 +89,33 @@
 | Search for Product not in the database | '0 Found' message returned | Search for 'chair' | 'Chair - 0 Found' message returned | Pass |
 | Search empty query | Toast Error Message - Search Criteria can not be blank. Direct to All Products page with 'Please enter a valid search word' | Search for '' | Error Message - Search Criteria can not be blank displayed and directed to All Products page with 'Please enter a valid search word'| Pass |
 
-### Order By Function
+
+### Filter Function
+
+### Sort By Function
 
 | **Feature**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
 | -----------| -------------------- | --------------------- | ----------- | ---------- |
-| Order Product by Category |  |  |  |  | 
-| Order Product by Rating |  |  |  |  | 
-| Order Product by Price |  |  |  |  | 
-| Order Product by Rating Ascending |  |  |  |  | 
-| Order Product by Price Ascending |  |  |  |  | 
+| Sort Product by Category |  |  |  |  | 
+| Sort Product by Rating |  |  |  |  | 
+| Sort Product by Price |  |  |  |  | 
+| Sort Product by Rating Ascending |  |  |  |  | 
+| Sort Product by Price Ascending |  |  |  |  | 
 
 
 ### App Functionality
 
- **Create**                                                  
+ **Products App**
 
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
-| User account creation | Complete and submit the registration form | User can login using username and password. Porfile menu changes to include logout an profile page links |  |
-| Submit a review | A registered user logs in and navigates to the profile page. Here they fill in the review form and submit | Form is submitted successfully message is displayed and the review awaits admin approval. Once approved by admin it is committed to the database. | |
-| Add new Product to Shop | Create and submit a new Product | Product added sucess messsage. Product appears on the shop to buy. | |  
-
-
+| View All Products |  |  | |
+| View Products by Category |  |  | |
+| Sort Products by Price |  |  | |
+| Sort Products by Rating |  |  | |
+| Sort Products by Category|  |  | |
+| View Product details |  |  | |
+| Add Product to shopping basket|  |  | |
 
  **Basket App** 
 
@@ -118,7 +135,7 @@
 
 
 
-**User Profile**
+**Profiles App**
 
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
@@ -158,21 +175,23 @@
 | Submit an incomplete review | Fill out the form by selecting a product from the Product drop down menu, do not enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form should not submit and a message telling the user that the field can not be blank should be displayed | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
 | Submit an incomplete review | Fill out the form by selecting a product from the Product drop down menu, enter a Product review, select a star rating and leave feedback on user experience blank. click the Submit button | The form should not submit and a message telling the user that the field can not be blank should be displayed | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
 
-**Contact Form**
+**About App**
 
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
-|  |   |  |
+| Contact Form  |   |  |
+| Faq Page |   |  |
 
- **Delete** 
-
-| **Feature** | **Action** | **Expected Result** | **Result** |
-| ----------- | ---------- | ------------------- | ---------- |
-| |  |   | |
 
 
 ### Authentication 
 
+| **Feature** | **Action** | **Expected Result** | **Result** |
+| ----------- | ---------- | ------------------- | ---------- |
+| User account creation | Complete and submit the registration form | User can login using username and password. Porfile menu changes to include logout an profile page links |  |
+| Submit a review | A registered user logs in and navigates to the profile page. Here they fill in the review form and submit | Form is submitted successfully message is displayed and the review awaits admin approval. Once approved by admin it is committed to the database. | |
+| Add new Product to Shop | Create and submit a new Product | Product added sucess messsage. Product appears on the shop to buy. | |  
+ 
 **Acount Registration** 
 
 | **Test** | **Expected Outcome** | **Result** |

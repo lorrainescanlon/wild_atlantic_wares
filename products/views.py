@@ -44,6 +44,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
+                display_category = "Please enter a valid search word"
                 messages.error(request, "Search criteria can not be blank")
                 return redirect(reverse('products'))
 
