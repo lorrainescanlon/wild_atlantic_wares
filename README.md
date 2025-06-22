@@ -405,8 +405,7 @@ The CRUD principle was at the center of the design process for this project.
             <meta name="keywords" content="handmade pottery, Irish pottery, ceramic gifts, ceramic vases, ceramic cups, 
                 ceramic mugs, cermic plates, ceramic bowls, wild atlantic way craft, Dingle craft, pottery Dingle, sustainable pottery ">
 
-  
-
+ 
 ### Sitemap
  - [Sitemap](#sitemap) - link it here
   Sitemap created at 
@@ -414,8 +413,6 @@ The CRUD principle was at the center of the design process for this project.
 ### Robots
  - [Robots](#robots) - link it here
   Robots file created to disallow certain sections of your website. I have disallowed the profile and basket dierctories.
-
-
 
 ## Testing
 
@@ -425,12 +422,31 @@ For detailed testing, validation and results please refer to the [Testing Docume
 ### Bugs
 
 #### Bugs Resolved
-For details on bugs encountered and resolved during development please refer to the [Bugs Document](BUGS.md)
- - Bug 1. 
-
- - Bug 2
+For details on bugs encountered and resolved during development please refer to the [Testing Document](TESTING.md)
 
 #### Bugs Remaining
+ - Sorting Bug
+  Sort by ratings bug encountered when testing. When sorting items by rating low to high products are displayed as expected with lowest stars to highest 
+  stars and then products with no ratings. When sorted from high to low, products with no ratings are returned first then highest rated to lowest. The opposite happens in the test environment.
+
+      products = Product.objects.annotate(rating=Avg(('reviews__rating')))
+
+  Ratings are calculated in all_products and product_detail views and returned with the queryset using the annotate function.
+
+ - Summernote Bug 
+   Summernote editor was installed to enable admin to add and update faqs via the admin console. 
+   When I edited an faq and refreshed the page the html tags appeared in the body of the text.
+   I then added the | safe filter but this then affected the data-toggle collapse, which did not work properly when the |safe filter was used.
+   The paragraphs expanded when clicked but would not collapse again,see here ![faq-problem](/static/docs/images/faq_problem.PNG)
+   I have reverted to unedited text for the faqs for now. 
+
+ - More link Bug
+   A bug exists in the implementation of the more link ![more-link](/static/docs/images/product_detail_morelink.PNG) from the products detail page.
+
+      <a href="{% url 'products' %}?category={{ product.category.name }}&menu={{ product.category.friendly_name }}">
+   
+   When the link is clicked the user is returned the products page which displays all products in that category.
+   The problem is in the menu display heading at the top of the page, which is set using the display_category and is only displaying part of a category name.  
 
 
 ## Deployment
