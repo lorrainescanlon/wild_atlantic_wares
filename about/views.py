@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.conf import settings
 from .models import Faq
 from .forms import ContactForm
 
@@ -19,10 +20,11 @@ def contact_us(request):
             messages.add_message(
                 request, messages.SUCCESS, 'Contact form recieved! '
                 'We appreciate your feedback & will be in contact shortly.')
-
+    map_key = settings.GMAPS_API_KEY
     contact_form = ContactForm()
     context = {
         'form': contact_form,
+        'map_key': map_key,
     }
 
     return render(request, 'about/contact.html', context,)

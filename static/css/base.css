@@ -364,6 +364,18 @@ footer span {
     cursor: pointer;
 }
 
+/* Map styles */
+.map-style {
+    flex-grow: 1;
+    padding: 0px;
+    margin-top: 0px;
+    min-height: 250px;
+    border-style: none;
+    border: none;
+    border-left: none;
+    border-top: none;
+}
+
 /* Media Queries */
 /* Make container bigger on xl screens */
 @media (min-width: 1200px) {

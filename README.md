@@ -246,6 +246,10 @@ There is a consistent colour scheme used throughout the site as shown on the col
 
 #### Filter and Sort 
 
+#### Shopping Basket
+
+#### Checkout
+
 #### Review Form
  - The review form allows logged in users to submit a review on a product.
  - The review form allows logged in users to submit a review on a their experience.
@@ -348,12 +352,12 @@ The CRUD principle was at the center of the design process for this project.
 ## Technologies Used
 
 ### Development Enviornment and Hosting
- - [Figma](https://figma.com) - Wireframes.
+ - [Balsamiq](https://balsamiq.com) - Wireframes.
  - [Lucid](https://lucid.app/) - Database ERD.
  - [GitHub](https://github.com/) - Version control.
  - [Visual Studio Code](https://code.visualstudio.com) - IDE.
  - [Heroku](https://heroku.com) - Website hosting platform.
- - [Amazon](https://cloudinary.com/) - Image hosting platform.
+ - [Amazon](https://aws.com/) - Image hosting platform.
 
 ### Libraries
 
@@ -406,7 +410,10 @@ The CRUD principle was at the center of the design process for this project.
 ### Sitemap
  - [Sitemap](#sitemap) - link it here
   Sitemap created at 
-  Robots file to  disallow certain sections of your website. I have disallowed the profile and basket dierctories.
+
+### Robots
+ - [Robots](#robots) - link it here
+  Robots file created to disallow certain sections of your website. I have disallowed the profile and basket dierctories.
 
 
 
@@ -418,6 +425,7 @@ For detailed testing, validation and results please refer to the [Testing Docume
 ### Bugs
 
 #### Bugs Resolved
+For details on bugs encountered and resolved during development please refer to the [Bugs Document](BUGS.md)
  - Bug 1. 
 
  - Bug 2
