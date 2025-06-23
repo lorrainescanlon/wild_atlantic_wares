@@ -1,5 +1,4 @@
-# wild_atlantic_wares
-  Wild atlantic wares
+# Wild Atlantic Wares
 
 ## Code Institute - Portfolio Project 5 - ECommerce 
 
@@ -141,7 +140,7 @@
 #### Github Project
   I created a GitHub Project to help manage the development of the site [GitHub project](https://github.com/users/lorrainescanlon/projects/5).
   Issues were created for user stories with acceptance criteria defined for each. Tasks were created for user stories and grouped into epics with milestones applied to epics. 
-  Tasks were managed through the various stages and states using a Kanban board ![Kanban](/static/docs/images/github_project)
+  Tasks were managed through the various stages and states using a Kanban board ![Kanban](/static/docs/images/github_project.PNG)
 
 #### MosCow Priorization
   Based on MoSCow Prioritization principles (Must have, Should have, Could have, Won't have), the following feature sets were identified.
@@ -497,12 +496,13 @@ The CRUD principle was at the center of the design process for this project.
 
  
 ### Sitemap
- - [Sitemap](/sitemap.xml) - link it here
-  Sitemap created at 
-
+ - [Sitemap](/sitemap.xml) - file can be found here.
+  The sitemap provides a structured outline of the website's pages and content, making it easier for search engines to discover and index the site's content. 
+  
 ### Robots
- - [Robots](/robots.txt) - link it here
-  Robots file created to disallow certain sections of your website. I have disallowed the profile and basket dierctories.
+ - [Robots](/robots.txt) - file can be found here.
+
+  The Robots file is created to provide instructions to web crawlers or bots about which parts of the website they are allowed access to and which parts they are prohibitted from. I have disallowed the profile and basket dierctories.
 
 ## Deployment
 
@@ -517,7 +517,7 @@ Ensure the following are installed and added to requirements.txt prior to deploy
 - The site was deployed to Heroku, the steps used were as follows: 
   - Create and login to your heroku account. 
   - On your heroku dashboard, click the new button and 'create new app' from the dropdown menu.
-  - Enter the name of the app 'farmers-market-review', select region as 'Europe' and click the 'Create app' button
+  - Enter the name of the app 'wild-atlantic-wares', select region as 'Europe' and click the 'Create app' button
   - On the app screen select the 'Settings' tab.
   - Find the 'Config Vars' section and populate the following Key : Value pairs
     - AWS_ACCESS_KEY_ID *your key value*

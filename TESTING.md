@@ -1,4 +1,4 @@
-# Farmers Market Review TESTING.md
+# Wild Atlantic Wares TESTING.md
 
 ## Table of Contents
 - [Manual Testing](#manual-testing)
