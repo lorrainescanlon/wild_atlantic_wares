@@ -145,13 +145,13 @@
 
 
 #### Github Project
-I created a GitHub Project to help manage the development of the site [GitHub project](https://github.com/users/lorrainescanlon/projects/5).
-Issues were created for user stories with acceptance criteria defined for each. Tasks were created for user stories and grouped into epics with milestones applied to epics. 
-Tasks were managed through the various stages and states using a Kanban board ![Kanban](/static/docs/images/github_project)
+  I created a GitHub Project to help manage the development of the site [GitHub project](https://github.com/users/lorrainescanlon/projects/5).
+  Issues were created for user stories with acceptance criteria defined for each. Tasks were created for user stories and grouped into epics with milestones applied to epics. 
+  Tasks were managed through the various stages and states using a Kanban board ![Kanban](/static/docs/images/github_project)
 
 #### MosCow Priorization
-Based on MoSCow Prioritization principles (Must have, Should have, Could have, Won't have), the following feature sets were identified.
-Must Have Features
+  Based on MoSCow Prioritization principles (Must have, Should have, Could have, Won't have), the following feature sets were identified.
+  Must Have Features
     - Product browsing
     - Product filtering
     - Product sorting
@@ -162,32 +162,32 @@ Must Have Features
     - Email notifications
     - Product management
 
-Should Have Features
+  Should Have Features
     - User profile order history
     - Use profile reviews
     - User profile management
 
-Could Have Features
+  Could Have Features
     - Newletter Subscription
     - Related Products recommendations
     - Contact form
 
-Won't have Features
+  Won't have Features
     - Social media login integration
     - Wishlist functionality
 
 
 ### Wireframes
-Wireframes were created using Balsamiq software. The initial designs met basic early requirements that have evolved since. View the wireframe designs here
+  Wireframes were created using Balsamiq software. The initial designs met basic early requirements that have evolved since. View the wireframe designs here
 
-![Wireframes](/static/docs/wireframes.pdf)
+  ![Wireframes](/static/docs/wireframes.pdf)
 
 
 
 ### Design
-There is a consistent colour scheme used throughout the site as shown on the colour palette below. These colours are complimented by rich images of ceramic ware that add interest and enhance the user experience.
+  There is a consistent colour scheme used throughout the site as shown on the colour palette below. These colours are complimented by rich images of ceramic ware that add interest and enhance the user experience.
  
-![colour palate](/static/docs/images/colour_palette.PNG)
+  ![colour palate](/static/docs/images/colour_palette.PNG)
 
 
 ## Features
@@ -195,21 +195,19 @@ There is a consistent colour scheme used throughout the site as shown on the col
 ### Existing Features
 
 #### Navigation Bar
- - Navbar with website name, and page navigation links.
- - If user is authenticated/logged in they are presented with appropriate navigation links.
- - An active link is highlighted.
+ - Navbar displays the website name which acts as a home link.
  - The search box is located to the left of the navigation bar and colapses to the burger menu on mobile devices.
+ - If user is authenticated/logged in they are presented with appropriate account links.
+ - A realtime basket total is displayed underneath the basket icon on the navbar.
+ - The navbar contains navigation links for the various product categories.
 
- ![Nav Bar](/static/docs/images/)
-
- - A logged in display tells the user whether they are logged in or not.
-
- ![Mobile nav](/static/docs/images/)
+ ![Nav Bar](/static/docs/images/navbar.PNG)
 
  - The navbar becomes a collapsible burger menu with drop-down list on small to medium sized screens.
 
- ![Nav burger](/static/docs/images/)
+ ![Mobile nav](/static/docs/images/mobile_nav.PNG)
 
+ 
 #### Footer
  - The footer contains sections for internal links, external links, social media links and a subcription box.
 
@@ -253,7 +251,7 @@ There is a consistent colour scheme used throughout the site as shown on the col
 #### Checkout
 
 #### Review Form
- - The review form allows logged in users to submit a review on a product.
+ - The review form allows logged in users to submit a review on a product that they have purchased.
  - The review form allows logged in users to submit a review on a their experience.
  - The form contains two textareas and a drop down menu to select a star rating.
 

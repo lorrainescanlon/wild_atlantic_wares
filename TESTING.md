@@ -17,9 +17,6 @@
     - [CSS](#css)
     - [Python](#python)
     - [JavaScript](#javascript)
-- [Bugs and Challenges](#bugs-challenges)
-    - [Resolved Bugs](#resolved-bugs)
-    - [Challenges](challenges)
 - [Browser Compatibility](#browser-compatibility)
 
 ## Manual Testing
@@ -85,7 +82,7 @@
 
 ### Search Function
 
-| **Feature**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
+| **Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
 | -----------| -------------------- | --------------------- | ----------- | ---------- |
 | Search for Product by name | One or more results containing serach query in product name or description are returned | Search for 'cup' | 2 products are returned | Pass | 
 | Search for Product by description | One or more results containing serach query in Product name or description are returned | Search for 'white' | 11 products are returned | Pass |
@@ -97,7 +94,7 @@
 
 ### Sort By Function
 
-| **Feature**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
+| **Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
 | -----------| -------------------- | --------------------- | ----------- | ---------- |
 | Sort Product by Category |  |  |  |  | 
 | Sort Product by Rating |  |  |  |  | 
@@ -110,8 +107,8 @@
 
  **Products App**
 
-| **Feature** | **Action** | **Expected Result** | **Result** |
-| ----------- | ---------- | ------------------- | ---------- |
+| **Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
+| -----------| -------------------- | --------------------- | ----------- | ---------- |
 | View All Products |  |  | |
 | View Products by Category |  |  | |
 | Sort Products by Price |  |  | |
@@ -122,16 +119,16 @@
 
  **Basket App** 
 
-| **Feature** | **Action** | **Expected Result** | **Result** |
-| ----------- | ---------- | ------------------- | ---------- |
+| **Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
+| -----------| -------------------- | --------------------- | ----------- | ---------- |
 | |  |  | |
 |  |  | |  |      
 |  |  |  |
 
  **Checkout App** 
 
-| **Feature** | **Action** | **Expected Result** | **Result** |
-| ----------- | ---------- | ------------------- | ---------- |
+|**Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
+| -----------| -------------------- | --------------------- | ----------- | ---------- |
 | |  |  | |
 |  |  | |  |      
 |  |  |  |
@@ -151,10 +148,12 @@
 
 
 *Update delivery details form validation*
+| **Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
+| -------------| -------------------- | --------------------- | ----------- | ---------- |
 
-| **Testing Perfomed** | **Action** | **Expected Outcome** | **Outcome** | **Result** |
-| -------------------- | ---------- | -------------------- | ----------- | ---------- |
-| Update Telephone number | Changed the last 2 didgits in the telephone number and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Profile default delivery details were updated and success message displayed | Pass |
+| **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
+| ------------- | -------------------- | -------------------- | ----------- | ---------- |
+| Update Telephone number | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated' | Changed the last 2 didgits in the telephone number and clicked Update | Profile default delivery details were updated and success message displayed | Pass |
 | Delete Telephone number | Cleared the telephone number field and clicked Update | The form should submit, the telephone number should now be blank on the form and a Toast Success message appear with 'Profile Updated' | Form Submitted, telephone number field is now blank on default delivery details form and Profile Updated Success message displayed | Pass |
 | Update Street Address 1 | Changed Address 1 field and clicked Update | The form should submit, the updated data should now be visible on the default delivery details form and a Toast Success message appear with 'Profile Updated'| Form submitted, Street Address 1 updated on default delivery details form and success message displayed | Pass |
 | Delete Street Address 1 | Cleared Address 1 field and clicked Update | The form should submit, street address 1 should now be blank on default delivery details form and a Toast Success message appear with 'Profile Updated' | Form Submitted, Street Address 1 is now clear on default delivery details form and Profile Updated Success message displayed | Pass |
@@ -172,13 +171,16 @@
 
 *Create Review form validation*
 
-| **Testing Perfomed** | **Action** | **Expected Outcome** | **Outcome** | **Result** |
-| -------------------- | ---------- | -------------------- | ----------- | ---------- |
-| Submit an incomplete review | Do not select a product from the Product drop down menu. Continue to enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form should not submit and a message telling the user that a product needs to be selected should be displayed | The form did not submit, the select drop down was highlighted but no message was displayed | Fail |
-| Submit an incomplete review | Fill out the form by selecting a product from the Product drop down menu, do not enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form should not submit and a message telling the user that the field can not be blank should be displayed | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
-| Submit an incomplete review | Fill out the form by selecting a product from the Product drop down menu, enter a Product review, select a star rating and leave feedback on user experience blank. click the Submit button | The form should not submit and a message telling the user that the field can not be blank should be displayed | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
+| **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
+| ------------- | -------------------- | -------------------- | ----------- | ---------- |
+| Submit an incomplete review | The form should not submit and a message telling the user what field is required or invalid should be displayed | Do not select a product from the Product drop down menu. Continue to enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form did not submit, the select drop down was highlighted but no message was displayed | Fail |
+| Submit an incomplete review | The form should not submit and a message telling the user what field is required or invalid should be displayed | Fill out the form by selecting a product from the Product drop down menu, do not enter a Product review, select a star rating and enter feedback on user experience click the Submit button | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
+| Submit an incomplete review | The form should not submit and a message telling the user what field is required or invalid should be displayed | Fill out the form by selecting a product from the Product drop down menu, enter a Product review, select a star rating and leave feedback on user experience blank. click the Submit button | The form did not sumit and a message saying 'Please fill out this field' is displayed | Pass |
+
 
 **About App**
+| **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
+| ------------- | -------------------- | -------------------- | ----------- | ---------- |
 
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
@@ -189,6 +191,11 @@
 
 ### Authentication 
 
+| **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
+| ------------- | -------------------- | -------------------- | ----------- | ---------- |
+| User account creation | User can login using username and password. Account menu changes to include logout and my profile links | Created user account by providing valid email address username and password | Logged in sucessfully, account links are updated to include logout and my profile | Pass |
+
+
 | **Feature** | **Action** | **Expected Result** | **Result** |
 | ----------- | ---------- | ------------------- | ---------- |
 | User account creation | Complete and submit the registration form | User can login using username and password. Porfile menu changes to include logout an profile page links |  |
@@ -197,27 +204,27 @@
  
 **Acount Registration** 
 
-| **Test** | **Expected Outcome** | **Result** |
-| -------- | -------------------- | ---------- |
-| Register new User with valid username, email and password |  |  |
-| Register new User with valid username and password, no email |  |  |
-| Register new User with valid username, no password and no email |   |  |
-| Register new User with valid password, no username and no email |   |  |
-| Register new User with valid username, invalid password and no email |   |  |
+| **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
+| ------------- | -------------------- | -------------------- | ----------- | ---------- |
+| Account creatation valid | User signed in and message re confirmation email sent | Register new User with valid username, email and password | Account created successfully, user signed in and confirmation email sent | Pass |
+| Account creatation invalid | Account not created, error message on form field 'please fill out this field'| Register new User with valid username and password, no email | Account not created, error message on email field 'please fill out this field' | Pass |
+| Account creatation invalid | Account not created, error message on form field 'please fill out this field' | Register new User with valid email, password and no username | Account not created, error message on username field 'please fill out this field' | Pass |
+| Account creatation invalid | Account not created, error message on form field 'please fill out this field' | Register new User with valid email, username and no password |  Account not created, error message on password field 'please fill out this field'  | Pass |
+
 
 **Account Login**
-| **Test** | **Expected Outcome** | **Result** |
-| -------- | -------------------- | ---------- |
-| Login with a valid username and password |  |  |
-| Login with a valid username and no password |  |  |
-| Login with a valid username and incorrect password | |  |
-| Login with a no username and no password |  | |
-| Login with a no username and a password |  |  |
+| **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
+| ------------- | -------------------- | -------------------- | ----------- | ---------- |
+| Valid login | User is logged in and successfull login message is displayed | Login with a valid username and password | User logged in successfully | Pass |
+| Invalid login | User login fails, error message is displayed | Login with a valid username and no password | Login failed, please fill in this field message displayed in password field | Pass |
+| Invalid login | User login fails, error message is displayed | Login with a valid username and incorrect password | Login fails with message 'The username and/or password you specified are not correct' | Pass |
+| Invalid login | User login fails, error message is displayed | Login with no username and password | Login failed, please fill in this field message displayed in username field | Pass |
+| Invalid login | User login fails, error message is displayed | Login with no username and no password | Login failed, please fill in this field message displayed in username field | Pass |
 
 **Account Logout**
-| **Test** | **Expected Outcome** | **Result** |
-| -------- | -------------------- | ---------- |
-| Logout using 'Log Out' button on Logout page | Account logout successfull, 'You have signed out' message appears and logged in as status changes to 'You are not logged in' | Pass |
+| **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
+| ------------- | -------------------- | -------------------- | ----------- | ---------- |
+| Logout | Account logout successfull, 'You have signed out' message appears | Logout using 'Log Out' button on Logout page | Account logout successfull, 'You have signed out' message appears | Pass |
 
 
 ### Site Admin Testing
@@ -270,59 +277,98 @@ Lighthouse testing was carried out on both desktop and mobile devices using chro
 As this project contains Django tags and Jinja templating language the source code of each page was pasted into the validator directly as opposed to using the websites url.
 
 **Home page**
+No error returned.
+![HTML Validation - index.html](/static/docs/Validation/index-html-validated.PNG)
 
 **Products page**
+No error returned.
+![HTML Validation - products.html](/static/docs/Validation/products-html-validated.PNG)
 
 **Product detail page**
+No error returned on initial testing.
+![HTML Validation - product_detail.html](/static/docs/Validation/product-detail-html-validation.PNG)
+
+Error returned on further test when product category name contains spaces i.e Cups & Mugs. The error refers to spaces in the 'more' link as detailed in the bugs section of README.
+![HTML Validation - products.html](/static/docs/Validation/product-detail-validation-error.PNG)
 
 **Basket page**
+No error returned.
+![HTML Validation - basket.html](/static/docs/Validation/basket_page_validation.PNG)
 
 **Checkout page**
+No error returned.
+![HTML Validation - checkout.html](/static/docs/Validation/checkout_page_validation.PNG)
+
+**Checkout Success page**
+No error returned.
+![HTML Validation - checkout_success.html](/static/docs/Validation/checkout-successful-validation.PNG)
 
 **Profile page**
+No error returned.
+![HTML Validation - profile.html](/static/docs/Validation/user-profile-validation.PNG)
 
-**Sales History page**
+**Order History page**
+No error returned.
+![HTML Validation - orders.html](/static/docs/Validation/profile-order-history-validation.PNG)
+
+**Order Summary page**
+No error returned.
+![HTML Validation - order_summary.html](/static/docs/Validation/profile_order_summary_validation.PNG)
 
 **Reviews page**
+No error returned.
+![HTML Validation - reviews.html](/static/docs/Validation/profile_review_validation.PNG)
 
 **About us page**
+No error returned.
+![HTML Validation - about.html](/static/docs/Validation/about-us-validation.PNG)
 
 **Contact Page page**
+No error returned.
+![HTML Validation - contact.html](/static/docs/Validation/contact-page-validation.PNG)
 
 **Privacy Policy page**
+No error returned.
+![HTML Validation - privacy.html](/static/docs/Validation/privacy-page-validation.PNG)
 
-Error reported in realtion to parameter value passed to google maps url. There are spaces in the location name.
-
-![Market details validation error](/static/docs/images/markedetailvalidation.PNG)
-
-![Error highlight in code](/static/docs/images/mapserror.PNG)
-
-**Search results page**
-Document checking completed. No errors or warnings to show.
+**FAQ page**
+No error returned.
+![HTML Validation - faq.html](/static/docs/Validation/faq-page-validation.PNG)
 
 **Register page**
+No error returned.
+![HTML Validation - signup.html](/static/docs/Validation/register-page-validation.PNG)
 
 **Login page**
-
+No error returned.
+![HTML Validation - login.html](/static/docs/Validation/login_page_validation.PNG)
 
 **Logout page**
+No error returned.
+![HTML Validation - logout.html](/static/docs/Validation/logout-page-validation.PNG)
 
+**Add Product page**
+No error returned.
+![HTML Validation - add_product.html](/static/docs/Validation/add_product_validation.PNG)
 
-**Contact page**
+**Edit Product page**
+No error returned.
+![HTML Validation - edit_product.html](/static/docs/Validation/edit_product_validation.PNG)
 
-
-**Reviews page**
 
 
 ### CSS Validation [Jigsaw](https://jigsaw.w3.org/css-validator/)
 No errors reported 
 
-![css validation]()
+![css validation - base.css](/static/docs/Validation/css-base-validation.PNG)
+![css validation - base.css warning](/static/docs/Validation/css-base-warning.PNG)
+![css validation - checkout.css](/static/docs/Validation/css-checkout-validation.PNG)
+![css validation - checkout.css warning](/static/docs/Validation/css-checkout-warning.PNG)
 
 ### Javascript Validation [JSHint](https://jshint.com/)
 No errors reported 
 
-![javascript validation]()
+![javascript validation](/static/docs/Validation/jshint-validation.PNG)
 
 
 ### Python Validation
