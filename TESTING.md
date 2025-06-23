@@ -228,20 +228,10 @@
  **Admin Account**
  | **Test** | **Expected Outcome** | **Result** |
  | -------- | -------------------- | ---------- |
- | Login with a valid username and password | My Account Menu list items to change |  |
- | View Products detail page| Links to edit and delete product should be displayed  |  |
- | Add Product |  |  |
- | Edit Product |  |  |
- | Delete Product |  |  |
-
- **Admin Console**
- | **Test** | **Expected Outcome** | **Result** |
- | -------- | -------------------- | ---------- |
- | Login with a valid username and password | |  |
- | View Model Data | |  |
- | Add Product |  |  |
- | Edit Product |  |  |
- | Delete Product |  |  |
+ | Login with a valid username and password | My Account Menu list items to change to include Product Management | Pass  |
+ | Add Product | Logged in Admin User can add Product from the Products Management Page | Pass  |
+ | Edit Product | Logged in Admin User can edit a Product from edit link on the Products detail Page | Pass |
+ | Delete Product | Logged in Admin User can delete a Product from delete link on the Products detail Page | Pass |
 
 
 ### Social Links

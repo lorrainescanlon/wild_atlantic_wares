@@ -34,10 +34,6 @@
     - [OrderLineItem Model](#orderlineitem-model)
     - [Contact Model](#contact-model)
     - [UserProfile Model](#userprofile-model)
-  - [Messaging & Error Handling]('messaging-errorhandling)
-    - [Toasts](#toasts)
-    - [Try Exceptions](#try-exceptions)
-    - [Error 500](#error500)
   - [Technologies Used](#technologies-used)
     - [Development Environment and Hosting](#development-environment-and-hosting)
     - [Libraries](#libraries)
@@ -298,7 +294,7 @@
 The database model evolved from the needs of the user stories.  
 The diagram was created using [Lucidchart](https://lucidchart.com)
 
-![DBModel](/static/docs/images/)
+![DBModel](/static/docs/images/DBModel.png)
 
 ### Category Model
  The category model records product categories
@@ -380,8 +376,8 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
  | -------------- | -------------- |
  | product | ForeignKey |
  | user | ForeignKey |
- | product_review | TestField |
- | experience_review | TestField |
+ | product_review | TextField |
+ | experience_review | TextField |
  | rating | IntegerField |
  | approved | BooleanField |
  | created_on | DateField |
@@ -481,9 +477,12 @@ The CRUD principle was at the center of the design process for this project.
 
 
 ### MailChimp
- - [MailChimp](https://mailchimp.com)  - Email marketing platform
- Screenshot of subscribe section and emails showing on mailchimp
- Setup a newsletter subscription service using Mailchimp
+ - [MailChimp](https://mailchimp.com)  - Email marketing platform for newsletter subscribers
+ 
+ Successfully setup mailchimp 
+
+ ![mailchimp](/static/docs/images/mailchimp.PNG)
+
 
 ## SEO
  
