@@ -25,6 +25,7 @@ def contact_us(request):
     context = {
         'form': contact_form,
         'map_key': map_key,
+        'from_profile': True,
     }
 
     return render(request, 'about/contact.html', context,)
