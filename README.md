@@ -301,7 +301,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 ![DBModel](/static/docs/images/)
 
 ### Category Model
- - The category model records product categories
+ The category model records product categories
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -310,7 +310,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 
 ### Product Model
- - The product model stores data for featured products. 
+ The product model stores data for featured products. 
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -324,7 +324,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 
 ### Order Model
- - The order model contains order details.
+ The order model contains order details.
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -348,7 +348,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 
 ### OrderLineItem
- - Records line items from orders.
+ Records line items from orders.
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -359,7 +359,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 
 ### UserProfile
-- Records UserPorfile record and default shipping details.
+ Records UserPorfile record and default shipping details.
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -374,7 +374,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 
 ### Review Model
- - The review model records reviews that are submitted for a particular product from the profile app.
+ The review model records reviews that are submitted for a particular product from the profile app.
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -388,7 +388,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 
 ### Contact Model
- - The cotact model records contact messages sent by users of the website
+ The cotact model records contact messages sent by users of the website
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -400,7 +400,7 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 
 ### Faq Model
- - The Faq model stores frequently asked questions.
+ The Faq model stores frequently asked questions.
 
  | **Field Name** | **Field Type** |
  | -------------- | -------------- |
@@ -437,7 +437,7 @@ The CRUD principle was at the center of the design process for this project.
  - [GitHub](https://github.com/) - Version control.
  - [Visual Studio Code](https://code.visualstudio.com) - IDE.
  - [Heroku](https://heroku.com) - Website hosting platform.
- - [Amazon](https://aws.com/) - Image hosting platform.
+ - [Amazon](https://aws.com/) - Image and static file hosting platform.
 
 ### Libraries
 
@@ -459,7 +459,7 @@ The CRUD principle was at the center of the design process for this project.
  - [PostgresSQL](https://www.postgresql.org/) - An object-relational database management system (ORDMBS) is used as the backend for this project.
 
 ### Amazon
- - [Amazon Web Services](#amazon-web-services) - Platform for hosting images and video.
+ - [Amazon Web Services](#amazon-web-services) - Platform for hosting images, video and static files.
  
 ### Stripe
 - [Stripe](#stripe) - Used to take secure payments over the web.
@@ -468,7 +468,17 @@ The CRUD principle was at the center of the design process for this project.
 
 ### Facebook
  - [Facebook](https://www.facebook.com/people/Wild-Atlantic-Wares/61576963876705/)
-  Facebook is a popular social media platform used by over 2 billion worldwide users monthly. 
+  Facebook is a popular social media platform used by over 2 billion worldwide users monthly.
+  ![Facebook profile](/static/docs/images/fbprofile.PNG)
+
+  Facebook posts grab the attention of the user visually.
+
+  ![Facebook post](/static/docs/images/fbpost1.PNG)
+
+  ![Facebook post](/static/docs/images/fbpost2.PNG)
+
+  ![Facebook post](/static/docs/images/fbpost3.PNG)
+
 
 ### MailChimp
  - [MailChimp](https://mailchimp.com)  - Email marketing platform
@@ -718,7 +728,8 @@ For detailed testing, validation and results please refer to the [Testing Docume
 
 ### Media
 - Images were taken from pexel and unsplash
- - Hero image Photo by 
+ - Hero image Photo  by Anastasia Lashkevich: https://www.pexels.com/photo/close-up-shot-of-a-person-making-a-pot-14676612/
+ - A full list of pictures and credits can be found in this file ![images](/static/docs/picturelist.txt)
  - Fonts were taken from [Fontawesome](https://fontawesome.com/)
  - Content was written by myself.
 

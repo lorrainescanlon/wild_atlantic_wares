@@ -133,19 +133,22 @@
 
  | **Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
  | -----------| -------------------- | --------------------- | ----------- | ---------- |
- | |  |  | |
- |  |  | |  |      
- |  |  |  |
+ | Add item to basket| Item added to basket notification, total and delivery details update | Added item to basket | Item added success message displayed along with basket summary and updated totals | Pass |
+ | View Basket | Basket page displayed listing all item details, totals and delivery cost | Clicked on basket icon | Basket page displayed detailing items, totals and delivery cost | Pass |      
+ | Adjust quantity | Increase or decrease in item quantity, totals to reflect adjustments | Increasesd the quantity of item to 2 | Item quantity increased, totals and delivery cost updated | Pass | 
+ | Remove item | Item removed from basket, totals to reflect adjustment | Click remove item link | Item removed from basket totals and delivery cost updated | Pass | 
+ | Secure Checkout | Proceed to secure checkout page to enter delivery and payment details | Click Secure Checkout link | Checkout page is displayed with shipping details form and stripe payment element | Pass |
+ | Keep Shopping | Return user to all products page | Click Keep Shopping button | Returned to all products page| Pass | 
 
  **Checkout App** 
 
  |**Test Case**| **Expected Outcome** |  **Testing Perfomed** | **Outcome** | **Result** | 
  | -----------| -------------------- | --------------------- | ----------- | ---------- |
- | |  |  | |
- |  |  | |  |      
- |  |  |  |
-
-
+ | Adjust basket | Return to shopping basket page | Click on Adjust Basket button | Returned to shopping basket page | Pass |
+ | Checkout Form Populated | When a profile user is logged in their default delivery details should populate the form | Log in, put items in the shopping cart and navigate to secure checkout | Form is populated with profile default delivery details | Pass |  
+ | Checkout Form | Form submits with a success message and order confirmation | Complete form with valid data and payment details | Order successfull message email confirmation sent | Pass |    
+ | Payment Recieved | Payment intent succeeded and charge succeeded events recorded on stripe dashboard | Place an order using valid delivery and card payment details. Logon to stripe dashboard and navigate to Events | Payment intent succeeded and charge succeeded events recorded on stripe dashboard | Pass |
+  
 
  **Profiles App**
 
@@ -189,16 +192,12 @@
  **About App**
  | **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
  | ------------- | -------------------- | -------------------- | ----------- | ---------- |
+ | Valid Contact Form | Message saying contact form received successfully | Submitted valid contact form | Contact form recieved success message displayed | Pass |
+ | Invalid Contact Form | Message saying contact form data is missing or invalid | Submitted invalid contact form | Form validation message 'please fill out this field' | Pass |
+ | Faq Page | List of Faqs can be expanded and collapsed when clicked | Navigate to faq page and toggled the faq headings | Faq heading expand to reveal paragraph and collapse again | Pass |
  
- | **Feature** | **Action** | **Expected Result** | **Result** |
- | ----------- | ---------- | ------------------- | ---------- |
- | Contact Form  |   |  |
- | Faq Page |   |  |
-
-
 
 ### Authentication 
-
 
  **Acount Registration** 
  | **Test Case** | **Expected Outcome** | **Testing Perfomed** | **Outcome** | **Result** |
@@ -377,7 +376,7 @@
  ![css validation - base.css warning](/static/docs/Validation/css-base-warning.PNG)
 
  ![css validation - checkout.css](/static/docs/Validation/css-checkout-validation.PNG)
- 
+
  ![css validation - checkout.css warning](/static/docs/Validation/css-checkout-warning.PNG)
 
 
