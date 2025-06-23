@@ -46,7 +46,6 @@ a :hover {
     padding-bottom: 2px;
 }
 
-
 /* Header Styles */
 header {
     background-color: white;
@@ -101,13 +100,11 @@ header hr {
     color: rgb(66, 68, 56);
 }
 
-
 .menu-font-white {
     text-transform: uppercase;
     font-family: 'Lato';
     color: white;
 }
-
 
 .nav-border {
     border-top: 1px black;
@@ -161,7 +158,6 @@ header hr {
     border-bottom-color: #17a2b8 !important;
 }
 
-
 .basket-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -173,14 +169,6 @@ header hr {
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
-
-
-/* Body Styles */
-/*main {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
 
 .hero-section {
     height: 60vh;
@@ -390,9 +378,7 @@ footer span {
     .header-container {
         padding-top: 162px;
     }
-
 }
-
 
 /* pad header container when navbar is collapsed on mobile */
 @media (max-width: 991px) {

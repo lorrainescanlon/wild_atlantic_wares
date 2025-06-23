@@ -3,9 +3,10 @@
 
 ## Code Institute - Portfolio Project 5 - ECommerce 
 
-  Wild Atlamtic Wares is an online ecommerce platform bringing our hand crafted pottery to its target audience.
-  This platform allows users to browse our current catalogue and share their experiences by reviewing products they have purchased.
+  Wild Atlantic Wares is an online e-commerce platform bringing our hand crafted pottery to its target audience.
+  This is a B2C or Business-to-Consumer platform that allows users to browse our current products make a purchase and share their experiences by submitting reviews.
   Wild Atlantic Wares features full CRUD frunctionality and web marketing initiatives like email subscription and social media.
+
 ## Demo
   ![How the website looks on different devices](/static/docs/images/amiresponsive.PNG)
 
@@ -151,30 +152,18 @@
 
 #### MosCow Priorization
   Based on MoSCow Prioritization principles (Must have, Should have, Could have, Won't have), the following feature sets were identified.
-  Must Have Features
-    - Product browsing
-    - Product filtering
-    - Product sorting
-    - Product search
-    - Shopping basket and checkout
-    - Payment processing
-    - Status messages
-    - Email notifications
-    - Product management
 
-  Should Have Features
-    - User profile order history
-    - Use profile reviews
-    - User profile management
-
-  Could Have Features
-    - Newletter Subscription
-    - Related Products recommendations
-    - Contact form
-
-  Won't have Features
-    - Social media login integration
-    - Wishlist functionality
+ | **Must Have Features** | **Should Have Features** | **Could Have Features** | **Won't Have Features** |
+ | ---------------------- | ------------------------ | ----------------------- | ----------------------- |
+ | Product browsing | User profile order history | Newletter Subscription | Related Products recommendations |
+ | Product filtering | Use profile reviews | Contact form | Wishlist functionality |
+ | Product sorting | User profile management |  | Social media login integration |
+ | Product search | | |
+ | Shopping basket & checkout | | |
+ | Payment processing | | |
+ | Status messages | | |
+ | Email notifications | | |
+ | Product management | | |
 
 
 ### Wireframes
@@ -211,84 +200,95 @@
 #### Footer
  - The footer contains sections for internal links, external links, social media links and a subcription box.
 
- ![Footer](/static/docs/images/)
+ ![Footer](/static/docs/images/footer.PNG)
 
  - The sections stack vertically on mobile screens.
 
- ![Mobile footer](/static/docs/images/)
 
 #### Hero Image
  - A hero image is displayed on the home page.
  - It depicts a potter at work scene.
  
- ![Hero](/static/docs/images/)
+ ![Hero](/static/docs/images/hero_image.PNG)
 
  - An overlay section invites the visitor to shop their products.
 
- ![Mobile hero](/static/docs/images/)
+ ![Mobile hero](/static/docs/images/mobile_hero.PNG)
+
+#### Thumbnail Menu
+ - A visual category menu with product images.
+
+ ![Thumbnail menu](/static/docs/images/thumbnail_menu.PNG)
 
 #### Product List
  - Products are displayed as card items in a grid structure and paginated to display ? per page. 
 
- ![Product grid](/static/docs/images/)
+ ![Product grid](/static/docs/images/products_page.PNG)
 
  - Product cards stack vertically on mobile devices.
 
- ![Mobile grid](/static/docs/images/)
+ ![Mobile grid](/static/docs/images/mobile_products.PNG)
 
-#### Product Description
- - This section gives some detail of the product, like description, image and rating.
+#### Product Details
+ - This section gives some detail of the product, like description, image, rating and reviews.
 
- ![Product details](/static/docs/images/)
-
-
- ![Mobile detail](/static/docs/images/mobdetails.jpg)
+ ![Product details](/static/docs/images/product_detail.PNG)
 
 #### Filter and Sort 
+ - The naviagtion bar allows you to filter products by category and the sort menu allows you to sort products by price and rating.
+
+ ![Filter and sort](/static/docs/images/filter_and_sort.PNG)
 
 #### Shopping Basket
+ - The shopping basket contains the products that the use wishes to purchase along with totals and shipping costs.
+
+ ![Shopping basket](/static/docs/images/basket.PNG)
 
 #### Checkout
+ - The checkout page contains the checkout form and stripe card element for delivery details and card payments. 
 
-#### Review Form
- - The review form allows logged in users to submit a review on a product that they have purchased.
- - The review form allows logged in users to submit a review on a their experience.
- - The form contains two textareas and a drop down menu to select a star rating.
-
- ![Review form](/static/docs/images/)
-
+ ![Checkout](/static/docs/images/checkout.png)
 
 #### Register
  - Registration form to become a site user.
  - Username and Password fields are required and validated.
 
- ![Register](/static/docs/images/)
+ ![Register](/static/docs/images/register_account.PNG)
 
 #### Login
  - Login form to authenticate user.
 
- ![Login](/static/docs/images/)
+ ![Login](/static/docs/images/login.PNG)
   
 #### Profile
+ - Authenticated users can navigate to their profile page where they can update their details, view order history and submit a review.
 
+ ![Profile](/static/docs/images/profile.PNG)
+
+#### Review Form
+ - The review form allows logged in users to submit a review on a product that they have purchased.
+ 
+ ![Review form](/static/docs/images/review_form.PNG)
 
 #### Logout
  - Log out button to log user out.
 
-  ![Logout](/static/docs/images/)
+  ![Logout](/static/docs/images/logout.PNG)
 
 #### About Us
+ - A story about the crafters behind Wild Atlantic Wares
+
+  ![About us](/static/docs/images/about_us.PNG)
 
 #### Contact form
  - Contact form to enable users to provide feedback and/or contact the site administrator.
 
-  ![Contact](/static/docs/images/)
+  ![Contact](/static/docs/images/contact_us.PNG)
 
 #### Privacy Policy
  - The link provides access to the sites privacy policy.
  
-
- ![Privacy Policy](/static/docs/images/)
+ ![Privacy Policy](/static/docs/images/privacy_policy.PNG)
 
 
 ### Future Features
