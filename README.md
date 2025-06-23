@@ -675,7 +675,7 @@ For detailed testing, validation and results please refer to the [Testing Docume
     I then added the | safe filter but this then affected the data-toggle collapse, which did not work properly when the | safe filter was used.
     The paragraphs expanded when clicked but would not collapse again.
 
-    ![faq-problem](/static/docs/bugs/faq_problem.PNG)
+    ![faq-problem](/static/docs/Bugs/faq_problem.PNG)
 
     I have reverted to unedited text for the faqs for now. 
 
@@ -683,7 +683,7 @@ For detailed testing, validation and results please refer to the [Testing Docume
  - More link Bug
     A bug exists in the implementation of the more link from the products detail page.
 
-    ![more-link](/static/docs/bugs/product_detail_morelink.PNG)
+    ![more-link](/static/docs/Bugs/product_detail_morelink.PNG)
 
     ```
     <a href="{% url 'products' %}?category={{ product.category.name }}&menu={{ product.category.friendly_name }}">
@@ -708,12 +708,12 @@ For detailed testing, validation and results please refer to the [Testing Docume
                 {% endif %}
     ```
         
-    ![correct-menu-heading](/static/docs/bugs/category_menu_correct.PNG)
+    ![correct-menu-heading](/static/docs/Bugs/category_menu_correct.PNG)
 
     The problem is in the menu display heading at the top of the page, which is set using the display_category.
     When naviagting to this page using the more link on the products detail page the category name is only partially displayed.  
 
-    ![partial-menu-heading](/static/docs/bugs/category_menu_bug.PNG)
+    ![partial-menu-heading](/static/docs/Bugs/category_menu_bug.PNG)
 
     This is affecting category names that contain spaces only, i.e for Cups & Mugs only Mugs is being displayed.
     
