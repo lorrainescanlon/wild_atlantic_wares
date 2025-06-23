@@ -377,7 +377,8 @@
 
 
 ### Python Validation
- I installed and used the pycodestyle tool to validate the projects python code. 
+ I installed and used the pycodestyle tool to validate the projects python code.
+ There are some issues still unresolved as when I try to refactor the code in settings.py and webhooks.py it causes server errors. 
 
 
 ## Browser Compatibility
