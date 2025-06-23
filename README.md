@@ -20,8 +20,6 @@
       - [User Stories](#user-stories)
       - [MoSCow Prioritization](#moscow)
       - [GitHub Projects](#github-projects)
-      - [Issues/sprints](#issues-sprints)
-      - [Milestones](#milestones)
     - [Wireframes](#wireframes)
     - [Design](#design)
   - [Features](#features)
@@ -36,7 +34,6 @@
     - [OrderLineItem Model](#orderlineitem-model)
     - [Contact Model](#contact-model)
     - [UserProfile Model](#userprofile-model)
-
   - [Messaging & Error Handling]('messaging-errorhandling)
     - [Toasts](#toasts)
     - [Try Exceptions](#try-exceptions)
@@ -204,7 +201,6 @@
 
  - The sections stack vertically on mobile screens.
 
-
 #### Hero Image
  - A hero image is displayed on the home page.
  - It depicts a potter at work scene.
@@ -304,27 +300,112 @@ The diagram was created using [Lucidchart](https://lucidchart.com)
 
 ![DBModel](/static/docs/images/)
 
+### Category Model
+ - The category model records product categories
+
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | name | CharField |
+ | friendly_name | CharField |
+
+
 ### Product Model
- - The market model stores data for featured farmers markets. 
+ - The product model stores data for featured products. 
+
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | category | ForeignKey |
+ | sku | CharField |
+ | name | CharField |
+ | description | TextField |
+ | price | DecimalField |
+ | image_url | URLField |
+ | image | ImageField |
 
 
 ### Order Model
- - The pictures model contains image urls for market pictures. These pictures are displayed on the image carousel on the markets detail page.
+ - The order model contains order details.
+
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | order_number | CharField |
+ | user_profile | ForeignKey |
+ | full_name | Charfield |
+ | email | EmailField |
+ | phone_number | CharField |
+ | country | CountryField |
+ | postcode | CharField |
+ | town_or_city| CharField |
+ | address1 | CharField |
+ | address2 | CharField |
+ | County | CharField |
+ | date | DateTimeField |
+ | delivery_cost | DecimalField |
+ | order_total | DecimalField |
+ | grand_total | DecimalField |
+ | original_basket | TextField |
+ | stripe_pid | CharField |
+
 
 ### OrderLineItem
- - Records contact messages sent via the form on the contact.html page.
+ - Records line items from orders.
+
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | order | ForeignKey |
+ | product | ForeignKey |
+ | quantity| IntegerField |
+ | lineitem_total | DecimalField |
+
 
 ### UserProfile
 - Records UserPorfile record and default shipping details.
 
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | user | OneToOneField |
+ | default_phone_number | CharField |
+ | default_address1 | CharField |
+ | default_address2 | CharField |
+ | default_town_or_city | CharField |
+ | default_county | CharField |
+ | default_postcode | CharField |
+ | default_country | CountryField |
+
+
 ### Review Model
- - The review model records reviews that are submitted for a particular item from the profile app.
+ - The review model records reviews that are submitted for a particular product from the profile app.
+
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | product | ForeignKey |
+ | user | ForeignKey |
+ | product_review | TestField |
+ | experience_review | TestField |
+ | rating | IntegerField |
+ | approved | BooleanField |
+ | created_on | DateField |
+
 
 ### Contact Model
  - The cotact model records contact messages sent by users of the website
 
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | name | CharField |
+ | email | EmailField |
+ | message | TextField |
+ | read | Boolean |
+ | created_on | DateField |
+
+
 ### Faq Model
  - The Faq model stores frequently asked questions.
+
+ | **Field Name** | **Field Type** |
+ | -------------- | -------------- |
+ | title | CharField |
+ | body | TextField |
 
 
 ### CRUD
@@ -338,14 +419,13 @@ The CRUD principle was at the center of the design process for this project.
 
 **Read:**
  - A user can read detailed product information and review data returned from the Product and Review database models.
- - A user can search for products by name and details. Results are retuend from the Products model.
+ - A user can search for products by name and details. Results are returned from the Products model.
 
 **Update:**
  - An authenticated user can update or edit their default shipping information attached to their profile.
  - An authenticated admin user can edit a product.
 
 **Delete:**
- - An authenticated user can .
  -  An authenticated admin user can delete a product.
 
 
@@ -408,11 +488,11 @@ The CRUD principle was at the center of the design process for this project.
 
  
 ### Sitemap
- - [Sitemap](#sitemap) - link it here
+ - [Sitemap](/sitemap.xml) - link it here
   Sitemap created at 
 
 ### Robots
- - [Robots](#robots) - link it here
+ - [Robots](/robots.txt) - link it here
   Robots file created to disallow certain sections of your website. I have disallowed the profile and basket dierctories.
 
 ## Deployment
@@ -634,28 +714,29 @@ For detailed testing, validation and results please refer to the [Testing Docume
     ![product-detail-validation-error](/static/docs/Bugs/product-detail-validation-error.PNG)
 
 
-
-
-
-
 ## Credits
 
 ### Media
 - Images were taken from pexel and unsplash
- - Hero image Photo by Wendy Wei [Pexels](https://www.pexels.com/photo/radish-and-carrots-1656663/)
- - Caherdaniel market card picture by Paréj Richárd [Unsplash](https://unsplash.com/photos/clear-glass-jars-on-brown-wooden-shelf-F20_xtNvis4?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash)
-
+ - Hero image Photo by 
  - Fonts were taken from [Fontawesome](https://fontawesome.com/)
  - Content was written by myself.
 
 ### Code
- - I used the Boutique Ado walkthrough project as a basis for this project. I followed the same basic structure and file layout. 
- - Google Maps 
- - Django documentation 
-
-
+ - I used the Boutique Ado walkthrough project as a guide for this project. I followed the same basic structure and file layout. A lot of the code for the basket app and checkout app were taken from the walkthrough project.  
+ - Django documentation and substack were used a lot in this project for research, reference and troubleshooting.
+ - URL encoding https://stackoverflow.com/questions/16622504/escaping-ampersand-in-url
+ - Modal Bootstrap 4 https://getbootstrap.com/docs/4.6/components/modal/
+ - Django documentation ModelChoiceField reference https://docs.djangoproject.com/en/5.2/ref/forms/fields/#django.forms.ModelChoiceField
+ - Django  queryset distinct https://docs.djangoproject.com/en/dev/ref/models/querysets/#django.db.models.query.QuerySet.distinct
+ - Substack resource to help with my review form queryset https://stackoverflow.com/questions/68132715/django-filter-queryset-of-a-models-that-are-related-with-a-foreign-key-to-other
+ - Stripe documentation for setting up stripe for the project https://docs.stripe.com/payments/accept-a-payment?platform=web&ui=embedded-form
+ - Troubleshooting stripe https://stackoverflow.com/questions/43172843/uncaught-referenceerror-stripe-is-not-defined-stripe-error
+ - Bootstrap accordian code was based on this thread https://stackoverflow.com/questions/62900105/how-to-modify-arrows-in-bootstrap-accordion
+ - Annotation, to annotate the ratings onto the products I followed the following resource https://www.youtube.com/watch?v=LEsmHKZLsBI
+ - How to use dumpdata and loaddata https://learndjango.com/tutorials/django-fixtures-dumpdata-loaddata
+ - Code validation https://www.youtube.com/watch?v=6j9dZTW4owI&list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt&index=41
 
 
 ### Acknowledgements
-- Thank you to my mentor Medale Oluwanfemi for his advice and guidance on this project.
 - The tutoring team for their help at troubleshooting during the project.
